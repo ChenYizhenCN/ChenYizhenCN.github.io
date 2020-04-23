@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "关于公众人物的一小点看法"
+title:      "Public figure"
 subtitle:   " \"随笔\""
 date:       2020-04-23 10:00:00
 author:     "Eric"
