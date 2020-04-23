@@ -4,7 +4,7 @@ title:      "Public figure"
 subtitle:   " \"随笔\""
 date:       2020-04-23 10:00:00
 author:     "Eric"
-header-img: "img/post-bg-suibi.jpg"
+header-img: "img/post-bg-PublicFigure.jpg"
 catalog: true
 tags:
     - 随笔
@@ -12,7 +12,7 @@ tags:
 
 > “公众人物应当对舆论监督予以一定的容忍与理解”
 
-作为公众人物的原告，对媒体在行使正当舆论监督的过程中，可能造成的轻微损害应当予以容忍与理解
+作为公众人物的原告，对媒体在行使正当舆论监督的过程中，可能造成的轻微损害应予以容忍与理解
 
 不止一个国家的法律对公众人物的名誉权「另眼相看」，例如，在美国法律中，针对公众人物所发表的言论，即使存在不实信息，只要不存在真实的恶意（actual malice），也不构成诽谤
 
