@@ -1,16 +1,62 @@
 ---
-title: Tool
-layout: default
-description: 仰望星空
-header-img: "img/tag-bg.jpg"
+layout: page
+title: "Tool"
+description: "你是我的梦想"
+header-img: "img/about-bg.jpg"
+multilingual: true
 ---
 
-// test.js
-// document.getElementById("btn").onclick = function(){ alert("hello") };
+{% include multilingual-sel.html %}
 
-// test.html
-<body>
-    <button id="btn">click</button>
-    <script src="./Tool.js">
-    </script>
-</body>
+<!-- Chinese Version -->
+<div class="zh post-container">
+    {% capture about_zh %}{% include about/zh.md %}{% endcapture %}
+    {{ about_zh | markdownify }}
+</div>
+
+<!-- English Version -->
+<div class="en post-container">
+    {% capture about_en %}{% include about/en.md %}{% endcapture %}
+    {{ about_en | markdownify }}
+</div>
+
+
+{% if site.disqus_username %}
+<!-- disqus 评论框 start -->
+<div class="comment">
+    <div id="disqus_thread" class="disqus-thread">
+
+    </div>
+</div>
+<!-- disqus 评论框 end -->
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+        </script>  
+  </head>  
+  <body>  
+    <div id="main" style="border-bottom: solid red 0px; height:100%; width:100%">  
+    </div>  
+  </body>  
+  <script>  
+    //测试代码  
+    Plot.init('main', 800, 500, 'green','red',1);  
+    Plot.sin(720);  
+    Plot.setBrushWeight(3);  
+    Plot.cos(720);  
+    Plot.setBrushWeight(2);  
+    Plot.circle(100,200,100);  
+    Plot.setBrushColor('purple');  
+    Plot.circle(100,100,100);  
+    Plot.setBrushColor('blue');  
+    Plot.circle(50,100,100);  
+    var t = new Array();  
+    var dots = new Array();  
+    dots[0] = {x:-10,y:-10};  
+    dots[1] = {x:400,y:10};  
+    dots[2] = {x:400,y:300};  
+    dots[3] = {x:10,y:300};  
+    Plot.polygon(dots);  
+  </script>  
+<!-- disqus 公共JS代码 end -->
+{% endif %}
