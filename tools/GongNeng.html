@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+<!-- Meta Tag -->
+<meta charset="utf-8">
+<meta name="description" content="提供在线功、能和热量转换换算器|焦耳,公斤·米,马力·时,千瓦·时,千卡,英热单位,英尺·磅|计量单位"/>
+<meta name="keywords" content="焦耳,公斤·米,马力·时,千瓦·时,千卡,英热单位,英尺·磅,J,kg·m,PS·h,HP·h,kW·h,kcal,Btu,ft·lb,换算,计算"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name='copyright' content='codeglim'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Title Tag-->
+<title>在线功、能和热量换算器</title>
+<!--标签图标-->
+<link rel="icon" href="/home/images/icon.png" type="image/x-icon">
+<!-- Hover  Css -->
+<link rel="stylesheet" href="/home/css/hover.min.css" type="text/css"/>
+<!-- Mobile Nav -->
+<link rel="stylesheet" href="/home/css/slicknav.min.css" type="text/css"/>  
+<!-- Font Awesome -->
+<link rel="stylesheet" href="/home/css/font-awesome.min.css" type="text/css"/>
+<!-- Slick Slider -->
+<link rel="stylesheet" href="/home/css/slick.css" type="text/css"/>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="/home/css/bootstrap.min.css" type="text/css"/>
+<!-- Sufia Stylesheet -->
+<link rel="stylesheet" href="/home/css/reset.css" type="text/css"/>
+<link rel="stylesheet" href="/home/css/style.css" type="text/css"/>
+<link rel="stylesheet" href="/home/css/responsive.css" type="text/css"/>
+<!--[if lt IE 9]>-->
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+<link rel="stylesheet" href="css/nanyi.css" type="text/css"/>
+
+
+</head>
+<body onLoad="startTime()">
+
+
+<!--/start section-->
+<div class="content1">
+  <div class="biaoti_header"></div>
+  <div class="container">
+      <div class="row clearfix">
+           <div class="col-md-8 col-md-offset-2 column">
+                <table class="table1" border="1" cellpadding="3" cellspacing="0" align="center" style="border-collapse:collapse">
+                     <form action="">
+                          <tr class="table2"><td colspan=4 align="center">功、能和热量转换换算器：可在线进行焦耳(J)、公斤·米(kg·m)、米制马力·时(PS·h)、英制马力·时(HP·h)、千瓦·时(kW·h)、千卡(kcal)、英热单位(Btu)、英尺·磅(ft·lb)之间的互相转换</td></tr>
+                               <tr>
+                               <td align=left nowrap class="table-t">焦耳(J)</td>
+                               <td align=left class="td4"><input name="Joule" class="td3"> 
+                                  <input name="Joule_bt" onClick="if (checkNum(Joule.value)) compute(this.form,Joule.name,heat_data)" type="button" class="button" value="换算">
+                               </td>
+                               <td align=left nowrap class="table-t">公斤·米(kg·m)</td>
+                               <td align=left class="td4"><input name="Kgm" class="td3"> 
+                                  <input name="Kgm_bt" onClick="if (checkNum(Kgm.value)) compute(this.form,Kgm.name,heat_data)" type="button" class="button" value="换算">
+                               </td>
+                          </tr>
+                          <tr>
+                               <td align=left nowrap class="table-t">米制马力·时(PS·h)</td>
+                               <td align=left class="td4"><input name="Psh" class="td3"> 
+                                  <input name="Psh_bt" onClick="if (checkNum(Psh.value)) compute(this.form,Psh.name,heat_data)" type="button" class="button" value="换算">
+                               </td>
+                               <td align=left nowrap class="table-t">英制马力·时(HP·h)</td>
+                               <td align=left class="td4"><input name="Hph" class="td3"> 
+                                  <input name="Hph_bt" onClick="if (checkNum(Hph.value)) compute(this.form,Hph.name,heat_data)"  type="button" class="button" value="换算">
+                               </td>
+                          </tr>
+                          <tr>
+                               <td align=left nowrap class="table-t">千瓦·时(kW·h)</td>
+                               <td align=left class="td4"><input name="Kwh" class="td3"> 
+                                  <input name="Kwh_bt" onClick="if (checkNum(Kwh.value)) compute(this.form,Kwh.name,heat_data)" type="button" class="button" value="换算">
+                               </td>
+                               <td align=left nowrap class="table-t">千卡(kcal)</td>
+                               <td align=left class="td4"><input name="Kcal" class="td3"> 
+                                  <input name="Kcal_bt" onClick="if (checkNum(Kcal.value)) compute(this.form,Kcal.name,heat_data)" type="button" class="button" value="换算">
+                               </td>
+                          </tr>
+                          <tr>
+                               <td align=left nowrap class="table-t">英热单位(Btu)</td>
+                               <td align=left class="td4"><input name="Btu" class="td3"> 
+                                  <input name="Btu_bt" onClick="if (checkNum(Btu.value)) compute(this.form,Btu.name,heat_data)" type="button" class="button" value="换算">
+                               </td>
+                               <td align=left nowrap class="table-t">英尺·磅(ft·lb)</td>
+                               <td align=left class="td4"><input name="Ftlb" class="td3"> 
+                                  <input name="Ftlb_bt" onClick="if (checkNum(Ftlb.value)) compute(this.form,Ftlb.name,heat_data)" type="button" class="button" value="换算">
+                               </td>
+                          </tr>
+                          <tr>
+                               <td colspan=4><div align="center"><input type="reset" class="reset" value="数据重置"></div></td>
+                          </tr>
+                    </form>
+                </table>
+                </a>
+           </div>
+      </div>
+  </div>
+</div>
+<!--end section-->
+
+
+<!-- Jquery -->
+<script type="text/javascript" src="/home/js/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script type="text/javascript" src="/home/js/bootstrap.min.js"></script>
+<!-- Slick Nav -->
+<script type="text/javascript" src="/home/js/jquery.slicknav.min.js"></script>
+<!-- Magnific Popup -->
+<script type="text/javascript" src="/home/js/magnific-popup.min.js"></script>
+<!-- Wow JS -->
+<script type="text/javascript" src="/home/js/wow.min.js"></script>
+<!-- Counter JS -->
+<script type="text/javascript" src="/home/js/jquery.counterup.min.js"></script>
+<!-- Isotop JS -->
+<script type="text/javascript" src="/home/js/isotope.pkgd.min.js"></script>
+<!-- Slick Slider -->
+<script type="text/javascript" src="/home/js/slick.min.js"></script>  
+<!-- Activate JS -->
+<script type="text/javascript" src="/home/js/active.js"></script>
+
+<script type="text/javascript" src="js/style.js"></script>
+<script type="text/javascript" src="js/nanicontrol-mianji.js"></script>
+
+
+</body>
+</html>

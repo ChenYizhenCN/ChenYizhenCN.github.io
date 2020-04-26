@@ -1,0 +1,146 @@
+#time1{border:1px solid #FA8C32;text-align:center;padding:0.3em;font-size:1.2em;color:rgb(228,63,7)}
+.table3{width:100%;margin-top:0.5em;}
+.td2{height:2em;width:10em;padding:0.5em;margin-left:0.2em;}
+.td5{height:2.5em;}
+.table5{height:2.5em;font-size:1.5em;background:#F63;color:rgb(246,246,246);}
+.table4{height:2em;font-size:1.2em;background:#F63;color:rgb(246,246,246);}
+.table7{width:100%;text-align:center;border:1px solid rgb(200,200,200);border-collapse:collapse; background:#FFFFFF;}
+.sousuo_header{border:1px solid #FA8C32;padding:0.2em;margin-bottom:0.2em;}
+.input1{width:20%}
+.input2{margin-left:0.2em}
+.input3{width:22%;}
+.row clearfix{background:#CCC}
+.panel-heading{text-align:center}
+.panel-heading a{text-decoration:none}
+.section{border:0px solid #F05F20;padding:1em;background:#FCEBE4;width:100%;margin-top:1.5em;}
+.table1{width:100%;margin:2em auto 1em auto;background:rgb(240,240,240);border:1px solid rgb(220,220,220);}
+#time{font-size:1.2em;color:#FFFFFF;width:100%;margin:0.5em auto 0.3em auto;text-align:center;padding:0.3em;background:rgba(0,0,0,0.6);}
+.table2{background:rgb(47,168,225);border-bottom:2px solid rgba(0,79,197,0.8);color:#ffffff;}
+.table2>td{padding:1em;}
+.td3{width:7.2em;margin:0.6em 0;}
+.td4{width:5em;}
+.td1{padding:0.3em}
+.table-t{padding:0.1em;width:3em;text-align:center;}
+.reset{margin:0.3em;padding:0 0.3em 0 0.3em;}
+.container .button{padding:0 0.3em 0 0.3em;}
+.td6{margin-bottom:0.2em;height:2em;width:10em;}
+.table-n{font-size:1.3em;color:#F00}
+.jieshi2{margin-top:0.5em;}
+.jieshi{color:#ffffff;background:rgb(47,168,225);height:5em;}
+.jieshi>td{padding:1em;}
+.table_liuliang{margin:0.5em auto;background:rgb(240,240,240);border:1px solid rgb(180,180,180);border-collapse:collapse;}
+.table_body{text-align:center;padding:0.6em}
+.table_header{text-align:center;font-size:1.8em;font-weight:bold;padding:0.8em;background:rgb(47,168,225);color:#FFFFFF;}
+.table_footer{text-align:center;padding:0.8em}
+.table_fang,.table_yuan{margin:0.2em}
+.content1{background-image:url("../images/conversion.jpg")/*tpa=https://www.nanicontrol.com/home/nanyi/images/conversion.jpg*/;background-size: cover;background-position: center center;background-attachment: fixed}
+.biaoti_header{padding:4em 0 1em 0;text-align:center;color:rgb(0,24,255)}
+.sousuo_header1{padding:0.6em;margin-bottom:0.2em;background:rgb(47,168,225);}
+select{border:1px solid #F60;padding:0 5px;}
+input[type="button"]{
+	padding:0 8px;
+}
+input[type="reset"]{
+	padding:0 8px;
+}
+
+
+
+/*主体内容*/
+.content1{padding:0.1em 0 10em 0;}
+/*end*/
+
+/*密度模糊搜索部分*/
+.choose-screening-input{
+		position: relative;
+	}
+	.auto-screening{
+		position: absolute;
+		z-index: 9;
+		overflow: hidden;
+		border: 1px solid #cccccc;
+		border-bottom: 0;
+		border-top: 0;
+	}
+	.auto-screening-prompt{
+		width: 200px;
+		height: 30px;
+		line-height: 30px;
+		border-bottom: 1px solid #cccccc;
+		background: #ffffff;
+		padding: 0 10px;
+	}
+	.auto-screening-prompt:hover{
+		background: #cccccc;
+	}
+/*end*/
+/*比热模糊搜索部分*/
+.choose-screening-input1{
+		position: relative;
+	}
+	.auto-screening1{
+		position: absolute;
+		z-index: 9;
+		overflow: hidden;
+		border: 1px solid #cccccc;
+		border-bottom: 0;
+		border-top: 0;
+	}
+	.auto-screening-prompt1{
+		width: 200px;
+		height: 30px;
+		line-height: 30px;
+		border-bottom: 1px solid #cccccc;
+		background: #ffffff;
+		padding: 0 10px;
+	}
+	.auto-screening-prompt1:hover{
+		background: #cccccc;
+	}
+/*end*/
+/*单位换算导航*/
+/* main menu styles */
+.biaoti_body{text-align:center;margin:10px;}
+.biaoti {
+    display:inline-block;
+    margin:0px auto;
+    padding:0;
+    background:rgba(0,0,0,0.7);
+    border-radius:10px; /*some css3*/       
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    box-shadow:0 2px 2px rgba(0,0,0,0.5);
+    -moz-box-shadow:0 2px 2px rgba(0,0,0,0.5);
+    -webkit-box-shadow:0 2px 2px rgba(0,0,0,0.5);
+}
+.biaoti li {
+	padding:5px;
+    float:left;
+    list-style:none;
+}
+.biaoti a {
+    font-weight:600;
+    font-size:16px;
+    font-family:'宋体';
+    letter-spacing:3px; 
+    color:rgb(222,222,222);
+    text-decoration:none;
+    display:block;
+    padding:6px 20px;
+    border-radius:20px; /*some css3*/
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+    text-shadow:0 2px 2px rgba(0,0,0,0.7);
+}
+
+/* selected menu element */
+.biaoti .current a, .biaoti li:hover > a {
+    background:rgb(240,240,240);
+    border-radius:8px;
+    color:#000;
+    box-shadow:0 2px 2px rgba(0,0,0,0.7); /*some css3*/
+    -moz-box-shadow:0 2px 2px rgba(0,0,0,0.7);
+    -webkit-box-shadow:0 2px 2px rgba(0,0,0,0.7);
+    text-shadow:0 2px 2px rgba(255,255,255,0.7);
+}
+

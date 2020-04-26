@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+<!-- Meta Tag -->
+<meta charset="utf-8">
+<meta name="description" content="在线进行流量计算"/>
+<meta name="keywords" content="直径,d,长度,L,宽度,H,流速,V,流量计算，计量单位换算"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name='copyright' content='codeglim'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Title Tag-->
+<title>在线压力单位换算</title>
+<!--标签图标-->
+<link rel="icon" href="/home/images/icon.png" type="image/x-icon">
+<!-- Hover  Css -->
+<link rel="stylesheet" href="/home/css/hover.min.css" type="text/css"/>
+<!-- Mobile Nav -->
+<link rel="stylesheet" href="/home/css/slicknav.min.css" type="text/css"/>  
+<!-- Font Awesome -->
+<link rel="stylesheet" href="/home/css/font-awesome.min.css" type="text/css"/>
+<!-- Slick Slider -->
+<link rel="stylesheet" href="/home/css/slick.css" type="text/css"/>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="/home/css/bootstrap.min.css" type="text/css"/>
+<!-- Sufia Stylesheet -->
+<link rel="stylesheet" href="/home/css/reset.css" type="text/css"/>
+<link rel="stylesheet" href="/home/css/style.css" type="text/css"/>
+<link rel="stylesheet" href="/home/css/responsive.css" type="text/css"/>
+<!--[if lt IE 9]>-->
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+<link rel="stylesheet" href="css/nanyi.css" type="text/css"/>
+
+
+</head>
+<body onLoad="startTime()">
+
+
+<!--/start section-->
+<div class="content1">
+  <div class="biaoti_header"></div>
+  <div class="container">
+      <div class="row clearfix">
+           <div class="col-md-8 col-md-offset-2 column">
+                 <table class="table1" border="1" cellpadding="3" cellspacing="0" align="center" style="border-collapse:collapse">
+	                  <form action="">
+                          <tr class="jieshi">
+                             <td colspan="2"><p>在线流量计算器：本计算器可在线实现由圆管截面的直径、流速或方管截面的长、宽、流速直接计算出最终的流量值</p></td>
+                          </tr>
+	                      <tr>
+                             <td class="table_header">圆管截面</td>
+                             <td class="table_header">方管截面</td>
+                          </tr>
+                          <tr>
+                             <td align="center"><img src="images/圆.png" style="width:35%"></td>
+                             <td align="center"><img src="images/矩形.png" style="width:35%"></td>
+                          </tr>
+                          <tr>
+                             <td>
+                                <div class="table_body">
+                                     直径d：<input type="text" id="text1" class="td2">
+                                     <select id="select1" onChange="change1()" autocomplete="off">
+                                           <option value="1">mm</option>
+                                           <option value="2" selected="selected">cm</option>
+                                           <option value="3">dm</option>
+                                           <option value="4">m</option>
+                                     </select>
+                                </div>    
+                                <div class="table_body">
+                                    流速V：<input type="text" id="text2" class="td2">
+                                     <select id="select2" onChange="change2()" autocomplete="off">
+                                           <option value="1">m/s</option>
+                                           <option value="2">m/min</option>
+                                           <option value="3" selected="selected">m/h</option>
+                                     </select>
+                                </div>
+                             </td>
+                             <td>
+                                <div class="table_body">
+                                     长度L：<input type="text" id="text3" class="td2">
+                                      <select id="select3" onChange="change3()" autocomplete="off">
+                                           <option value="1">mm</option>
+                                           <option value="2" selected="selected">cm</option>
+                                           <option value="3">dm</option>
+                                           <option value="4">m</option>
+                                     </select>
+                                </div>
+                                <div class="table_body">
+                                     宽度H：<input type="text" id="text4" class="td2">
+                                     <select id="select4" onChange="change4()" autocomplete="off">
+                                           <option value="1">mm</option>
+                                           <option value="2" selected="selected">cm</option>
+                                           <option value="3">dm</option>
+                                           <option value="4">m</option>
+                                     </select>
+                                </div>
+                                <div class="table_body">
+                                     流速V：<input type="text" id="text5" class="td2">
+                                      <select id="select5" onChange="change5()" autocomplete="off">
+                                           <option value="1">m/s</option>
+                                           <option value="2">m/min</option>
+                                           <option value="3" selected="selected">m/h</option>
+                                     </select>
+                                </div>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td class="table_footer">
+                                 <input type="button" value="计算流量" onClick="yuan()" class="table_yuan">
+                                 <input type="text" id="text6" class="td2" readonly>m<sup>3</sup>/h
+                              </td>
+                              <td class="table_footer">
+                                 <input type="button" value="计算流量" onClick="fang()" class="table_fang">
+                                 <input type="text" id="text7" class="td2" readonly>m<sup>3</sup>/h 
+                              </td>
+                          </tr>
+                          <tr>
+                              <td colspan="2" class="table_footer"><input type="reset" value="重置"></td>
+                          </tr>
+                      </form>
+                </table>
+                </a>
+           </div>
+       </div>
+   </div>
+</div>
+<!--end section-->
+
+
+<!-- Jquery -->
+<script type="text/javascript" src="/home/js/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script type="text/javascript" src="/home/js/bootstrap.min.js"></script>
+<!-- Slick Nav -->
+<script type="text/javascript" src="/home/js/jquery.slicknav.min.js"></script>
+<!-- Magnific Popup -->
+<script type="text/javascript" src="/home/js/magnific-popup.min.js"></script>
+<!-- Wow JS -->
+<script type="text/javascript" src="/home/js/wow.min.js"></script>
+<!-- Counter JS -->
+<script type="text/javascript" src="/home/js/jquery.counterup.min.js"></script>
+<!-- Isotop JS -->
+<script type="text/javascript" src="/home/js/isotope.pkgd.min.js"></script>
+<!-- Slick Slider -->
+<script type="text/javascript" src="/home/js/slick.min.js"></script>  
+<!-- Activate JS -->
+<script type="text/javascript" src="/home/js/active.js"></script>
+
+<script  type="text/javascript" src="js/jisuan.js"></script> 
+
+
+</body>
+</html>
