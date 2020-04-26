@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+<!-- Meta Tag -->
+<meta charset="utf-8">
+<meta name="description" content="提供在线面积转换换算器|平方公里,公顷,市亩,分米,厘米,毫米,英里,英亩,竿,码,英尺,英寸计量单位"/>
+<meta name="keywords" content="平方公里,公顷,市亩,平方米,平方分米,平方厘米,平方毫米,平方英里,英亩,平方竿,平方码,平方英尺,平方英寸,km,ha,cm,dm,mm,sq mi,sq rd,sq yd,sq ft,sq in,计算,换算"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name='copyright' content='codeglim'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Title Tag-->
+<title>在线面积单位换算</title>
+<!--标签图标-->
+<link rel="icon" href="/home/images/icon.png" type="image/x-icon">
+<!-- Hover  Css -->
+<link rel="stylesheet" href="/home/css/hover.min.css" type="text/css"/>
+<!-- Mobile Nav -->
+<link rel="stylesheet" href="/home/css/slicknav.min.css" type="text/css"/>  
+<!-- Font Awesome -->
+<link rel="stylesheet" href="/home/css/font-awesome.min.css" type="text/css"/>
+<!-- Slick Slider -->
+<link rel="stylesheet" href="/home/css/slick.css" type="text/css"/>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="/home/css/bootstrap.min.css" type="text/css"/>
+<!-- Sufia Stylesheet -->
+<link rel="stylesheet" href="/home/css/reset.css" type="text/css"/>
+<link rel="stylesheet" href="/home/css/style.css" type="text/css"/>
+<link rel="stylesheet" href="/home/css/responsive.css" type="text/css"/>
+<!--[if lt IE 9]>-->
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    
+<link rel="stylesheet" href="css/nanyi.css" type="text/css"/>
+
+
+</head>
+<body onLoad="startTime()">
+
+
+<!--/start section-->
+<div class="content1">
+  <div class="biaoti_header"></div>
+  <div class="container">
+      <div class="row clearfix">
+           <div class="col-md-8 col-md-offset-2 column">
+                 <table class="table1" border="1" cellpadding="3" cellspacing="0" align="center" style="border-collapse:collapse">
+	                  <form action="">
+	                       <tr class="table2"><td colspan=4 align="center">面积单位换算器</b>：可在线进行平方公里(km<sup>2</sup>)、公顷(ha)、市亩、平方米(m<sup>2</sup>)、平方分米(dm<sup>2</sup>)、平方厘米(cm<sup>2</sup>)、平方毫米(mm<sup>2</sup>)、
+                       平方英里(sq mi)、英亩、平方竿(sq rd)、平方码(sq yd)、平方英尺(sq ft)、平方英寸(sq in)间的互相转换</td></tr>
+	                       <tr>
+		                       <td align=right nowrap class="table-t">平方公里(km<sup>2</sup>)</td>
+		                       <td align=left class="td4"><input name="mSquare_kilometer" class="td3"> 
+                               <input onClick="if(checkNum(mSquare_kilometer.value))compute(this.form,mSquare_kilometer.name,area_data)" type=button value="换算" class="button"
+                               name="mSquare_kilometer_bt">
+                               </td>
+		                       <td align=right nowrap class="table-t">公顷(ha)</td>
+		                       <td align=left class="td4"><input name="mHectare" class="td3"> 
+                               <input onClick="if (checkNum(mHectare.value)) compute(this.form,mHectare.name,area_data)" type=button value="换算" class="button"
+                               name=mHectare_bt>
+                               </td>
+	                       </tr>
+                           <tr>
+                               <td align=right nowrap class="table-t">平方米(m<sup>2</sup>)</td>
+		                       <td align=left class="td4"><input name="mSquare_meter" class="td3"> 
+                               <input onClick="if (checkNum(mSquare_meter.value)) compute(this.form,mSquare_meter.name,area_data)" type=button value="换算" 
+                               name="mSquare_meter_bt" class="button">
+                               </td> 
+		                       <td align=right nowrap class="table-t">市亩</td>
+		                       <td align=left class="td4"><input name="mAre" class="td3"> 
+                               <input onClick="if (checkNum(mAre.value)) compute(this.form,mAre.name,area_data)" type=button value="换算" name="mAre_bt" class="button">
+                               </td>
+	                       </tr>
+	                       <tr> 
+		                       <td align=right nowrap class="table-t">平方分米(dm<sup>2</sup>)</td>
+		                       <td align=left class="td4"><input name="mSquare_decimeter" class="td3"> 
+                               <input onClick="if (checkNum(mSquare_decimeter.value)) compute(this.form,mSquare_decimeter.name,area_data)" type=button value="换算" 
+                               name="mSquare_decimeter_bt" class="button">
+                               </td>
+		                       <td align=right nowrap class="table-t">英亩</td>
+		                       <td align=left class="td4"><input name="engAcre" class="td3"> 
+                               <input onClick="if (checkNum(engAcre.value)) compute(this.form,engAcre.name,area_data)" type=button value="换算" name="engAcre_bt" class="button">
+                               </td>
+
+	                       </tr>
+                           <tr>
+                               <td align=right nowrap class="table-t">平方厘米(cm<sup>2</sup>)</td>
+		                       <td align=left class="td4"><input name="mSquare_centimeter" class="td3"> 
+                               <input onClick="if (checkNum(mSquare_centimeter.value)) compute(this.form,mSquare_centimeter.name,area_data)" type=button value="换算" 
+                               name="mSquare_centimeter_bt" class="button">
+                               </td> 
+		                       <td align=right nowrap class="table-t">平方英里(sq mi)</td>
+		                       <td align=left class="td4"><input name="engSquare_mile" class="td3"> 
+                               <input onClick="if (checkNum(engSquare_mile.value)) compute(this.form,engSquare_mile.name,area_data)" type=button value="换算" 
+                               name="engSquare_mile_bt" class="button">
+                               </td>
+
+	                       </tr>
+                           <tr> 
+                               <td align=right nowrap class="table-t">平方毫米(mm<sup>2</sup>)</td>
+		                       <td align=left class="td4"><input name="mSquare_millimeter" class="td3"> 
+                               <input onClick="if (checkNum(mSquare_millimeter.value)) compute(this.form,mSquare_millimeter.name,area_data)" type=button value="换算" 
+                               name="mSquare_millimeter_bt" class="button">
+                               </td>
+		                       <td align=right nowrap class="table-t">平方竿(sq rd)</td>
+		                       <td align=left class="td4"><input name="usSquare_rod" class="td3"> 
+                               <input onClick="if (checkNum(usSquare_rod.value)) compute(this.form,usSquare_rod.name,area_data)" type=button value="换算" 
+                               name="usSquare_rod_bt" class="button">
+                               </td>
+
+	                       </tr>
+                           <tr> 
+		                       <td align=right nowrap class="table-t">平方码(sq yd)</td>
+		                       <td align=left class="td4"><input name="engSquare_yard" class="td3"> 
+                               <input onClick="if (checkNum(engSquare_yard.value)) compute(this.form,engSquare_yard.name,area_data)" type=button value="换算" 
+                               name="engSquare_yard_bt" class="button">
+                               </td>
+		                       <td align=right nowrap class="table-t">平方英尺(sq ft)</td>
+		                       <td align=left class="td4"><input name="engSquare_foot" class="td3"> 
+                               <input onClick="if (checkNum(engSquare_foot.value)) compute(this.form,engSquare_foot.name,area_data)" type=button value="换算" 
+                               name="engSquare_foot_bt" class="button">
+                               </td>
+
+	                       </tr>
+	                       <tr>
+                               <td align=right nowrap class="table-t">平方英寸(sq in)</td>
+		                       <td align=left class="td4"><input name="engSquare_inch" class="td3"> 
+                               <input onClick="if (checkNum(engSquare_inch.value)) compute(this.form,engSquare_inch.name,area_data)" type=button value="换算" 
+                               name="engSquare_inch_bt" class="button">
+                               </td>
+		                       <td colspan=2 align="center"><div align="right"><input type="reset" class="reset" value="数据重置"></div></td>
+	                       </tr>
+                      </form>
+                </table>
+                </a>
+           </div>
+       </div>
+   </div>
+</div>
+<!--end section-->
+
+
+<!-- Jquery -->
+<script type="text/javascript" src="/home/js/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script type="text/javascript" src="/home/js/bootstrap.min.js"></script>
+<!-- Slick Nav -->
+<script type="text/javascript" src="/home/js/jquery.slicknav.min.js"></script>
+<!-- Magnific Popup -->
+<script type="text/javascript" src="/home/js/magnific-popup.min.js"></script>
+<!-- Wow JS -->
+<script type="text/javascript" src="/home/js/wow.min.js"></script>
+<!-- Counter JS -->
+<script type="text/javascript" src="/home/js/jquery.counterup.min.js"></script>
+<!-- Isotop JS -->
+<script type="text/javascript" src="/home/js/isotope.pkgd.min.js"></script>
+<!-- Slick Slider -->
+<script type="text/javascript" src="/home/js/slick.min.js"></script>  
+<!-- Activate JS -->
+<script type="text/javascript" src="/home/js/active.js"></script>
+
+<script type="text/javascript" src="js/style.js"></script>
+<script type="text/javascript" src="js/nanicontrol-mianji.js"></script>
+
+</body>
+</html>

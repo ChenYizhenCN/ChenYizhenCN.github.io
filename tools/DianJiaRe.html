@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+<!-- Meta Tag -->
+<meta charset="utf-8">
+<meta name="description" content="提供在线电加热功率计算器,可在线实现由质量kg（质量流量kg/h）、比热（kcal/kg℃)、目标温度℃、初始温度℃、加热时间h、散热系数直接计算出功率KW。"/>
+<meta name="keywords" content="质量，kg,质量流量,kg/h,比热,kcal/kg℃,功率,KW,密度,体积，体积流量,计算,电加热功率计算,电加热，功率计算"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name='copyright' content='codeglim'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Title Tag-->
+<title>在线电加热功率计算</title>
+<!--标签图标-->
+<link rel="icon" href="/home/images/icon.png" type="image/x-icon">
+<!-- Hover  Css -->
+<link rel="stylesheet" href="/home/css/hover.min.css" type="text/css"/>
+<!-- Mobile Nav -->
+<link rel="stylesheet" href="/home/css/slicknav.min.css" type="text/css"/>  
+<!-- Font Awesome -->
+<link rel="stylesheet" href="/home/css/font-awesome.min.css" type="text/css"/>
+<!-- Slick Slider -->
+<link rel="stylesheet" href="/home/css/slick.css" type="text/css"/>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="/home/css/bootstrap.min.css" type="text/css"/>
+<!-- Sufia Stylesheet -->
+<link rel="stylesheet" href="/home/css/reset.css" type="text/css"/>
+<link rel="stylesheet" href="/home/css/style.css" type="text/css"/>
+<link rel="stylesheet" href="/home/css/responsive.css" type="text/css"/>
+<!--[if lt IE 9]>-->
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<link rel="stylesheet" href="css/nanyi.css" type="text/css"/>
+
+
+</head>
+<body onLoad="startTime1()">
+
+
+<!--/start section-->
+<div class="content1">
+  <div class="biaoti_header"></div>
+  <div class="container">
+     <div class="section"> 
+           <div class="row clearfix">
+		       <div class="col-md-6 column">
+                     <p class="jieshi1">电加热功率计算器：可实现在线由质量（重量kg/流量kg/h）、比热（cal/kg℃)、目标温度℃、初始温度℃、加热时间h、散热系数直接计算出功率KW。
+                    （<strong>提示：使用密度表和比热表请注意单位的选择！</strong>）</p>
+                     </a>
+					 <table class="table3" border="1" cellpadding="3" cellspacing="0" align="center" style="border-collapse:collapse">
+                         <form action="">
+                             <tr class="table4">
+                                  <td colspan="2" align="center">质量（质量流量）计算</td>
+                             </tr>
+                             <tr>
+                                  <td class="td1">介质密度</td>
+                                  <td class="td5"><input type="text" id="text8" class="td2" autocomplete="off">
+                                       <select id="select" onChange="change()" autocomplete="off">
+                                           <option value="1">g/dm<sup>3</sup></option>
+                                           <option value="2">g/cm<sup>3</sup></option>
+                                           <option value="3">g/m<sup>3</sup></option>
+                                           <option value="4">kg/cm<sup>3</sup></option>
+                                           <option value="5">kg/dm<sup>3</sup></option>
+                                           <option value="6" selected="selected">kg/m<sup>3</sup></option>
+                                       </select>
+                                  </td>
+                             </tr>
+                             <tr>
+                                  <td class="td1">体积（体积流量）</td>
+                                  <td class="td5"><input type="text" id="text9" class="td2" autocomplete="off">
+                                       <select id="myselect" onChange="check()" autocomplete="off" class="selectpicker">
+                                           <option value="1" selected="selected">m<sup>3</sup>（m<sup>3</sup>/h）</option>
+                                           <option value="2">m<sup>3</sup>/s</option>
+                                           <option value="3">m<sup>3</sup>/min</option>
+                                           <option value="4">L/s</option>
+                                           <option value="5">L/min</option>
+                                           <option value="6">L（L/h）</option>
+                                       </select>
+                                  </td>
+                              </tr>
+                              <tr>
+                                   <td align="left" class="td1"><input type="button" value="计算（质量流量）" onClick="sal()" class="button"></td>
+                                   <td class="td5"><input type="text" id="text10" readonly class="td2">&nbsp;kg(kg/h)
+                                                   <input type="button" onMouseDown="copy()" onMouseUp="copy1()" value="复制结果" class="copyBox">
+                                   </td>
+                              </tr>
+                              <tr><td colspan="2" align="center"><input type="reset" value="数据重置" class="reset"></td></tr>
+                           </form>
+                      </table>
+					  <table class="table3" border="1" cellpadding="3" cellspacing="0" align="center" style="border-collapse:collapse; margin-top:8px">
+                           <form action="">
+	                          <tr class="table5"><td colspan=4 align="center">电加热功率计算器</td></tr>
+                              <tr>
+                                   <td align=left nowrap class="td1">质量(质量流量)</td>
+                                   <td align=left class="td5"><Input Type="Text" Id="Text1" class="td2">&nbsp kg(kg/h)</td>
+                              </tr>
+                              <tr>
+                                   <td align=left nowrap class="td1">比热</td>
+                                   <td align=left class="td5"><Input Type="Text" Id="Text2" class="td2">&nbsp kcal/kg℃</td>
+                              </tr>
+                              <tr>
+                                   <td align=left nowrap class="td1">初始温度</td>
+                                   <td align=left class="td5"><Input Type="Text" Id="Text3" class="td2">&nbsp ℃</td>
+                              </tr>
+                              <tr>
+                                   <td align=left nowrap class="td1">目标温度</td>
+                                   <td align=left class="td5"><Input Type="Text" Id="Text4" class="td2">&nbsp ℃</td>
+                              </tr>
+                              <tr>
+                                   <td align=left nowrap class="td1">加热时间</td>
+                                   <td align=left class="td5"><Input Type="Text" Id="Text5" class="td2">&nbsp h</td>
+                              </tr>
+                              <tr>
+                                   <td align=left nowrap class="td1">散热系数</td>
+                                   <td align=left class="td5"><Input Type="Text" Id="Text6" value="1.2" class="td2" onkeyup="limitInput(this);"></td>
+                              </tr>
+                              <tr>
+                                   <td align="left" nowrap class="td1"><Input Type="Button" Value="计算电加热的功率" OnClick="Calc()" class="button"></td>
+                                   <td align=left class="td5"><Input Type="Text" Id="Text7" readonly class="td2">&nbsp KW</td>
+                              </tr>
+                              <tr>
+                                   <td colspan=3 align="center"><input  type="reset" value="数据重置" class="reset"></td>
+                              </tr>
+                           </form>
+                       </table>
+					<br>
+                    <p class="table6">(散热系数一般默认为1.2，如果您的散热系数不是1.2；请您按照实际情况自行修改！)<br>
+                       <strong>公式一：<font size="3">N=Q/3595×A</font></strong>&nbsp;(式中：N:加热器功率KW ；Q：所需热量kg/h；A：裕度系数)<br>
+                       <strong>公式二：<font size="3">Q<sub>a</sub>=c<sub>a</sub>×m<sub>a</sub>×(t<sub>2</sub>-t<sub>1</sub>)</font></strong>&nbsp;
+                       (式中：Q<sub>a</sub>:干空气热量kj/h；c<sub>a</sub>:空气比热1.01kj/kg℃      （平均）； m<sub>a</sub>空气质量流量kg/h ；t:温度℃<br> <strong>
+                       公式三：m<sub>a</sub>=V×60×1.205</strong>&nbsp;(式中：V：空气流量）
+                    </p>
+		       </div>
+		       <div class="col-md-6 column">
+                     <div class="panel-group" id="panel-523528">
+				         <div class="panel panel-default">
+					        <div class="panel-heading">
+						       <a class="panel-title" data-toggle="collapse" data-parent="#panel-523528" href="#panel-element-903122">介质密度查询表</a>
+					        </div>
+					        <div id="panel-element-903122" class="panel-collapse collapse in">
+						       <div class="panel-body">
+							          <div class="sousuo_header">
+                                          <form action="" method="post">
+                                             <div class="choose-screening-input">
+                                               <input type="text" id="id1" placeholder="请输入介质" class="input1" name="searchCity"> 
+                                               <input type="button" value="密度搜索" onclick="Di();" class="input2">
+                                               <input type="text" id="di1" readonly class="input3"> kg/m<sup>3</sup>
+                                               <input type="button" value="复制结果" onMouseDown="copy2()" onMouseUp="copy3()" class="input4">
+                                               <input type="reset" value="重置" class="input5">
+                                               <div class="auto-screening auto-hidden" id="autoScreening"></div>
+                                             </div>
+                                           </form>
+                                       </div> 
+                                       <table border="1" cellpadding="5" cellspacing="0" bordercolor="#666666" align="center" style="border-collapse:collapse; background:#FFF" class="table7">
+                                              <tr>
+                                                  <td colspan=8 align="center"><strong>气体（0℃和标准大气压）及固液体（常温）的密度表kg/m<sup>3</sup></strong> </td>
+                                              </tr>
+                                              <tr>
+                                                  <td><strong>物质</strong></td> <td><strong>密度</strong></td> <td><strong>物质</strong></td><td><strong>密度</strong></td>
+                                                  <td><strong>物质</strong></td><td><strong>密度</strong></td> <td><strong>物质</strong></td> <td><strong>密度</strong></td>
+                                              </tr>
+                                              <tr> 
+                                                  <td id="a1">氢气</td>  <td>0.09</td><td id="a20">氨气</td> <td>0.7</td> <td id="a39">汽油</td> <td>700</td> <td id="a58">纯水</td> <td>1000</td> 
+                                              </tr>
+                                              <tr>
+                                                  <td id="a2">氦气</td> <td>0.18</td> <td id="a21">甲烷</td> <td>0.78</td> <td id="a40">乙醚</td> <td>710</td> <td id="a59">海水</td> <td>1030</td> 
+                                              </tr>
+                                              <tr> 
+                                                  <td id="a3">氖气</td> <td>0.9</td> <td id="a22">乙炔</td> <td>1.17</td> <td id="a41">石油</td> <td>760</td> <td id="a60">醋酸</td><td>1050</td> 
+                                              </tr>
+                                              <tr>
+                                                  <td id="a4">氮气</td><td>1.25</td> <td id="a23">一氧化碳</td> <td>1.25</td> <td id="a42">酒精</td> <td>790</td> <td id="a61">盐酸</td><td>1200</td> 
+                                              </tr>
+                                              <tr> 
+                                                  <td id="a5">氧气</td> <td>1.43</td> <td id="a24">空气</td> <td>1.29</td> <td id="a43">木精</td> <td>800</td> <td id="a62">植物油</td> <td>900~930</td> 
+                                              </tr>
+                                              <tr> 
+                                                  <td id="a6">氟气</td> <td>1.696</td> <td id="a25">一氧化氮</td> <td>1.34</td><td id="a44">煤油</td> <td>800</td> <td id="a63">矿油</td> <td>900~930</td>                                               </tr>
+                                              <tr> 
+                                                  <td id="a7">氩气</td> <td>1.78</td> <td id="a26">硫化氢</td><td>1.54</td> <td id="a45">松节油</td><td>860</td> <td id="a64">蜂蜜</td> <td>1400</td> 
+                                              </tr>
+                                              <tr> 
+                                                  <td id="a8">臭氧</td> <td>2.14</td> <td id="a27">二氧化碳</td> <td>1.98</td> <td id="a46">苯</td> <td>880</td> <td id="a65">硝酸</td> <td>1500</td>
+                                              </tr>
+                                              <tr> 
+                                                  <td id="a9">氯气</td><td>3.21</td> <td id="a28">二氧化氮</td> <td>1.98</td> <td id="a47">二硫化碳</td> <td>1290</td> <td id="a66">硫酸</td> <td>1800</td>                                               </tr>
+                                              <tr> 
+                                                  <td id="a10">氪气</td> <td>3.74</td> <td id="a29">氰</td> <td>2.34</td> <td id="a48">无水甘油</td> <td>1260</td> <td id="a67">溴</td> <td>3120</td> 
+                                              </tr> 
+                                              <tr> 
+                                                  <td id="a11">氙气</td> <td>5.89</td> <td id="a30">二氧化硫</td> <td>2.93</td><td id="a49">橄榄油</td><td>920</td> <td id="a68">水银</td> <td>14200</td>                                              </tr>
+                                              <tr> 
+                                                  <td id="a12">氡气</td> <td>9.73</td> <td id="a31">溴化氢</td> <td>3.64</td> <td id="a50">鱼肝油</td> <td>950</td> <td id="a69">液压油</td> 
+                                                  <td>850-920</td>
+                                              </tr>
+                                              <tr> 
+                                                  <td id="a13">煤气</td> <td>0.6</td> <td id="a32">碘化氢</td> <td>5.79</td> <td id="a51">蓖麻油</td> <td>970</td> <td id="a70">铸钢</td> <td>7800</td>
+                                              </tr>
+                                              <tr> 
+                                                  <td id="a14">铝</td> <td>2700</td> <td id="a33">康铜</td> <td>8900</td> <td id="a52">金</td> <td>19302</td> <td id="a71">碳钢</td> <td>7800~7850</td>
+                                              </tr>
+                                              <tr> 
+                                                  <td id="a15">镍</td> <td>8900</td> <td id="a34">铜</td> <td>8930</td> <td id="a53">银</td> <td>10490</td> <td id="a72">铸铁</td> <td>6800~7200</td>
+                                              </tr>
+                                              <tr> 
+                                                  <td id="a16">镍铬</td> <td>8400</td> <td id="a35">镁</td> <td>1738</td> <td id="a54">铅</td> <td>11340</td> <td id="a73">石灰石</td> <td>2600~3000</td>                                              </tr>
+                                              <tr> 
+                                                  <td id="a17">铬</td> <td>7190</td> <td id="a36">锌</td> <td>7133</td> <td id="a55">钨</td> <td>19254</td> <td id="a74">碳</td> <td>1900~2300</td>
+                                              </tr>
+                                              <tr> 
+                                                  <td id="a18">锰</td> <td>7430</td> <td id="a37">钠</td> <td>970</td> <td id="a56">钽</td> <td>16600</td> <td id="a75">铂</td> <td>21450</td>
+                                              </tr>
+                                              <tr> 
+                                                  <td id="a19">锡</td> <td>5765</td> <td id="a38">有机玻璃</td> <td>1180</td> <td id="a57">白磷</td> <td>1820</td> <td id="a76">沥青</td> <td>900~1500</td>                                              </tr>
+                                      </table>
+						       </div>
+					        </div>
+				         </div>
+				         <div class="panel panel-default">
+					         <div class="panel-heading">
+						        <a class="panel-title" data-toggle="collapse" data-parent="#panel-523528" href="#panel-element-705935">物质比热查询表</a>
+					         </div>
+					         <div id="panel-element-705935" class="panel-collapse collapse">
+						        <div class="panel-body">
+                                       <div class="sousuo-header">
+                                                <form action="" method="post">
+                                                  <div class="choose-screening-input1">
+                                                    <input type="text" id="ib1" placeholder="请输入介质" class="input1" name="searchCity1"> 
+                                                    <input type="button" value="比热搜索" onclick="Bi();" class="input2">
+                                                    <input type="text" id="bi1" readonly class="input3"> kcal/kg℃
+                                                    <input type="button" value="复制结果" onMouseDown="copy4()" onMouseUp="copy5()" class="input4">
+                                                    <input type="reset" value="重置" class="input5">
+                                                    <div class="auto-screening1 auto-hidden1" id="autoScreening1"></div>
+                                                  </div>
+                                                </form>
+                                    
+                                       </div>
+							           <table border="1" cellpadding="5" cellspacing="0" bordercolor="#666666" align="center" style="border-collapse:collapse; background:#FFF" class="table7">
+                                        <tr>
+                                            <td colspan=8 align="center"><strong>各种物质的比热（25℃）&nbsp;cal/(g℃)&nbsp;kcal/(kg℃)</strong> </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>物质</strong></td> <td><strong>比热</strong></td> <td><strong>物质</strong></td><td><strong>比热</strong></td>
+                                            <td><strong>物质</strong></td><td><strong>比热</strong></td> <td><strong>物质</strong></td> <td><strong>比热</strong></td>
+                                        </tr>
+                                        <tr> 
+                                            <td id="b1">氢气</td>  <td>3.41</td><td id="b16">液压油</td> <td>0.4~0.5</td> <td id="b31">硫</td> <td>0.18</td> <td id="b46">玻璃</td> <td>0.2</td> 
+                                        </tr>
+                                        <tr>
+                                            <td id="b2" nowrap>二氧化碳</td> <td>0.24</td> <td id="b17">松香水</td> <td>0.42</td> <td id="b32">冰</td> <td>0.5</td> <td id="b47">生铁</td> <td>0.13</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td id="b3">甲苯</td> <td>0.44</td> <td id="b18">萘</td> <td>0.4</td> <td id="b33">石蜡</td> <td>0.77</td> <td id="b48">黄铜</td><td>0.09</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td id="b4">苯</td><td>0.34</td> <td id="b19">甲醇</td> <td>0.6</td> <td id="b34">蜂蜡</td> <td>0.82</td> <td id="b49">银</td><td>0.056</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td id="b5">空气</td> <td>0.24</td> <td id="b20">乙醇</td> <td>0.55</td> <td id="b35">水泥</td> <td>0.19</td> <td id="b50">锡</td> <td>0.051</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td id="b6">氨</td> <td>0.52</td> <td id="b21">丙醇</td> <td>0.67</td><td id="b36">混凝土</td> <td>0.21</td> <td id="b51">锌</td> <td>0.09</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td id="b7">氯化氢</td> <td>0.2</td> <td id="b22">丁醇</td><td>0.69</td> <td id="b37">软木塞</td><td>0.49</td> <td id="b52">镍</td> <td>0.106</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td id="b8">天然气</td> <td>0.6</td> <td id="b23">丙酮</td> <td>0.51</td> <td id="b38">沥青</td> <td>0.4</td> <td id="b53">钢</td> <td>0.12</td>
+                                        </tr>
+                                        <tr> 
+                                            <td id="b9">氮气</td><td>0.25</td> <td id="b24">石油</td> <td>0.52</td> <td id="b39">硬橡胶</td> <td>0.34</td> <td id="b54">铁</td> <td>0.118</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td id="b10">水</td> <td>1</td> <td id="b25">醋酸</td> <td>0.42</td> <td id="b40">ABS塑料</td> <td>0.35</td> <td id="b55">铜</td> <td>0.092</td> 
+                                        </tr> 
+                                        <tr> 
+                                            <td id="b11">酒精</td> <td>0.58</td> <td id="b26">硫磺</td> <td>0.24</td><td id="b41">陶瓷</td><td>0.26</td> <td id="b56">汞</td> <td>0.033</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td id="b12">甘油</td> <td>0.58</td> <td id="b27">硫酸</td> <td>0.34</td> <td id="b42">岩盐</td> <td>0.22</td> <td id="b57">铝</td> <td>0.215</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td id="b13">乙醚</td> <td>0.56</td> <td id="b28">橄榄油</td> <td>0.47</td> <td id="b43">无定形碳</td> <td>0.17</td> <td></td> <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td id="b14">煤油</td><td>0.51</td> <td id="b29">蓖麻油</td> <td>0.43</td> <td id="b44">炉渣</td> <td>0.18</td><td></td> <td></td> 
+                                        </tr>
+                                        <tr>
+                                            <td id="b15">机油</td> <td>0.4</td> <td id="b30">导热油</td> <td>0.46</td> <td id="b45">石墨</td> <td>0.174</td> <td></td> <td></td>
+                                        </tr>
+                                    </table>
+						        </div>
+					         </div>
+				          </div>
+			          </div>
+		        </div>
+	       </div>  
+       </div>
+   </div>
+</div>
+<!--end section-->
+
+
+<!-- Jquery -->
+<script type="text/javascript" src="/home/js/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script type="text/javascript" src="/home/js/bootstrap.min.js"></script>
+<!-- Slick Nav -->
+<script type="text/javascript" src="/home/js/jquery.slicknav.min.js"></script>
+<!-- Magnific Popup -->
+<script type="text/javascript" src="/home/js/magnific-popup.min.js"></script>
+<!-- Wow JS -->
+<script type="text/javascript" src="/home/js/wow.min.js"></script>
+<!-- Counter JS -->
+<script type="text/javascript" src="/home/js/jquery.counterup.min.js"></script>
+<!-- Isotop JS -->
+<script type="text/javascript" src="/home/js/isotope.pkgd.min.js"></script>
+<!-- Slick Slider -->
+<script type="text/javascript" src="/home/js/slick.min.js"></script>  
+<!-- Activate JS -->
+<script type="text/javascript" src="/home/js/active.js"></script>
+
+<!--section JS-->
+<script type="text/javascript" src="js/style.js"></script>
+<script type="text/javascript" src="js/sousuochaxun.js"></script>
+
+<!--模糊查询下拉列表提示JS-->
+<script>
+	$("#id1").bind('input propertychange',function(){
+		/*这个是全部数据的数组*/
+		var arr = ['氢气','氦气','氖气','氮气','氧气','氟气','氩气', '臭氧', '氯气', '氪气', '氙气', '氡气', '煤气', '铝','镍','镍铬','铬','锰','锡','氨气','甲烷', '乙炔', '一氧化碳', '空气', 
+		'一氧化氮', '硫化氢', '二氧化碳', '二氧化氮','氰','二氧化硫','溴化氢','碘化氢','康铜','铜','镁', '锌', '钠', '有机玻璃', '汽油', '乙醚', '石油','酒精','木精','煤油','松节油','苯','二硫化碳',
+		'无水甘油','橄榄油','鱼肝油','蓖麻油','金','银','铅','钨', '钽', '白磷', '纯水', '海水', '醋酸', '盐酸', '植物油','矿油','蜂蜜', '硝酸','硫酸','溴','水银','液压油','铸钢','碳钢','铸铁', 
+		'石灰石','碳','铂','沥青'];
+		/*这个数组我是防止出现重复的数据进行数据去重复后的新数组*/
+		var arrNew = [];
+		var i;
+		for(i=0;i<arr.length;i++){
+			var arrItems=arr[i];
+		　　  /*判断元素是否存在于arrNew中，如果不存在则插入到arrNew的最后*/
+		　　  if($.inArray(arrItems,arrNew)==-1) {
+		　　　　    arrNew.push(arrItems);
+				/*console.log(arrNew);*/													
+			}
+		}
+		/*这是将input中输入的数据有关联的全部加入新生成的div中显示出来*/
+		for(i=0;i<arrNew.length;i++){
+			var arrWord = arrNew[i].toString();
+			/*console.log(arrWord);*/
+			if(((arrWord.indexOf($('#id1').val())) > -1) && ($('#id1').val().length > 0)){
+				var addArrWord = "<div class=auto-screening-prompt>" + arrWord + "</div>";
+				$("#autoScreening").append(addArrWord);
+				$("#autoScreening").removeClass("auto-hidden");
+			}
+		}
+		/*将显示出来的div的内容去重复，input内容变动时去重复*/
+		$(".auto-screening-prompt").each(function(){
+			if($(this).text().indexOf($('#id1').val()) < 0){
+				$(this).remove();
+			}
+			else if($('#id1').val().length == 0){
+				$("#autoScreening").addClass("auto-hidden");
+				$(".auto-screening-prompt").remove();
+			}
+		});	
+		/*弹出的提示div去重复*/
+		$(".auto-screening-prompt").each(function(i, iText){
+			var iTextHtml = iText.innerHTML;
+			$(".auto-screening-prompt").each(function(j, jText){
+				var jTextHtml = jText.innerHTML;
+				if (i < j && iTextHtml == jTextHtml) {
+					$(this).remove();
+				}
+			});
+		});    
+		/*点击div获取文本传值*/
+		$(".auto-screening-prompt").on("click",function(){
+			$("#id1").val($(this).text());
+			$("#autoScreening").addClass("auto-hidden");
+			$(".auto-screening-prompt").remove();
+		})				
+	})
+</script>
+<script>
+	$("#ib1").bind('input propertychange',function(){
+		/*这个是全部数据的数组*/
+		var arr = ['氢气','二氧化碳','甲苯','苯','空气','氨','氯化氢', '天然气', '氮气', '水', '酒精', '甘油', '乙醚', '煤油','机油','液压油','松香水','萘','甲醇','乙醇','丙醇', '丁醇', '丙酮', '石油', 
+		'醋酸', '硫磺', '硫酸', '橄榄油','蓖麻油','导热油','硫','冰','石蜡','蜂蜡','水泥', '混凝土', '软木塞', '沥青', '硬橡胶', 'ABS塑料', '陶瓷','岩盐','无定形碳','炉渣','石墨','玻璃','生铁',
+		'黄铜','银','锡','锌','镍','钢','铁','铜', '汞', '铝'];
+		/*这个数组我是防止出现重复的数据进行数据去重复后的新数组*/
+		var arrNew = [];
+		var i;
+		for(i=0;i<arr.length;i++){
+			var arrItems=arr[i];
+		　　  /*判断元素是否存在于arrNew中，如果不存在则插入到arrNew的最后*/
+		　　  if($.inArray(arrItems,arrNew)==-1) {
+		　　　　    arrNew.push(arrItems);
+				/*console.log(arrNew);*/													
+			}
+		}
+		/*这是将input中输入的数据有关联的全部加入新生成的div中显示出来*/
+		for(i=0;i<arrNew.length;i++){
+			var arrWord = arrNew[i].toString();
+			/*console.log(arrWord);*/
+			if(((arrWord.indexOf($('#ib1').val())) > -1) && ($('#ib1').val().length > 0)){
+				var addArrWord = "<div class=auto-screening-prompt1>" + arrWord + "</div>";
+				$("#autoScreening1").append(addArrWord);
+				$("#autoScreening1").removeClass("auto-hidden1");
+			}
+		}
+		/*将显示出来的div的内容去重复，input内容变动时去重复*/
+		$(".auto-screening-prompt1").each(function(){
+			if($(this).text().indexOf($('#ib1').val()) < 0){
+				$(this).remove();
+			}
+			else if($('#ib1').val().length == 0){
+				$("#autoScreening1").addClass("auto-hidden1");
+				$(".auto-screening-prompt1").remove();
+			}
+		});	
+		/*弹出的提示div去重复*/
+		$(".auto-screening-prompt1").each(function(i, iText){
+			var iTextHtml = iText.innerHTML;
+			$(".auto-screening-prompt1").each(function(j, jText){
+				var jTextHtml = jText.innerHTML;
+				if (i < j && iTextHtml == jTextHtml) {
+					$(this).remove();
+				}
+			});
+		});    
+		/*点击div获取文本传值*/
+		$(".auto-screening-prompt1").on("click",function(){
+			$("#ib1").val($(this).text());
+			$("#autoScreening1").addClass("auto-hidden1");
+			$(".auto-screening-prompt1").remove();
+		})				
+	})
+</script>
+
+</body>
+</html>
