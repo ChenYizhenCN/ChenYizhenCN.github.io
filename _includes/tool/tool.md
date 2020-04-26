@@ -1,3 +1,3 @@
 >Math
 
-[函数图像](include/tool/HanShu.html)
+[函数图像](_includes/tool/HanShu.html)
