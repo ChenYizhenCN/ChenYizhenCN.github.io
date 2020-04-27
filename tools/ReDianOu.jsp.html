@@ -1,0 +1,128 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>在线PT100分度表热电偶热电阻分度值互查互算</title>
+    <meta name="content-type" content="text/html;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+	<meta name="keywords" content="PT100,分度表,PT1000,CU50,K型,J型,T型,S型,R型,B型,N型,E型,热电偶,热电阻,分度值,在线查询,互算,在线分度表,RTD,TC"/>
+	<meta name="description" content="本网站实现在线PT100、PT1000、K、J、T、S、R、B、N、E等分度表在线互查，热电偶热电阻分度值任意值之间的互算。依据ITS-90标准!"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no"> 
+	<link rel="icon" href="static/images/icon.png" type="image/x-icon">
+	<link rel="stylesheet" href="index.css" tppabs="http://www.nanicontrol.cn/static/css/index.css" type="text/css">
+    <link rel="stylesheet" href="nanyi.css" tppabs="http://www.nanicontrol.cn/static/css/nanyi.css" type="text/css"/>
+    <link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.nanicontrol.cn/static/css/bootstrap.min.css" type="text/css"/>
+    <script type="text/javascript" src="jquery.min.js" tppabs="http://www.nanicontrol.cn/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap.min.js" tppabs="http://www.nanicontrol.cn/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="index.js" tppabs="http://www.nanicontrol.cn/static/js/index.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+	    $('#list li a').each(function(){
+		  if($($(this))[0].href==String(window.location)){
+		    $('#list li').removeClass("current");
+			$(this).parent().addClass('current');
+		  }	
+		});
+      });
+    </script>
+  </head>
+  
+  <body>
+    <div id="menu">
+	  <nav class="navbar navbar-default" role="navigation">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" target="_blank" href="javascript:if(confirm('http://www.nanicontrol.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.nanicontrol.com/'" tppabs="http://www.nanicontrol.com/">
+	        <img src="logo.png" tppabs="http://www.nanicontrol.cn/static/images/logo.png">
+	      </a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+	      <ul class="nav navbar-nav" id="list">
+	        <li><a href="pressure.do.htm" tppabs="http://www.nanicontrol.cn/page/pressure.do">压力单位换算</a></li>
+	        <li><a href="gonglv.do.htm" tppabs="http://www.nanicontrol.cn/page/gonglv.do">功率单位换算</a></li>
+	        <li><a href="dianjiare.do.htm" tppabs="http://www.nanicontrol.cn/page/dianjiare.do">电加热功率计算</a></li>
+	        <li><a href="temp.do.htm" tppabs="http://www.nanicontrol.cn/page/temp.do">温度单位换算</a></li>
+	        <li><a href="mianji.do.htm" tppabs="http://www.nanicontrol.cn/page/mianji.do">面积单位换算</a></li>
+	        <li><a href="gongneng.do.htm" tppabs="http://www.nanicontrol.cn/page/gongneng.do">功与能量热量单位</a></li>
+	        <li><a href="zhiliang.do.htm" tppabs="http://www.nanicontrol.cn/page/zhiliang.do">体积流量质量流量</a></li>
+	        <li><a href="liuliang.do.htm" tppabs="http://www.nanicontrol.cn/page/liuliang.do">在线流量计算</a></li>
+	        <li><a href="monixinhao.do.htm" tppabs="http://www.nanicontrol.cn/page/monixinhao.do">模拟值与输出值</a></li>
+	        <li class="current"><a href="index.jsp.htm" tppabs="http://www.nanicontrol.cn/index.jsp">热电偶热电阻分度值</a></li>
+	      </ul>
+	    </div>
+	    <a href="javascript:void(0);" onclick="AddFavorite('南仪实业（上海）有限公司','http://www.nanicontrol.com/')" style="text-decoration:none;">
+	      <img src="shoucang.jpg" tppabs="http://www.nanicontrol.cn/static/images/shoucang.jpg" style="margin:50px 0 0 25px" class="hidden-xs">
+	    </a>
+	  </nav>
+	</div>
+	<div class="container">
+	  <div class="col-md-6 col-md-offset-4 col-sm-10 col-xs-12 pt">
+	    <table border="0" cellspacing="0" cellpadding="0" class="tablePt">
+	      <tr class="thead">
+	        <td colspan="2">热电阻(RTD)热电偶(TC)分度值在线互查</td>
+	      </tr>
+	      <tr class="tbody_tp" style="background:rgb(220,220,220);">
+	        <td colspan="2">
+	          <span>温度:</span><input type="text" id="change"/> ℃
+	          <span><input type="reset" value="重置" id="reset"/></span>
+	        </td>
+	      </tr>
+	      <tr class="tbody" style="background:rgb(235,235,235);">
+	        <td>PT100<p>(-200℃~+850℃)</p></td>
+	        <td><input type="text" id="ret"/>&nbsp; Ω</td>
+	      </tr>
+	      <tr class="tbody" style="background:rgb(220,220,220);">
+	        <td>PT1000<p>(-50℃~+300℃)</p></td>
+	        <td><input type="text" id="pret"/>&nbsp; Ω</td>
+	      </tr>
+	      <tr class="tbody" style="background:rgb(235,235,235);">
+	        <td>K型<p>(-270℃~+1370℃)</p></td>
+	        <td><input type="text" id="kret"/>&nbsp; mV</td>
+	      </tr>
+	      <tr class="tbody" style="background:rgb(220,220,220);">
+	        <td>J型<p>(-210℃~+1200℃)</p></td>
+	        <td><input type="text" id="jret"/>&nbsp; mV</td>
+	      </tr>
+	      <tr class="tbody" style="background:rgb(235,235,235);">
+	        <td>T型<p>(-270℃~+400℃)</p></td>
+	        <td><input type="text" id="tret"/>&nbsp; mV</td>
+	      </tr>
+	      <tr class="tbody" style="background:rgb(220,220,220);">
+	        <td>S型<p>(-50℃~+1760℃)</p></td>
+	        <td><input type="text" id="sret"/>&nbsp; mV</td>
+	      </tr>
+	      <tr class="tbody" style="background:rgb(235,235,235);">
+	        <td>R型<p>(-50℃~+1760℃)</p></td>
+	        <td><input type="text" id="rret"/>&nbsp; mV</td>
+	      </tr>
+	      <tr class="tbody" style="background:rgb(220,220,220);">
+	        <td>B型<p>(+100℃~+1820℃)</p></td>
+	        <td><input type="text" id="bret"/>&nbsp; mV</td>
+	      </tr>
+	      <tr class="tbody" style="background:rgb(235,235,235);">
+	        <td>N型<p>(-270℃~+1300℃)</p></td>
+	        <td><input type="text" id="nret"/>&nbsp; mV</td>
+	      </tr>
+	      <tr class="tbody" style="background:rgb(220,220,220);">
+	        <td>E型<p>(-270℃~+1000℃)</p></td>
+	        <td><input type="text" id="eret"/>&nbsp; mV</td>
+	      </tr>
+	      <tr class="tfoot" style="background:rgb(248,248,248)">
+	        <td colspan="2">
+	          <p>铂热电阻R0=100 &nbsp; 依据标准：ITS-90 (注:overrun为范围超限)</p>
+	          <p style="font-size:14px">
+	             ICP备案号：<a target="_blank" href="javascript:if(confirm('http://www.beian.miit.gov.cn/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.beian.miit.gov.cn/'" tppabs="http://www.beian.miit.gov.cn/">沪ICP备18025813号-2</a><a target="_blank" href="javascript:if(confirm('http://www.nanicontrol.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.nanicontrol.com/'" tppabs="http://www.nanicontrol.com/">&nbsp;&nbsp;&nbsp;&nbsp;网站首页</a>
+	          </p>
+	        </td>
+	      </tr>
+	    </table>
+	  </div>
+	</div>
+  </body>
+</html>

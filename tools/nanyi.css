@@ -1,0 +1,476 @@
+.table3{
+	width:100%;
+    }
+.td2{
+	height:2em;
+	width:10em;
+	padding:0.5em;
+	margin-left:0.2em;
+    }
+.td5{
+	height:2.5em;
+    }
+.table5{
+	height:2.5em;
+	font-size:1.5em;
+	background:#F63;
+	color:rgb(246,246,246);
+	}
+.table4{
+	height:2em;
+	font-size:1.2em;
+	background:#F63;
+	color:rgb(246,246,246);
+	}
+.table7{
+	width:100%;
+	text-align:center;
+	border:1px solid rgb(200,200,200);
+	border-collapse:collapse; 
+	background:#FFFFFF;
+	}
+.table7 tr td{
+	padding:2px 0;
+	}
+.sousuo_header{
+	border:1px solid #FA8C32;
+	padding:0.8em 0.2em 0 0.2em;
+	margin-bottom:0.2em;
+	}
+.input1{
+	width:20%;
+	}
+.input2{
+	margin-left:0.2em;
+	}
+.input3{
+	width:22%;
+	}
+.row clearfix{
+	background:#CCC;
+	}
+.panel-heading{
+	text-align:center;
+	}
+.panel-heading a{
+	text-decoration:none;
+	}
+.section{
+	border:0px solid #F05F20;
+	padding:1em;
+	background:#FCEBE4;
+	width:100%;
+	}
+.table1{
+	width:100%;
+	background:rgb(240,240,240);
+	border:1px solid rgb(220,220,220);
+	}
+.table2{
+	background:rgb(47,168,225);
+	border-bottom:2px solid rgba(0,79,197,0.8);
+	color:#ffffff;
+	}
+.table2>td{
+	padding:1em;
+	}
+.td3{
+	height:1.8em;
+	margin:0.6em;
+	}
+.td4{
+	width:5em;
+	}
+.td1{
+	width:6em;
+	margin:0.6em;
+	}
+.tdl{
+	width:6em;
+	margin:0.6em
+	}
+.tdll{
+	width:5em;
+	}
+.table-t{
+	padding:0.1em;
+	width:10em;
+	text-align:center;
+	}
+.table-l{
+	padding:0.1em;
+	width:8em;
+	text-align:center;
+	}
+.reset{
+	margin:0.3em;
+	padding:0 0.3em 0 0.3em;
+	}
+.container .button{
+	padding:0 0.3em 0 0.3em;
+	}
+.td6{
+	margin-bottom:0.2em;
+	margin-left:5px;
+	height:1.6em;
+	width:8em;
+	}
+.table-n{
+	font-size:1.3em;
+	color:#F00;
+	}
+.jieshi2{
+	margin-top:0.5em;
+	}
+.jieshi{
+	color:#ffffff;
+	background:rgb(47,168,225);
+	height:5em;
+	}
+.jieshi>td{
+	padding:1em;
+	}
+.table_liuliang{
+	background:rgb(240,240,240);
+	border:1px solid rgb(180,180,180);
+	border-collapse:collapse;
+	}
+.table_body{
+	text-align:center;
+	padding:0.6em;
+	}
+.table_header{
+	text-align:center;
+	font-size:1.8em;
+	font-weight:bold;
+	padding:0.8em;
+	background:rgb(47,168,225);
+	color:#FFFFFF;
+	}
+.table_footer{
+	text-align:center;
+	padding:0.8em;
+	}
+.table_fang,.table_yuan{
+	margin:0.2em;
+	}
+.sousuo_header1{
+	padding:1em 0.6em 0.1em 0.6em;
+	margin-bottom:0.2em;
+	background:rgb(47,168,225);
+	}
+select{
+	border:1px solid #F60;
+	padding:0 5px;
+	height:1.6em;
+	}
+input[type="button"]{
+	padding:0 8px;
+}
+input[type="reset"]{
+	padding:0 8px;
+}
+.footer a{
+	color:#ff6400;
+}
+.footer p{
+	text-align:center;
+	color:#000;
+}
+/*主体内容*/
+body{
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+	background-image:url("index.jpg")/*tpa=http://www.nanicontrol.cn/static/images/index.jpg*/;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content{
+	flex:1;
+}
+/*end*/
+
+/*密度模糊搜索部分*/
+   .choose-screening-input{
+		position: relative;
+	}
+	.auto-screening{
+		position: absolute;
+		z-index: 9;
+		overflow: hidden;
+		border: 1px solid #cccccc;
+		border-bottom: 0;
+		border-top: 0;
+	}
+	.auto-screening-prompt{
+		width: 200px;
+		height: 30px;
+		line-height: 30px;
+		border-bottom: 1px solid #cccccc;
+		background: #ffffff;
+		padding: 0 10px;
+	}
+	.auto-screening-prompt:hover{
+		background: #cccccc;
+	}
+/*end*/
+/*比热模糊搜索部分*/
+   .choose-screening-input1{
+		position: relative;
+	}
+	.auto-screening1{
+		position: absolute;
+		z-index: 9;
+		overflow: hidden;
+		border: 1px solid #cccccc;
+		border-bottom: 0;
+		border-top: 0;
+	}
+	.auto-screening-prompt1{
+		width: 200px;
+		height: 30px;
+		line-height: 30px;
+		border-bottom: 1px solid #cccccc;
+		background: #ffffff;
+		padding: 0 10px;
+	}
+	.auto-screening-prompt1:hover{
+		background: #cccccc;
+	}
+/*end*/
+
+/*左侧换算列表*/
+.current{
+	background:rgba(255, 255, 255, .2)
+}
+#menu {
+    position: fixed;
+    width: 220px;
+    background:rgba(0,0,0,0.8);
+    height: 100%;
+    left: 0;
+    font-family:'Raleway', sans-serif;
+}
+#menu .navbar-toggle {
+    margin-top: 11px;
+}
+#menu .navbar-brand {
+    padding-top: 10px;
+    padding-bottom: 40%;
+    padding-left: 30px;
+}
+#menu .navbar {
+    border-radius: 0;
+    background: transparent;
+    border: none;
+    padding-top: 20%;
+}
+#menu .navbar-collapse {
+    padding-left: 20px;
+}
+#menu .navbar-header, #menu .navbar-nav, #menu .navbar-nav li {
+    float: none;
+    margin-left: -10px;
+}
+#menu .navbar-default .navbar-nav>li>a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing:1.5px;
+    text-transform: uppercase;
+    padding-left: 30px;
+}
+#menu .navbar-default .navbar-nav>li>a:hover {
+    background: rgb(0, 0, 0);
+}
+#menu .navbar-nav {
+    margin: 7.5px -15px;
+}
+@media only screen and (max-width: 871px){
+	.container{
+	  margin-top:100px;
+	}
+	.footer{
+	  margin-top:50px;
+	}
+	.table-t{
+      font-size:12px;
+    }
+    .container .button{
+      font-size:12px;
+      margin-left:15px;
+    }
+    .container .reset{
+      font-size:14px
+    }
+    .table1{
+      font-size:12px;
+    }
+    .table7{
+	  font-size:12px;
+	}
+    .table_liuliang{
+      font-size:10px;
+    }
+    #menu {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        z-index: 99999;
+    }
+    #menu .navbar {
+        padding-top: 20px;
+    }
+    #menu .navbar-brand {
+        padding-bottom: 0;
+    }
+    .container {
+        margin-left: 0;
+    }     
+}
+@media only screen and (min-width: 481px) and (max-width: 991px){
+	.container{
+	  margin-top:100px;
+	}
+	.footer{
+	  margin-top:50px;
+	}
+	.table-l{
+	  font-size:12px;
+	}
+	.table-t{
+      font-size:12px;
+    }
+    .container .button{
+      font-size:12px;
+      margin-left:15px;
+    }
+    .container .reset{
+      font-size:14px
+    }
+    .table1{
+      font-size:12px;
+    }
+    .table7{
+	  font-size:12px;
+	}
+    .table_liuliang{
+      font-size:10px;
+    }
+    #menu {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        z-index: 99999;
+    }
+    #menu .navbar {
+        padding-top: 20px;
+    }
+    #menu .navbar-brand {
+        padding-bottom: 0;
+    }
+    .container {
+        margin-left: 0;
+    }
+    #menu .navbar-nav a,#menu .navbar-nav li{
+        float: none;
+    }
+}
+
+@media only screen and (min-width: 871px) and (max-width: 991px){
+	.container{
+	  margin-top:100px;
+	}
+	.footer{
+	  margin-top:50px;
+	}
+	.table7{
+	  font-size:14px;
+	}
+	.table-l{
+	  font-size:14px;
+	}
+	.table-t{
+      font-size:14px;
+    }
+    .container .button{
+      font-size:14px;
+      margin-left:15px;
+    }
+    .container .reset{
+      font-size:16px
+    }
+    #menu .navbar-nav a,#menu .navbar-nav li{
+        float: left;
+    }
+    #menu .navbar-header{
+        float: left;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+	.container{
+	  width:100%;
+	  position:absolute;
+	  top:50%;
+	  left:50%;
+	  -webkit-transform:translate(-50%,-50%);
+	  -moz-transform:translate(-50%,-50%);
+	  -transform:translate(-50%,-50%);
+    }
+	.table7{
+	  font-size:14px;
+	}
+	.table-l{
+	  font-size:16px;
+	}
+	.table-t{
+      font-size:16px;
+    }
+    .container .button{
+      font-size:14px;
+      margin-left:15px;
+    }
+    .container .reset{
+      font-size:16px
+    }
+    #menu .navbar-header, #menu .navbar-nav, #menu .navbar-nav li{
+        float: none;
+    }
+}
+@media only screen and (min-width: 1200px){
+	.container{
+	  width:100%;
+	  position:absolute;
+	  top:50%;
+	  left:50%;
+	  -webkit-transform:translate(-50%,-50%);
+	  -moz-transform:translate(-50%,-50%);
+	  -transform:translate(-50%,-50%);
+    }
+	.table7{
+	  font-size:14px;
+	}
+	.table-l{
+	  font-size:16px;
+	}
+	.table-t{
+      font-size:16px;
+    }
+    .container .button{
+      font-size:16px;
+      margin-left:15px;
+    }
+    .container .reset{
+      font-size:16px
+    }
+    #menu .navbar-header, #menu .navbar-nav, #menu .navbar-nav li{
+        float: none;
+    }
+}
