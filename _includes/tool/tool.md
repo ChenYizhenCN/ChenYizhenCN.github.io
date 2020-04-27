@@ -24,3 +24,4 @@
 
 [模拟信号](MoNiXinHao.html)
 
+[热电偶](ReDianOu.jsp.html)
