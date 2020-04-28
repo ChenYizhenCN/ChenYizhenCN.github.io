@@ -5,6 +5,7 @@
 
 [面积](MianJi.html)
 
+[方程解](http://eqworld.ipmnet.ru/)
 
 >Physics
 
@@ -24,4 +25,4 @@
 
 [模拟信号](MoNiXinHao.html)
 
-[热电偶](ReDianOu.jsp.html)
+
