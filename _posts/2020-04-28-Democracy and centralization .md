@@ -2,9 +2,9 @@
 layout:     post
 title:      "Democracy and centralization"
 subtitle:   " \"随笔\""
-date:       2020-04-23 09:00:00
+date:       2020-04-28 10:00:00
 author:     "Eric"
-header-img: "img/post-bg-PublicFigure.jpg"
+header-img: "img/home-bg-art.jpg"
 catalog: true
 tags:
     - 随笔
