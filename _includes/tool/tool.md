@@ -5,7 +5,7 @@
 
 [面积](MianJi.html)
 
-[方程解](http://eqworld.ipmnet.ru/)
+[方程解](eqworld/eqworld.ipmnet.ru/index.html)
 
 >Physics
 
