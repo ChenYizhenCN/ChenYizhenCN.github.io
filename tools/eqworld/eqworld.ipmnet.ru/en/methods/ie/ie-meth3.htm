@@ -1,0 +1,1130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+<head>
+  <meta http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+  <title>Solution Method for Nonlinear Integral Equations - EqWorld</title>
+  <meta name="Keywords" content="integral, equations, integro-functional,
+    integro-differential, equation, method, solution, nonlinear">
+  <meta name="Description" content="Solution method for nonlinear integral,
+    integro-functional, and integro-differential equations">
+  <link rel="stylesheet" href="../../../css/main.css" tppabs="http://eqworld.ipmnet.ru/css/main.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="ie-meth3.css" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3.css">
+</head>
+
+<body><table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:0.5em; margin:0px">
+<table width="100%" bgcolor="#0FD1BA" cellpadding=4>
+<tr>
+  <td ALIGN=Center VALIGN=Middle WIDTH=160>
+    <a href="../../../index-1.htm" tppabs="http://eqworld.ipmnet.ru/index.htm"><img SRC="../../../images/eqworld-logo-small.gif" tppabs="http://eqworld.ipmnet.ru/images/eqworld-logo-small.gif" ALT="EqWorld logo" WIDTH=155 HEIGHT=81 border=0></a></td>
+  <td align=Center valign=Middle>
+    <p class=ew1>EqWorld</p>
+    <p class=ew2>The World of Mathematical Equations</p></td>
+  <td WIDTH=155 ALIGN=Center VALIGN=Middle>
+    <img src="../../../images/ipmlogo24b.gif" tppabs="http://eqworld.ipmnet.ru/images/ipmlogo24b.gif" width="86" height="80"
+    alt="IPM Logo" border="0" align="middle"></td>
+</tr>
+</table>
+
+<p class=widemenu>
+<a href="../../../index-1.htm" tppabs="http://eqworld.ipmnet.ru/index.htm">Home Page</a>
+<a class=quad href="../../solutions.htm" tppabs="http://eqworld.ipmnet.ru/en/solutions.htm">Exact Solutions</a>
+<a class=quad href="../../methods.htm" tppabs="http://eqworld.ipmnet.ru/en/methods.htm">Methods</a>
+<a class=quad href="../../software.htm" tppabs="http://eqworld.ipmnet.ru/en/software.htm">Software</a>
+<a class=quad href="../../education.htm" tppabs="http://eqworld.ipmnet.ru/en/education.htm">Education</a>
+<a class=quad href="../../authors.htm" tppabs="http://eqworld.ipmnet.ru/en/authors.htm">For Authors</a>
+<a class=quad href="../../forums.htm" tppabs="http://eqworld.ipmnet.ru/en/forums.htm">Math Forums</a></p>
+
+<div style="font-size:11pt">
+<p style="margin-top:.5em">
+<h2>A Solution Method for Some Classes of Nonlinear
+Integral, Integro-Functional, and
+Integro-Differential Equations</h2>
+<!--l. 33--><p class="noindent">
+<!--l. 34--><p class="noindent"><span
+class="cmsy-10x-x-120">©</span>&nbsp;2007  A.&nbsp;D.&nbsp;Polyanin, A.&nbsp;I.&nbsp;Zhurov</div>
+
+<div style="margin-top:1em;font-size:80%">Published in <em>Doklady Mathematics</em> as:
+A.&nbsp;D.&nbsp;Polyanin, A.&nbsp;I.&nbsp;Zhurov,
+<a href="javascript:if(confirm('http://www.springerlink.com/content/3633k16l60l87590/  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.springerlink.com/content/3633k16l60l87590/'" tppabs="http://www.springerlink.com/content/3633k16l60l87590/">Exact solutions
+to some classes of nonlinear integral, integro-functional, and integro-differential equations</a>,
+<a href="javascript:if(confirm('http://www.springerlink.com/content/119871/  \n\n¸ÃÎÄ¼þÎÞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·þÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.springerlink.com/content/119871/'" tppabs="http://www.springerlink.com/content/119871/"><em>Doklady Mathematics</em></a>, 2008, Vol.&nbsp;77, No.&nbsp;2, pp. 315-319.
+</div>
+
+<div class="center">
+<!--l. 37--><p class="noindent"><span class="cmbx-12">Abstract</span></div>
+      <!--l. 38--><p class="abstract">
+      A method for constructing exact solutions to some classes of Urysohn-type integral
+equations (with constant limits of integration) is suggested. It generalizes the method
+for solving nonlinear integral equations of the second kind with a degenerate kernel.
+The method is based on the solution of the auxiliary linear equation obtained by
+discarding  the  nonlinear  terms.  Some  new  solutions  to  specific  nonlinear  integral
+equations of the first and second kind are obtained. The generalization of the method
+to some nonlinear integro-functional, and integro-differential equations is discussed
+and illustrative examples are given.</p>
+
+   <h3 class="sectionHead"><span class="titlemark">1.</span> <a
+ id="x1-10001"></a>Introduction</h3>
+<!--l. 53--><p class="noindent">There are a considerable number of methods for finding exact solutions to various classes of
+linear integral equations (e.g., see [1&#8211;20]). Numerous exact solutions obtained with these
+methods have been collected and systematized in the handbook&nbsp;[20]. Unlike linear
+equations, only a small number of exact solutions to nonlinear integral equations are
+known [4,&nbsp;19,&nbsp;20].
+
+<!--l. 60--><p class="noindent">
+   <h3 class="sectionHead"><span class="titlemark">2.</span> <a
+ id="x1-20002"></a>Description of the method for nonlinear integral equations</h3>
+<!--l. 62--><p class="noindent">To make it easier to understand, let us first present the method as applied to constructing
+exact solutions to nonlinear integral equations. After that, its generalization to more
+complex equations will be given.
+<!--l. 66--><p class="indent"> Let us consider nonlinear integral equations with constant limits of integration
+(Urysohn-type equations) of the form
+<!--l. 73--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-0x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-0x.png" alt="         &#x222B; b[              &#x2211;n                  ]
+&#x03B2;y (x) +    K  (x, t)y (t) +     &#x03C6;m (x)&#x03A8;m (t,y(t))  dt = f(x).
+          a               m=1
+" class="math-display"></center>
+<!--l. 73--><p class="noindent"></td><td width="1" valign="middle">(1)</td></tr></table>
+<!--l. 73--><p class="noindent">To <span
+class="cmmi-12">&#x03B2; </span>= 0 there correspond equations of the first kind and to <span
+class="cmmi-12">&#x03B2; </span>= 1, equations of the second
+kind. In the special case <span
+class="cmmi-12">&#x03C6;</span><sub><span
+class="cmr-8">1</span></sub>(<span
+class="cmmi-12">x</span>) = <img
+src="ie-meth3-1x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-1x.png" alt="..."  class="cdots"> = <span
+class="cmmi-12">&#x03C6;</span><sub><span
+class="cmmi-12">n</span></sub>(<span
+class="cmmi-12">x</span>) = 0, equation&nbsp;(1) becomes a linear integral
+equation. If <span
+class="cmmi-12">&#x03B2; </span>= 1 and <span
+class="cmmi-12">K</span>(<span
+class="cmmi-12">x,t</span>) = 0, it is a nonlinear integral equation with a
+degenerate kernel. In the latter case, solutions to equation&nbsp;(1) are sought in the
+form of a finite sum, <span
+class="cmmi-12">y</span>(<span
+class="cmmi-12">x</span>) = <span
+class="cmmi-12">f</span>(<span
+class="cmmi-12">x</span>) + <span
+class="cmex-12">&#x2211;</span>&nbsp;<span
+class="cmmi-12">A</span><sub><span
+class="cmmi-12">m</span></sub><span
+class="cmmi-12">&#x03C6;</span><sub><span
+class="cmmi-12">m</span></sub>(<span
+class="cmmi-12">x</span>), where the constants&nbsp;<span
+class="cmmi-12">A</span><sub><span
+class="cmmi-12">m</span></sub> are
+determined by solving a system of nonlinear algebraic (transcendental) equations
+[4,&nbsp;19,&nbsp;20].
+<!--l. 83--><p class="indent"> Consider the auxiliary linear integral equation
+<!--l. 88--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-2x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-2x.png" alt="         &#x222B; b
+&#x03B2;Y (x ) +   K (x,t)Y (t)dt = f(x),
+          a
+" class="math-display"></center>
+<!--l. 88--><p class="noindent"></td><td width="1" valign="middle">(2)</td></tr></table>
+<!--l. 88--><p class="noindent">which is obtained from (1) by discarding the nonlinear terms. Suppose now that
+equation&nbsp;(2) can be solved for any function&nbsp;<span
+class="cmmi-12">f</span>(<span
+class="cmmi-12">x</span>) from some class of functions&nbsp;<span
+class="cmmi-12">L</span><sub><span
+class="cmmi-12">F</span> </sub>. Let
+<span
+class="cmmi-12">Y</span><sub><span
+class="cmmi-12">f</span></sub>(<span
+class="cmmi-12">x</span>) denote a solution to the truncated equation&nbsp;(2).
+<!--l. 94--><p class="indent"> Let <span
+class="cmmi-12">&#x03C6;</span><sub><span
+class="cmmi-12">m</span></sub>(<span
+class="cmmi-12">x</span>) <span
+class="cmsy-10x-x-120"><img
+src="cmsy10-c-32.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/cmsy10-c-32.png" alt="&#x2208;" class="10-120x-x-32"> </span><span
+class="cmmi-12">L</span><sub><span
+class="cmmi-12">F</span> </sub> (<span
+class="cmmi-12">m </span>= 1<span
+class="cmmi-12">,</span> <span
+class="cmmi-12">&#x2026;</span><span
+class="cmmi-12">, n</span>). Then the function
+
+<!--l. 99--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-3x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-3x.png" alt="                 n
+y(x ) = Y (x ) + &#x2211;  A  Y   (x),
+        f      m=1   m  &#x03C6;m
+" class="math-display"></center>
+<!--l. 99--><p class="noindent"></td><td width="1" valign="middle">(3)</td></tr></table>
+<!--l. 99--><p class="noindent">solves the original nonlinear equation&nbsp;(1). The function <span
+class="cmmi-12">Y</span><sub><span
+class="cmmi-12">&#x03C6;</span><sub><span
+class="cmmi-12">m</span></sub></sub>(<span
+class="cmmi-12">x</span>) in&nbsp;(3) is a solution to the
+linear equation&nbsp;(2) where <span
+class="cmmi-12">f</span>(<span
+class="cmmi-12">x</span>) is substituted by&nbsp;<span
+class="cmmi-12">&#x03C6;</span><sub><span
+class="cmmi-12">m</span></sub>(<span
+class="cmmi-12">x</span>). Inserting (3) into&nbsp;(1), collecting
+the coefficients of <span
+class="cmmi-12">f</span>(<span
+class="cmmi-12">x</span>), <span
+class="cmmi-12">&#x03C6;</span><sub><span
+class="cmr-8">1</span></sub>(<span
+class="cmmi-12">x</span>),&nbsp;&#x2026;,&nbsp;<span
+class="cmmi-12">&#x03C6;</span><sub><span
+class="cmmi-12">n</span></sub>(<span
+class="cmmi-12">x</span>), and equating the coefficients to zero, one arrives
+at the following system of nonlinear algebraic (transcendental) equations for the
+constants&nbsp;<span
+class="cmmi-12">A</span><sub><span
+class="cmmi-12">m</span></sub>:
+<!--l. 111--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-4x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-4x.png" alt="      &#x222B; b    (          &#x2211;n         )
+Am  +    &#x03A8;m   t, Yf(t) +   AjY &#x03C6;j(t)  dt = 0,     m = 1, ...,n.
+       a                j=1
+" class="math-display"></center>
+<!--l. 111--><p class="noindent"></td><td width="1" valign="middle">(4)</td></tr></table>
+<!--l. 111--><p class="noindent">
+<!--l. 113--><p class="indent"> In general, formulas (3)&#8211;(4) may determine several (or infinitely many) solutions to the
+nonlinear integral equation&nbsp;(1). In the special case of a linear equation&nbsp;(1) with
+&#x03A8;<sub><span
+class="cmmi-12">m</span></sub>(<span
+class="cmmi-12">t,y</span>) = <span
+class="cmmi-12">&#x03C6;</span><sub><span
+class="cmmi-12">m</span></sub>(<span
+class="cmmi-12">t</span>)<span
+class="cmmi-12">y</span>, the algebraic system&nbsp;(4) is linear and determines (in the nondegenerate
+case) a single solution.
+<!--l. 118--><p class="indent"> <span
+class="cmbx-12">Remark 1. </span><span
+class="cmr-12">The above method may be used for approximate solution of nonlinear integral equations</span>
+<span
+class="cmr-12">of the more general case</span>
+   <center class="math-display">
+<img
+src="ie-meth3-5x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-5x.png" alt="       &#x222B;
+&#x03B2;y(x)+   b[K (x,t)y(t) + &#x03A8;(x,t,y(t))]dt = f (x)
+        a  " class="math-display"></center> <span
+class="cmr-12">by</span>
+<span
+class="cmr-12">suitably approximating the nonlinear part of the kernel as &#x03A8;(</span><span
+class="cmmi-12">x,t,y</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">t</span><span
+class="cmr-12">)) </span><span
+class="cmsy-12">&#x2248;</span><span
+class="cmex-12">&#x2211;</span>&nbsp;<span
+class="cmmi-12">&#x03C6;</span><sub><span
+class="cmmi-10">m</span></sub><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">)&#x03A8;</span><sub><span
+class="cmmi-10">m</span></sub><span
+class="cmr-12">(</span><span
+class="cmmi-12">t,y</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">t</span><span
+class="cmr-12">)).</span>
+
+<!--l. 126--><p class="indent"> <span
+class="cmbx-12">Remark 2. </span><span
+class="cmr-12">In the special case of </span><span
+class="cmmi-12">&#x03B2; </span><span
+class="cmr-12">= 1 and </span><span
+class="cmmi-12">K</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">x,t</span><span
+class="cmr-12">) = 0, we have </span><span
+class="cmmi-12">Y</span><sub><span
+class="cmmi-10">f</span></sub><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) = </span><span
+class="cmmi-12">f</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">). Then the above</span>
+<span
+class="cmr-12">method converts into the known method for nonlinear integral equations of the second kind with constant</span>
+<span
+class="cmr-12">limits of integration and a degenerate kernel</span><span
+class="cmr-12">&nbsp;[4, 19, 20].</span>
+<!--l. 132--><p class="noindent">
+   <h3 class="sectionHead"><span class="titlemark">3.</span> <a
+ id="x1-30003"></a>Examples of exact solutions to nonlinear integral equations</h3>
+<!--l. 134--><p class="noindent"><span
+class="cmbx-12">Example 1. </span><span
+class="cmr-12">Consider the integral equation of the first kind with a quadratic nonlinearity</span>
+<!--l. 140--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-6x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-6x.png" alt="&#x222B;
+  &#x221E; [sin(xt)y(t)+ &#x03C6;(x)&#x03C8;(t)y2(t)]dt = f(x ).
+ 0
+" class="math-display"></center>
+<!--l. 140--><p class="noindent"></td><td width="1" valign="middle">(5)</td></tr></table>
+<!--l. 140--><p class="noindent"><span
+class="cmr-12">The auxiliary linear integral equation</span>
+<!--l. 146--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-7x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-7x.png" alt="&#x222B;
+  &#x221E;
+ 0  sin(xt)Y (t)dt = f(x),
+" class="math-display"></center>
+<!--l. 146--><p class="noindent"></td><td width="1" valign="middle">(6)</td></tr></table>
+<!--l. 146--><p class="noindent"><span
+class="cmr-12">obtained from (5) by setting </span><span
+class="cmmi-12">&#x03C6;</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) = 0, is the Fourier sine transform up to a constant factor [6,</span><span
+class="cmr-12">&nbsp;14, 20,</span><span
+class="cmr-12">&nbsp;21].</span>
+<span
+class="cmr-12">Is solution is given by</span>
+<!--l. 153--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-8x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-8x.png" alt="        &#x222B;
+      -2  &#x221E;
+Yf(t) = &#x03C0; 0  sin(xt)f(x )dx.
+" class="math-display"></center>
+<!--l. 153--><p class="noindent"></td><td width="1" valign="middle">(7)</td></tr></table>
+<!--l. 153--><p class="noindent">
+<!--l. 155--><p class="indent"> <span
+class="cmr-12">Solutions of the original nonlinear equation</span><span
+class="cmr-12">&nbsp;(5) are sought in the form</span>
+<!--l. 161--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-9x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-9x.png" alt="                            2-&#x222B; &#x221E;
+y(t) = Yf(t)+ AY &#x03C6;(t),  Y&#x03C6;(t) = &#x03C0; 0  sin(xt)&#x03C6;(x)dx.
+" class="math-display"></center>
+<!--l. 161--><p class="noindent"></td><td width="1" valign="middle">(8)</td></tr></table>
+<!--l. 161--><p class="noindent"><span
+class="cmr-12">Substituting (8) into (5) and rearranging he terms, one arrives at a quadratic equation for the</span>
+<span
+class="cmr-12">coefficients</span><span
+class="cmr-12">&nbsp;</span><span
+class="cmmi-12">A</span><span
+class="cmr-12">:</span>
+
+<!--l. 168--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-10x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-10x.png" alt="   2
+pA  + qA + r = 0,
+" class="math-display"></center>
+<!--l. 168--><p class="noindent"></td><td width="1" valign="middle">(9)</td></tr></table>
+<!--l. 168--><p class="noindent"><span
+class="cmr-12">where</span>
+   <center class="math-display">
+<img
+src="ie-meth3-11x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-11x.png" alt="   &#x222B; &#x221E;                      &#x222B; &#x221E;                     &#x222B; &#x221E;
+p =    &#x03C8;(t)Y2&#x03C6;(t)dt,  q = 1 + 2   &#x03C8;(t)Yf(t)Y&#x03C6;(t)dt, r =     &#x03C8;(t)Yf2 (t)dt.
+    0                        0                       0  " class="math-display"></center> <span
+class="cmr-12">Here</span>
+<span
+class="cmr-12">and henceforth, it is assumed that all integrals exist. Different solutions</span><span
+class="cmr-12">&nbsp;(8) correspond to different roots of</span>
+<span
+class="cmr-12">the quadratic equation.</span>
+<!--l. 179--><p class="indent"> <span
+class="cmbx-12">Example 2. </span><span
+class="cmr-12">Consider the nonlinear integral equation of the second kind</span>
+<!--l. 186--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-12x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-12x.png" alt="      &#x222B; &#x221E;
+y(x)+     [&#x03BB;e-|x-t|y(t)+ &#x03C6;(x)&#x03A8;(t, y(t))]dt = f(x),  &#x03BB; &#x003E; - 1.
+       -&#x221E;                                             2
+" class="math-display"></center>
+<!--l. 186--><p class="noindent"></td><td width="1" valign="middle">(10)</td></tr></table>
+<!--l. 186--><p class="noindent"><span
+class="cmr-12">The solution to the auxiliary linear integral equation of the second kind</span>
+<!--l. 192--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-13x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-13x.png" alt="        &#x222B;
+          &#x221E;  -|x-t|                      1
+Y (x )+ &#x03BB; -&#x221E; e     Y(t)dt = f(x),   &#x03BB; &#x003E; - 2,
+" class="math-display"></center>
+<!--l. 192--><p class="noindent"></td><td width="1" valign="middle">(11)</td></tr></table>
+<!--l. 192--><p class="noindent"><span
+class="cmr-12">is expressed as [7, 20]</span>
+<!--l. 199--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-14x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-14x.png" alt="                &#x03BB;    &#x222B; &#x221E;    ( &#x221A; ------     )
+Yf(x) = f(x)- &#x221A;1+-2&#x03BB;-    exp -  1+ 2&#x03BB; |x - t| f(t)dt.
+                      -&#x221E;
+" class="math-display"></center>
+<!--l. 199--><p class="noindent"></td><td width="1" valign="middle">(12)</td></tr></table>
+<!--l. 199--><p class="noindent"><span
+class="cmr-12">Solutions of the original nonlinear equation (10) is sought in the form</span>
+<!--l. 205--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+
+   <center class="math-display">
+<img
+src="ie-meth3-15x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-15x.png" alt="y(x) = Yf(x)+ AY &#x03C6;(x),
+" class="math-display"></center>
+<!--l. 205--><p class="noindent"></td><td width="1" valign="middle">(13)</td></tr></table>
+<!--l. 205--><p class="noindent"><span
+class="cmr-12">where </span><span
+class="cmmi-12">Y</span><sub><span
+class="cmmi-10">&#x03C6;</span></sub><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) is defined by (12) with </span><span
+class="cmmi-12">f</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) substituted by</span><span
+class="cmr-12">&nbsp;</span><span
+class="cmmi-12">&#x03C6;</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">). On inserting (13) into</span><span
+class="cmr-12">&nbsp;(10), one arrives at</span>
+<span
+class="cmr-12">the following algebraic (transcendental) equation for the coefficient</span><span
+class="cmr-12">&nbsp;</span><span
+class="cmmi-12">A</span><span
+class="cmr-12">:</span>
+<!--l. 213--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-16x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-16x.png" alt="    &#x222B; b
+A +    &#x03A8;(t, Yf(t)+ AY &#x03C6;(t))dt = 0.
+     a
+" class="math-display"></center>
+<!--l. 213--><p class="noindent"></td><td width="1" valign="middle">(14)</td></tr></table>
+<!--l. 213--><p class="noindent">
+<!--l. 215--><p class="indent"> <span
+class="cmr-12">In the special case &#x03A8;(</span><span
+class="cmmi-12">t,y</span><span
+class="cmr-12">) = </span><span
+class="cmmi-12">&#x03C8;</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">t</span><span
+class="cmr-12">)</span><span
+class="cmmi-12">y</span><span
+class="cmr-12">, equation (10) is linear and its solution is given by</span><span
+class="cmr-12">&nbsp;(13)</span>
+<span
+class="cmr-12">with</span>
+   <center class="math-display">
+<img
+src="ie-meth3-17x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-17x.png" alt="        &#x222B;
+         &#x221E;
+      ---0-&#x03C8;-(t)Yf(t)-dt--
+A = -    &#x222B; &#x221E;           .
+      1+  0  &#x03C8;(t)Y&#x03C6;(t)dt
+" class="math-display"></center>
+<!--l. 222--><p class="indent"> <span
+class="cmr-12">In the case of quadratic nonlinearity, &#x03A8;(</span><span
+class="cmmi-12">t,y</span><span
+class="cmr-12">) = </span><span
+class="cmmi-12">&#x03C8;</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">t</span><span
+class="cmr-12">)</span><span
+class="cmmi-12">y</span><sup><span
+class="cmr-10">2</span></sup><span
+class="cmr-12">, equation</span><span
+class="cmr-12">&nbsp;(14) is reduced to the quadratic</span>
+<span
+class="cmr-12">equation</span><span
+class="cmr-12">&nbsp;(9) where the functions </span><span
+class="cmmi-12">Y</span><sub><span
+class="cmmi-10">f</span></sub><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) and </span><span
+class="cmmi-12">Y</span><sub><span
+class="cmmi-10">&#x03C6;</span></sub><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) are the same as above.</span>
+<!--l. 228--><p class="noindent">
+   <h3 class="sectionHead"><span class="titlemark">4.</span> <a
+ id="x1-40004"></a>Generalizations</h3>
+<!--l. 230--><p class="noindent">The method described above for Urysohn-type integral equations of the first and second
+kind admits a significant generalization.
+<!--l. 233--><p class="indent"> Consider the abstract nonlinear equation for <span
+class="cmmi-12">y </span>= <span
+class="cmmi-12">y</span>(<span
+class="cmmi-12">x</span>)
+<!--l. 238--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-18x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-18x.png" alt="       &#x2211;n
+L [y ] +    &#x03C6;m (x)Im[y] = f(x),
+       m=1
+" class="math-display"></center>
+<!--l. 238--><p class="noindent"></td><td width="1" valign="middle">(15)</td></tr></table>
+<!--l. 238--><p class="noindent">where <span
+class="cmmi-12">L</span>[<span
+class="cmmi-12">y</span>] is a linear operator (integral, functional,
+differential,<span class="footnote-mark"><a
+href="ie-meth3-1.htm#fn1x0" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-1.htm#fn1x0"><sup class="textsuperscript">1</sup></a></span><a
+ id="x1-4001f1"></a>
+or any other) and the <span
+class="cmmi-12">I</span><sub><span
+class="cmmi-12">m</span></sub>[<span
+class="cmmi-12">y</span>] are some nonlinear functionals (i.e., numbers for each&nbsp;<span
+class="cmmi-12">y</span>(<span
+class="cmmi-12">x</span>)
+from a given class of functions).
+<!--l. 246--><p class="indent"> <span
+class="cmr-12">Examples of nonlinear functionals:</span>
+   <center class="math-display">
+<img
+src="ie-meth3-19x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-19x.png" alt="                                (              )         &#x222B; b (               )
+I1[y] = ay2(0)+ by(1), I2[y] = 0m&#x2264;axx&#x2264;1 a|y(x)|+ b|y&#x2032;x(x)| , I3[y] =   K t,y(t),y&#x2032;t(t),y&#x2032;t&#x2032;t(t) dt.
+                                                          a
+" class="math-display"></center>
+<!--l. 254--><p class="indent"> Suppose the truncated linear equation
+<!--l. 259--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-20x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-20x.png" alt="L[Y ] = f (x),
+" class="math-display"></center>
+<!--l. 259--><p class="noindent"></td><td width="1" valign="middle">(16)</td></tr></table>
+<!--l. 259--><p class="noindent">obtained from (15) by discarding the nonlinear terms (i.e., setting <span
+class="cmmi-12">&#x03C6;</span><sub><span
+class="cmmi-12">m</span></sub>(<span
+class="cmmi-12">x</span>) = 0, <span
+class="cmmi-12">m </span>= 1<span
+class="cmmi-12">,</span><span
+class="cmmi-12">&#x2026;</span><span
+class="cmmi-12">,n</span>),
+can be solved for any <span
+class="cmmi-12">f</span>(<span
+class="cmmi-12">x</span>) from a given class of functions&nbsp;<span
+class="cmmi-12">L</span><sub><span
+class="cmmi-12">F</span> </sub>. Let <span
+class="cmmi-12">Y</span><sub><span
+class="cmmi-12">f</span></sub>(<span
+class="cmmi-12">x</span>) denote the
+solution to the truncated equation (16).
+<!--l. 264--><p class="indent"> Let <span
+class="cmmi-12">&#x03C6;</span><sub><span
+class="cmmi-12">m</span></sub>(<span
+class="cmmi-12">x</span>) <span
+class="cmsy-10x-x-120"><img
+src="cmsy10-c-32.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/cmsy10-c-32.png" alt="&#x2208;" class="10-120x-x-32"> </span><span
+class="cmmi-12">L</span><sub><span
+class="cmmi-12">F</span> </sub> (<span
+class="cmmi-12">m </span>= 1<span
+class="cmmi-12">,</span> <span
+class="cmmi-12">&#x2026;</span><span
+class="cmmi-12">, n</span>). Then the original nonlinear equation (15) has solutions
+of the form
+<!--l. 270--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+
+   <center class="math-display">
+<img
+src="ie-meth3-21x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-21x.png" alt="                &#x2211;n
+y(x ) = Yf (x ) +   AmY  &#x03C6;m(x),
+               m=1
+" class="math-display"></center>
+<!--l. 270--><p class="noindent"></td><td width="1" valign="middle">(17)</td></tr></table>
+<!--l. 270--><p class="noindent">where <span
+class="cmmi-12">Y</span><sub><span
+class="cmmi-12">&#x03C6;</span><sub><span
+class="cmmi-12">m</span></sub></sub>(<span
+class="cmmi-12">x</span>) is the solution to the linear equation (16) where <span
+class="cmmi-12">f</span>(<span
+class="cmmi-12">x</span>) is substituted
+by&nbsp;<span
+class="cmmi-12">&#x03C6;</span><sub><span
+class="cmmi-12">m</span></sub>(<span
+class="cmmi-12">x</span>). Inserting (17) into&nbsp;(15), collecting the coefficients of the functions <span
+class="cmmi-12">f</span>(<span
+class="cmmi-12">x</span>),
+<span
+class="cmmi-12">&#x03C6;</span><sub><span
+class="cmr-12">1</span></sub>(<span
+class="cmmi-12">x</span>),&nbsp;&#x2026;,&nbsp;<span
+class="cmmi-12">&#x03C6;</span><sub><span
+class="cmmi-12">n</span></sub>(<span
+class="cmmi-12">x</span>), and equating the coefficients to zero, one arrives at the following system
+of nonlinear algebraic (transcendental) equations for&nbsp;<span
+class="cmmi-12">A</span><sub><span
+class="cmmi-12">m</span></sub>:
+<!--l. 280--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-22x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-22x.png" alt="        [        &#x2211;n          ]
+Am +  Im Yf(x) +    AjY &#x03C6;j(x) ,    m  = 1,...,n.
+                 j=1
+" class="math-display"></center>
+<!--l. 280--><p class="noindent"></td><td width="1" valign="middle">(18)</td></tr></table>
+<!--l. 280--><p class="noindent">Formulas (17)&#8211;(18) can determine several (or even infinitely many) solutions to
+equation&nbsp;(15).
+   <h3 class="sectionHead"><span class="titlemark">5.</span> <a
+ id="x1-50005"></a>Examples of exact solutions to nonlinear integro-functional and integro-differential
+equations</h3>
+<!--l. 288--><p class="noindent"><span
+class="cmbx-12">Example 3. </span><span
+class="cmr-12">Consider the nonlinear functional-integral equation</span>
+<!--l. 295--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-23x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-23x.png" alt="                     &#x222B;
+                       a (            )
+y(x)+ &#x03BB;y(a - x )+ &#x03C6;(x) 0 &#x03A8; t,y(t),y(a- t) dt = f(x), &#x03BB; &#x2044;= ±1,
+" class="math-display"></center>
+<!--l. 295--><p class="noindent"></td><td width="1" valign="middle">(19)</td></tr></table>
+<!--l. 295--><p class="noindent"><span
+class="cmr-12">where 0 </span><span
+class="cmsy-12">&#x2264; </span><span
+class="cmmi-12">x </span><span
+class="cmsy-12">&#x2264; </span><span
+class="cmmi-12">a </span><span
+class="cmr-12">and 0 </span><span
+class="cmsy-12">&#x2264; </span><span
+class="cmmi-12">t </span><span
+class="cmsy-12">&#x2264; </span><span
+class="cmmi-12">a</span><span
+class="cmr-12">.</span>
+<!--l. 298--><p class="indent"> <span
+class="cmr-12">The auxiliary linear functional equation, obtained from (19) by setting </span><span
+class="cmmi-12">&#x03C6;</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) = 0, is expressed</span>
+<span
+class="cmr-12">as</span>
+
+<!--l. 304--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-24x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-24x.png" alt="Y (x) +&#x03BB;Y (a- x) = f(x ).
+" class="math-display"></center>
+<!--l. 304--><p class="noindent"></td><td width="1" valign="middle">(20)</td></tr></table>
+<!--l. 304--><p class="noindent"><span
+class="cmr-12">Let us substitute </span><span
+class="cmmi-12">x </span><span
+class="cmr-12">in (20) by </span><span
+class="cmmi-12">a </span><span
+class="cmsy-12">&minus; </span><span
+class="cmmi-12">x </span><span
+class="cmr-12">to obtain</span>
+<!--l. 310--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-25x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-25x.png" alt="Y (a- x)+ &#x03BB;Y (x) = f(a- x).
+" class="math-display"></center>
+<!--l. 310--><p class="noindent"></td><td width="1" valign="middle">(21)</td></tr></table>
+<!--l. 310--><p class="noindent"><span
+class="cmr-12">Eliminating </span><span
+class="cmmi-12">Y </span><span
+class="cmr-12">(</span><span
+class="cmmi-12">a </span><span
+class="cmsy-12">- </span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) from (20)&#8211;(21), one finds the solution to functional equation</span><span
+class="cmr-12">&nbsp;(20):</span>
+<!--l. 317--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-26x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-26x.png" alt="       f(x)--&#x03BB;f(a--x)-
+Yf(x ) =     1- &#x03BB;2    .
+" class="math-display"></center>
+<!--l. 317--><p class="noindent"></td><td width="1" valign="middle">(22)</td></tr></table>
+<!--l. 317--><p class="noindent">
+<!--l. 319--><p class="indent"> <span
+class="cmr-12">Following the method described in Section</span><span
+class="cmr-12">&nbsp;4, one looks for solutions to the original functional-integral</span>
+<span
+class="cmr-12">equation</span><span
+class="cmr-12">&nbsp;(19) in the form</span>
+   <center class="math-display">
+<img
+src="ie-meth3-27x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-27x.png" alt="                              &#x03C6;-(x)-- &#x03BB;-&#x03C6;(a--x)
+y(x) = Yf(x)+ AY &#x03C6;(x),  Y&#x03C6;(x) =     1- &#x03BB;2     ,  " class="math-display"></center>
+<span
+class="cmr-12">where the constant </span><span
+class="cmmi-12">A </span><span
+class="cmr-12">is determined by the algebraic (transcendental) equation</span>
+   <center class="math-display">
+<img
+src="ie-meth3-28x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-28x.png" alt="    &#x222B; a
+A +    &#x03A8;(t, Y (t)+ AY (t), Y (a- t)+ AY (a - t))dt = 0.
+     0      f       &#x03C6;    f          &#x03C6;
+" class="math-display"></center>
+<!--l. 331--><p class="indent"> <span
+class="cmbx-12">Example 4. </span><span
+class="cmr-12">Consider the nonlinear integral-functional-differential equation</span>
+<!--l. 337--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-29x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-29x.png" alt="&#x222B;
+  &#x03C0;&#x2215;2[              (       &#x2032;  )]
+ 0   y(x sint)+ &#x03C6;(x)&#x03A8; t, y(t), yt(t) dt = f (x).
+" class="math-display"></center>
+<!--l. 337--><p class="noindent"></td><td width="1" valign="middle">(23)</td></tr></table>
+<!--l. 337--><p class="noindent"><span
+class="cmr-12">Note that this equation involves the unknown function with two different arguments, </span><span
+class="cmmi-12">y</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">sin</span><span
+class="cmmi-12">t</span><span
+class="cmr-12">) and</span>
+<span
+class="cmmi-12">y</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">t</span><span
+class="cmr-12">).</span>
+<!--l. 341--><p class="indent"> <span
+class="cmr-12">The auxiliary linear equation, obtained from</span><span
+class="cmr-12">&nbsp;(23) by setting </span><span
+class="cmmi-12">&#x03C6;</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) = 0, has the form</span>
+   <center class="math-display">
+<img
+src="ie-meth3-30x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-30x.png" alt="&#x222B; &#x03C0;&#x2215;2
+    Y (xsin t)dt = f(x )
+ 0  " class="math-display"></center> <span
+class="cmr-12">and</span>
+<span
+class="cmr-12">is called Schl</span><span
+class="cmr-12">ömilch&#8217;s equation. Its solution is expressed as</span><span
+class="cmr-12">&nbsp;[11]</span>
+   <center class="math-display">
+<img
+src="ie-meth3-31x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-31x.png" alt="         [       &#x222B; &#x03C0;&#x2215;2      ]
+Yf(z) = 2 f(0)+ z     f&#x2032;&#x03BE;(&#x03BE;)d&#x03C4; ,   &#x03BE; = zsin&#x03C4;.
+       &#x03C0;          0
+" class="math-display"></center>
+<!--l. 350--><p class="indent"> <span
+class="cmr-12">Following the method described in Section</span><span
+class="cmr-12">&nbsp;4, one looks for solutions to the original</span>
+<span
+class="cmr-12">integral-functional-differential equation</span><span
+class="cmr-12">&nbsp;(23) in the form</span>
+   <center class="math-display">
+<img
+src="ie-meth3-32x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-32x.png" alt=" y(z) = Yf(z)+ AY&#x03C6;(z),
+       2 [       &#x222B; &#x03C0;&#x2215;2       ]
+Y&#x03C6;(z) =-- &#x03C6;(0)+ z     &#x03C6;&#x2032;&#x03BE;(&#x03BE;)d&#x03C4; ,  &#x03BE; = zsin&#x03C4;.
+       &#x03C0;          0  " class="math-display"></center> <span
+class="cmr-12">The</span>
+<span
+class="cmr-12">constant </span><span
+class="cmmi-12">A </span><span
+class="cmr-12">is determined by the algebraic (transcendental) equation</span>
+   <center class="math-display">
+<img
+src="ie-meth3-33x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-33x.png" alt="    &#x222B; b (                            )
+A +    &#x03A8; t, Yf(t) +AY &#x03C6;(t), Yf&#x2032;(t)+ AY &#x2032;&#x03C6;(t) dt = 0.
+     a
+" class="math-display"></center>
+<!--l. 363--><p class="indent"> <span
+class="cmbx-12">Example 5. </span><span
+class="cmr-12">Consider the boundary-value problem for the nonlinear integro-differential</span>
+<span
+class="cmr-12">equation</span>
+<!--l. 370--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-34x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-34x.png" alt="         &#x222B;
+y&#x2032;&#x2032; + &#x03C6;(x)  1&#x03A8; (t,y(t))dt = f(x)
+ xx       0
+" class="math-display"></center>
+<!--l. 370--><p class="noindent"></td><td width="1" valign="middle">(24)</td></tr></table>
+<!--l. 370--><p class="noindent"><span
+class="cmr-12">with the homogeneous boundary conditions</span>
+<!--l. 376--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-35x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-35x.png" alt="y(0) = y(1) = 0.
+" class="math-display"></center>
+<!--l. 376--><p class="noindent"></td><td width="1" valign="middle">(25)</td></tr></table>
+<!--l. 376--><p class="noindent">
+<!--l. 378--><p class="indent"> <span
+class="cmr-12">The solution of the auxiliary linear boundary-value problem</span>
+   <center class="math-display">
+<img
+src="ie-meth3-36x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-36x.png" alt="Yx&#x2032;&#x2032;x = f (x);   Y(0) = Y (1) = 0  " class="math-display"></center> <span
+class="cmr-12">is</span>
+<span
+class="cmr-12">expressed as</span>
+<!--l. 390--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-37x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-37x.png" alt="       &#x222B; 1                         {
+Yf(x) =   G (x,&#x03BE;)f(&#x03BE;)d&#x03BE;,    G(x,&#x03BE;) =  (&#x03BE; - 1)x for 0 &#x2264; x &#x2264; &#x03BE; &#x2264; 1,
+        0                            (x- 1)&#x03BE;  for 0 &#x2264; &#x03BE; &#x2264; x &#x2264; 1.
+" class="math-display"></center>
+<!--l. 390--><p class="noindent"></td><td width="1" valign="middle">(26)</td></tr></table>
+<!--l. 390--><p class="noindent"><span
+class="cmr-12">Therefore solutions to the original boundary-value problem for the nonlinear integro-differential</span>
+<span
+class="cmr-12">equation</span><span
+class="cmr-12">&nbsp;(24) subject to the boundary conditions</span><span
+class="cmr-12">&nbsp;(25) are sought in the form</span>
+<!--l. 399--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-38x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-38x.png" alt="y(x) = Yf(x)+ AY &#x03C6;(x).
+" class="math-display"></center>
+<!--l. 399--><p class="noindent"></td><td width="1" valign="middle">(27)</td></tr></table>
+<!--l. 399--><p class="noindent"><span
+class="cmr-12">The function </span><span
+class="cmmi-12">Y</span><sub><span
+class="cmmi-10">&#x03C6;</span></sub><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) is determined by the right-hand side of the first formula in</span><span
+class="cmr-12">&nbsp;(26), where </span><span
+class="cmmi-12">f</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) is</span>
+<span
+class="cmr-12">substituted by </span><span
+class="cmmi-12">&#x03C6;</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">). Inserting (27) into</span><span
+class="cmr-12">&nbsp;(24), one arrives at the following algebraic (transcendental)</span>
+<span
+class="cmr-12">equation for the coefficient</span><span
+class="cmr-12">&nbsp;</span><span
+class="cmmi-12">A</span><span
+class="cmr-12">:</span>
+<!--l. 408--><p class="noindent"><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle">
+   <center class="math-display">
+<img
+src="ie-meth3-39x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-39x.png" alt="    &#x222B; b (              )
+A +  a &#x03A8; t, Yf(t)+ AY &#x03C6;(t) dt = 0.
+" class="math-display"></center>
+
+<!--l. 408--><p class="noindent"></td><td width="1" valign="middle">(28)</td></tr></table>
+<!--l. 408--><p class="noindent">
+<!--l. 410--><p class="indent"> <span
+class="cmr-12">In the special case of </span><span
+class="cmmi-12">f</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) = 0 and </span><span
+class="cmmi-12">&#x03C6;</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) = 1, one should set </span><span
+class="cmmi-12">Y</span><sub><span
+class="cmmi-10">f</span></sub><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) = 0 and </span><span
+class="cmmi-12">Y</span><sub><span
+class="cmmi-10">&#x03C6;</span></sub><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) =</span> <img
+src="ie-meth3-40x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-40x.png" alt="12"  class="frac" align="middle"><span
+class="cmmi-12">x</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">x </span><span
+class="cmsy-12">- </span><span
+class="cmr-12">1) in</span>
+<span
+class="cmr-12">(27)&#8211;(28).</span>
+<!--l. 415--><p class="indent"> <span
+class="cmbx-12">Remark 3. </span><span
+class="cmr-12">In the case of nonhomogeneous boundary conditions for integro-differential</span>
+<span
+class="cmr-12">equations, one should perform the change of variable </span><span
+class="cmmi-12">y</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) =</span> <img
+src="ie-meth3-41x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-41x.png" alt="¯y"  class="bar"> <span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) + </span><span
+class="cmmi-12">g</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">), where </span><span
+class="cmmi-12">g</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) is any</span>
+<span
+class="cmr-12">sufficiently smooth function satisfying the boundary conditions, to obtain a problem for</span><span
+class="cmr-12">&nbsp;</span><img
+src="ie-meth3-42x.png" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3-42x.png" alt="¯y"  class="bar"> <span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) with</span>
+<span
+class="cmr-12">homogeneous boundary conditions. For example, if the integro-differential equation</span><span
+class="cmr-12">&nbsp;(24) is</span>
+<span
+class="cmr-12">subjected to the nonhomogeneous boundary conditions </span><span
+class="cmmi-12">y</span><span
+class="cmr-12">(0) = </span><span
+class="cmmi-12">a </span><span
+class="cmr-12">and </span><span
+class="cmmi-12">y</span><span
+class="cmr-12">(1) = </span><span
+class="cmmi-12">b</span><span
+class="cmr-12">, one could take</span>
+<span
+class="cmmi-12">g</span><span
+class="cmr-12">(</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">) = </span><span
+class="cmmi-12">a </span><span
+class="cmr-12">+ (</span><span
+class="cmmi-12">b </span><span
+class="cmsy-12">- </span><span
+class="cmmi-12">a</span><span
+class="cmr-12">)</span><span
+class="cmmi-12">x</span><span
+class="cmr-12">.</span>
+<!--l. 424--><p class="noindent">
+   <h3 class="likesectionHead"><a
+ id="x1-60005"></a>References</h3>
+<!--l. 426--><p class="noindent">
+      <ol  class="enumerate1">
+      <li
+  class="enumerate" id="x1-6002x1"><span
+class="cmr-12">Lovitt,</span><span
+class="cmr-12">&nbsp;W.</span><span
+class="cmr-12">&nbsp;V., </span><span
+class="cmti-12">Linear Integral Equations</span><span
+class="cmr-12">, Dover Publ., New York, 1950.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6004x2"><span
+class="cmr-12">Petrovskii,</span><span
+class="cmr-12">&nbsp;I.</span><span
+class="cmr-12">&nbsp;G., </span><span
+class="cmti-12">Lectures on the Theory of Integral Equations</span><span
+class="cmr-12">, Graylock Press, Rochester,</span>
+      <span
+class="cmr-12">1957.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6006x3"><span
+class="cmr-12">Mikhlin,</span><span
+class="cmr-12">&nbsp;S.</span><span
+class="cmr-12">&nbsp;G., </span><span
+class="cmti-12">Linear Integral Equations</span><span
+class="cmr-12">, Hindustan Publ. Corp., Delhi, 1960.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6008x4"><span
+class="cmr-12">Krasnov,</span><span
+class="cmr-12">&nbsp;M.</span><span
+class="cmr-12">&nbsp;L., Kiselev,</span><span
+class="cmr-12">&nbsp;A.</span><span
+class="cmr-12">&nbsp;I., and Makarenko,</span><span
+class="cmr-12">&nbsp;G.</span><span
+class="cmr-12">&nbsp;I., </span><span
+class="cmti-12">Problems and Exercises in Integral</span>
+      <span
+class="cmti-12">Equations</span><span
+class="cmr-12">, Mir Publ., Moscow, 1971.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6010x5"><span
+class="cmr-12">Cochran,</span><span
+class="cmr-12">&nbsp;J.</span><span
+class="cmr-12">&nbsp;A., </span><span
+class="cmti-12">The Analysis of Linear Integral Equations</span><span
+class="cmr-12">, McGraw-Hill Book Co., New</span>
+      <span
+class="cmr-12">York, 1972.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6012x6"><span
+class="cmr-12">Zabreyko,</span><span
+class="cmr-12">&nbsp;P.</span><span
+class="cmr-12">&nbsp;P., Koshelev,</span><span
+class="cmr-12">&nbsp;A.</span><span
+class="cmr-12">&nbsp;I., et al., </span><span
+class="cmti-12">Integral Equations: A Reference Text</span><span
+class="cmr-12">, Noordhoff</span>
+      <span
+class="cmr-12">Int. Publ., Leyden, 1975.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6014x7"><span
+class="cmr-12">Gakhov,</span><span
+class="cmr-12">&nbsp;F.</span><span
+class="cmr-12">&nbsp;D. and Cherskii,</span><span
+class="cmr-12">&nbsp;Yu.</span><span
+class="cmr-12">&nbsp;I., </span><span
+class="cmti-12">Equations of Convolution Type </span><span
+class="cmr-12">[in</span><span
+class="cmr-12">&nbsp;Russian], Nauka,</span>
+      <span
+class="cmr-12">Moscow, 1978.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6016x8"><span
+class="cmr-12">Tricomi,</span><span
+class="cmr-12">&nbsp;F.</span><span
+class="cmr-12">&nbsp;G., </span><span
+class="cmti-12">Integral Equations</span><span
+class="cmr-12">, Dover Publ., New York, 1985.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6018x9"><span
+class="cmr-12">Jerry,</span><span
+class="cmr-12">&nbsp;A.</span><span
+class="cmr-12">&nbsp;J.,  </span><span
+class="cmti-12">Introduction  to  Integral  Equations  With  Applications</span><span
+class="cmr-12">,  Marcel  Dekker,  New</span>
+      <span
+class="cmr-12">York&#8211;Basel, 1985.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6020x10"><span
+class="cmr-12">Gorenflo,</span><span
+class="cmr-12">&nbsp;R.   and   Vessella,</span><span
+class="cmr-12">&nbsp;S.,   </span><span
+class="cmti-12">Abel  Integral  Equations:  Analysis  and  Applications</span><span
+class="cmr-12">,</span>
+      <span
+class="cmr-12">Springer-Verlag, Berlin&#8211;New York, 1991.</span>
+
+      </li>
+      <li
+  class="enumerate" id="x1-6022x11"><span
+class="cmr-12">Corduneanu,</span><span
+class="cmr-12">&nbsp;C., </span><span
+class="cmti-12">Integral Equations and Applications</span><span
+class="cmr-12">, Cambridge Univ. Press, Cambridge,</span>
+      <span
+class="cmr-12">1991.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6024x12"><span
+class="cmr-12">Pipkin,</span><span
+class="cmr-12">&nbsp;A.</span><span
+class="cmr-12">&nbsp;C., </span><span
+class="cmti-12">A Course on Integral Equations</span><span
+class="cmr-12">, Springer-Verlag, New York, 1991.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6026x13"><span
+class="cmr-12">Kondo,</span><span
+class="cmr-12">&nbsp;J., </span><span
+class="cmti-12">Integral Equations</span><span
+class="cmr-12">, Clarendon Press, Oxford, 1991.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6028x14"><span
+class="cmr-12">Prudnikov, A. P., Brychkov, Yu. A., and Marichev, O. I., </span><span
+class="cmti-12">Integrals and Series, Vol. 5, Inverse</span>
+      <span
+class="cmti-12">Laplace Transforms</span><span
+class="cmr-12">, Gordon &amp; Breach, New York, 1992.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6030x15"><span
+class="cmr-12">Samko,</span><span
+class="cmr-12">&nbsp;S.</span><span
+class="cmr-12">&nbsp;G.,  Kilbas,</span><span
+class="cmr-12">&nbsp;A.</span><span
+class="cmr-12">&nbsp;A.,  and  Marichev,</span><span
+class="cmr-12">&nbsp;O.</span><span
+class="cmr-12">&nbsp;I.,  </span><span
+class="cmti-12">Fractional Integrals and Derivatives.</span>
+      <span
+class="cmti-12">Theory and Applications</span><span
+class="cmr-12">, Gordon &amp; Breach Sci. Publ., New York, 1993.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6032x16"><span
+class="cmr-12">Hackbusch,</span><span
+class="cmr-12">&nbsp;W., </span><span
+class="cmti-12">Integral Equations: Theory and Numerical Treatment</span><span
+class="cmr-12">, Birkh</span><span
+class="cmr-12">äuser Verlag,</span>
+      <span
+class="cmr-12">Boston, 1995.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6034x17"><span
+class="cmr-12">Sakhnovich,</span><span
+class="cmr-12">&nbsp;L.</span><span
+class="cmr-12">&nbsp;A.,   </span><span
+class="cmti-12">Integral  Equations  with  Difference  Kernels  on  Finite  Intervals</span><span
+class="cmr-12">,</span>
+      <span
+class="cmr-12">Birkh</span><span
+class="cmr-12">äuser Verlag, Basel&#8211;Boston, 1996.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6036x18"><span
+class="cmr-12">Kanwal,</span><span
+class="cmr-12">&nbsp;R.</span><span
+class="cmr-12">&nbsp;P., </span><span
+class="cmti-12">Linear Integral Equations</span><span
+class="cmr-12">, Birkh</span><span
+class="cmr-12">äuser Verlag, Boston, 1996.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6038x19"><span
+class="cmr-12">Verlan&#8217;,</span><span
+class="cmr-12">&nbsp;A.</span><span
+class="cmr-12">&nbsp;F. and Sizikov</span><span
+class="cmr-12">&nbsp;V.</span><span
+class="cmr-12">&nbsp;S., </span><span
+class="cmti-12">Integral Equations: Methods, Algorithms, and Programs</span>
+      <span
+class="cmr-12">[in</span><span
+class="cmr-12">&nbsp;Russian], Naukova Dumka, Kiev, 1986.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6040x20"><span
+class="cmr-12">Polyanin,</span><span
+class="cmr-12">&nbsp;A.</span><span
+class="cmr-12">&nbsp;D. and Manzhirov,</span><span
+class="cmr-12">&nbsp;A.</span><span
+class="cmr-12">&nbsp;V., </span><span
+class="cmti-12">Handbook of Integral Equations</span><span
+class="cmr-12">, CRC Press, Boca</span>
+      <span
+class="cmr-12">Raton, 1998.</span>
+      </li>
+      <li
+  class="enumerate" id="x1-6042x21"><span
+class="cmr-12">Ditkin,</span><span
+class="cmr-12">&nbsp;V.</span><span
+class="cmr-12">&nbsp;A.  and  Prudnikov,</span><span
+class="cmr-12">&nbsp;A.</span><span
+class="cmr-12">&nbsp;P.,  </span><span
+class="cmti-12">Integral  Transforms  and  Operational  Calculus</span><span
+class="cmr-12">,</span>
+      <span
+class="cmr-12">Pergamon Press, New York, 1965.</span>
+      </li></ol>
+
+<hr>
+<p style="font:9pt"><b>A.D. Polyanin and A.I. Zhurov,</b>
+<i>A solution method for some classes of nonlinear integral, integro-functional,
+and integro-differential equations</i>, 2007. Website <i>EqWorld &mdash;
+The World of Mathematical Equations</i>,
+<a href="ie-meth3.htm" tppabs="http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3.htm">
+http://eqworld.ipmnet.ru/en/methods/ie/ie-meth3.htm</a></p>
+</div>
+
+</td></tr></table></body></html>

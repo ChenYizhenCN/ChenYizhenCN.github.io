@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="200" height="200" viewBox="0 0 200 200">
+<defs>
+  <radialGradient id="rg" fx="50%" fy="50%" r="50%" spreadMethod="pad">
+  	<stop offset="0%"   style="stop-color:#3797d1" stop-opacity="1"/>
+  	<stop offset="25%"  style="stop-color:#3797d1" stop-opacity="1"/>
+  	<stop offset="100%" style="stop-color:#2959bc" stop-opacity="1"/>
+  </radialGradient>
+</defs>
+<ellipse cx="100" cy="100" rx="97.4" ry="97.4" style="fill:url(#rg);"/>
+</svg>

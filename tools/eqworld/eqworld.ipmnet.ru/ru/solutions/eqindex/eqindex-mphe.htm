@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ru">
+<head>
+  <meta http-equiv=Content-Type content="text/html; charset=Windows-1251">
+  <title>Уравнения математической физики - EqWorld</title>
+  <meta name="Keywords" content="уравнения, математической, физики,
+  в частных производных, дифференциальные, нелинейные, нелинейное, линейные, уравнение,
+  теплопроводности, волновое, диффузии, пограничного слоя, Навье-Стокса,
+  Шредингера, Кортевега-де Фриза, Клейна-Гордона, синус-Гордона,
+  Монжа-Ампера, Буссинеска">
+  <meta name="Description" content="Уравнения математической физики
+  (уравнение теплопроводности, волновое, диффузии, пограничного слоя,
+  Шредингера, Кортевега-де Фриза и др.).">
+  <link rel="stylesheet" href="../../../css/main.css" tppabs="http://eqworld.ipmnet.ru/css/main.css" type="text/css">
+</head>
+
+<body><table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:0.5em; margin:0px">
+<table width="100%" bgcolor="#0FD1BA" cellpadding=4>
+<tr>
+  <td ALIGN=Center VALIGN=Middle WIDTH=160>
+    <a href="../../../indexr.htm" tppabs="http://eqworld.ipmnet.ru/indexr.htm"><img SRC="../../../images/eqworld-logo-small.gif" tppabs="http://eqworld.ipmnet.ru/images/eqworld-logo-small.gif" ALT="EqWorld logo" WIDTH=155 HEIGHT=81 border=0></a></td>
+  <td align=Center valign=Middle>
+    <p class=ew1>EqWorld</p>
+    <p class=ew2>МИР МАТЕМАТИЧЕСКИХ УРАВНЕНИЙ</p></td>
+  <td WIDTH=155 ALIGN=Center VALIGN=Middle>
+    <img src="../../../images/ipmlogo24b.gif" tppabs="http://eqworld.ipmnet.ru/images/ipmlogo24b.gif" width="86" height="80"
+    alt="IPM Logo" border="0" align="middle"></td>
+</tr>
+</table>
+
+<table width="100%" cellpadding=2 style="margin-top:.25em">
+<tr>
+  <td class=menu width=160 valign=Top align=Left>
+    <p class=menutop><a href="../../../indexr.htm" tppabs="http://eqworld.ipmnet.ru/indexr.htm">Начальная стр.</a>
+      <a href="javascript:if(confirm('http://top100.rambler.ru/top100/  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://top100.rambler.ru/top100/'" tppabs="http://top100.rambler.ru/top100/">
+      <img src="../../../../counter.rambler.ru/top100.cnt-708065.gif" tppabs="http://counter.rambler.ru/top100.cnt?708065" alt="" width=1 height=1 border=0></a>
+    </p><p class=menu><a href="../../solutions.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions.htm">Точные решения</a>
+    </p><p class=submenu>
+    <a href="../ae.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/ae.htm" title="Алгебраические уравнения">Алгебраические ур-я</a><br>
+    <a href="../ode.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/ode.htm" title="Обыкновенные дифференциальные уравнения">Обыкновенные ДУ</a><br>
+    <a href="../sysode.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/sysode.htm" title="Системы обыкновенных дифференциальных уравнений">Системы ОДУ</a><br>
+    <a href="../firstpde.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/firstpde.htm" title="Дифференциальные уравнения с частными производными первого порядка">УрЧП 1-го порядка</a><br>
+    <a href="../lpde.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/lpde.htm" title="Линейные дифференциальные уравнения с частными производными">Линейные УрЧП</a><br>
+    <a href="../npde.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/npde.htm" title="Нелинейные дифференциальные уравнения с частными производными">Нелинейные УрЧП</a><br>
+    <a href="../syspde.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/syspde.htm" title="Системы дифференциальных уравнений с частными производными">Системы УрЧП</a><br>
+    <a href="../ie.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/ie.htm" title="Интегральные уравнения">Интегральные ур-ния</a><br>
+    <a href="../fe.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/fe.htm" title="Функциональные уравнения">Функциональные ур-я</a><br>
+    <a href="../eqindex.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/eqindex.htm">Указатель уравнений</a><br>
+    <a href="../../../eqarchive/-lang=ru.htm" tppabs="http://eqworld.ipmnet.ru/eqarchive/?lang=ru">EqArchive</a><br>
+    <a href="../basbooks.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/basbooks.htm">Справочники</a><br>
+    <a href="../interesting.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/interesting.htm">Интересные статьи</a>
+
+    </p><p class=menu><a href="../../methods.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods.htm">Методы решения</a>
+    </p><p class=submenu>
+    <a href="../../methods/meth-ode.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/meth-ode.htm" title="Обыкновенные дифференциальные уравнения">Обыкновенные ДУ</a><br>
+    <a href="../../methods/meth-pde.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/meth-pde.htm" title="Дифференциальные уравнения с частными производными">УрЧП</a><br>
+    <a href="../../methods/meth-ie.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/meth-ie.htm" title="Интегральные уравнения">Интегральные ур-ния</a><br>
+    <a href="../../methods/meth-fe.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/meth-fe.htm" title="Функциональные уравнения">Функциональные ур-я</a>
+
+    </p><p class=menu><a href="../../forums.htm" tppabs="http://eqworld.ipmnet.ru/ru/forums.htm">Мат. форумы</a>
+    </p><p class=submenu>
+    <a href="javascript:if(confirm('http://eqworld.ipmnet.ru/forum/  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ·юОсЖч±ЁёжёГОДјюОґХТµЅЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://eqworld.ipmnet.ru/forum/'" tppabs="http://eqworld.ipmnet.ru/forum/">Форум EqWorld</a><br>
+    <a href="../../forums/others.htm" tppabs="http://eqworld.ipmnet.ru/ru/forums/others.htm">Другие форумы</a>
+
+    </p><p class=menu><a href="../../auxiliary.htm" tppabs="http://eqworld.ipmnet.ru/ru/auxiliary.htm">Вспом. разделы</a>
+    </p><p class=submenu>
+    <a href="../../auxiliary/aux-integrals.htm" tppabs="http://eqworld.ipmnet.ru/ru/auxiliary/aux-integrals.htm">Интегралы</a><br>
+    <a href="../../auxiliary/aux-specfunc.htm" tppabs="http://eqworld.ipmnet.ru/ru/auxiliary/aux-specfunc.htm" title="Специальные функции">Спец. функции</a><br>
+    <a href="../../auxiliary/aux-inttrans.htm" tppabs="http://eqworld.ipmnet.ru/ru/auxiliary/aux-inttrans.htm" title="Интегральные преобразования">Интеграл. преобраз.</a>
+
+    </p><p class=menu><a href="../../software.htm" tppabs="http://eqworld.ipmnet.ru/ru/software.htm">Программы</a>
+    </p><p class=submenu>
+    <a href="../../software.htm#maple" tppabs="http://eqworld.ipmnet.ru/ru/software.htm#maple">Maple</a><br>
+    <a href="../../software.htm#mathematica" tppabs="http://eqworld.ipmnet.ru/ru/software.htm#mathematica">Mathematica</a><br>
+    <a href="../../software.htm#matlab" tppabs="http://eqworld.ipmnet.ru/ru/software.htm#matlab">MATLAB</a><br>
+    <a href="../../software.htm#others" tppabs="http://eqworld.ipmnet.ru/ru/software.htm#others">Другие</a>
+
+    </p><p class=menu><a href="../../education.htm" tppabs="http://eqworld.ipmnet.ru/ru/education.htm">Образование</a>
+    </p><p class=submenu>
+    <a href="../../education/edu-ode.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-ode.htm" title="Обыкновенные дифференциальные уравнения">Обыкновенные ДУ</a><br>
+    <a href="../../education/edu-pde.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-pde.htm" title="Дифференциальные уравнения с частными производными">УрЧП</a><br>
+    <a href="../../education/edu-ie.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-ie.htm" title="Интегральные уравнения">Интегральные ур-ния</a><br>
+    <a href="../../education/edu-fe.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-fe.htm" title="Функциональные уравнения">Функциональные ур-я</a><br>
+    <a href="../../education/edu-CommonErrors.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-CommonErrors.htm" title="Типичные ошибки при построении точных решений">Типичные ошибки</a><br>
+    <a href="../../education/edu-scientists.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-scientists.htm" title="Выдающиеся математики">Выдающ. математики</a><br>
+    <a href="../../education/edu-universities.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-universities.htm">Университеты</a><br>
+    <a href="../../education/edu-mathsites.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-mathsites.htm">Сайты для студентов</a><br>
+    <a href="../../education/edu-school.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-school.htm">Для школьников</a>
+
+    </p><p class=menu><a href="../../library.htm" tppabs="http://eqworld.ipmnet.ru/ru/library.htm">Библиотека</a>
+    </p><p class=submenu>
+    <a href="../../library/mathematics.htm" tppabs="http://eqworld.ipmnet.ru/ru/library/mathematics.htm">Книги по математике</a><br>
+    <a href="../../library/mechanics.htm" tppabs="http://eqworld.ipmnet.ru/ru/library/mechanics.htm">Книги по механике</a><br>
+    <a href="../../library/physics.htm" tppabs="http://eqworld.ipmnet.ru/ru/library/physics.htm">Книги по физике</a><br>
+    <a href="../../library/theses.htm" tppabs="http://eqworld.ipmnet.ru/ru/library/theses.htm">Диссертации</a><br>
+    <a href="../../library/bookrefs.htm" tppabs="http://eqworld.ipmnet.ru/ru/library/bookrefs.htm">Ссылки на книги</a><br>
+    <a href="../../library/otherlibs.htm" tppabs="http://eqworld.ipmnet.ru/ru/library/otherlibs.htm">Другие библиотеки</a>
+
+    </p><p class=menu><a href="../../about.htm" tppabs="http://eqworld.ipmnet.ru/ru/about.htm">Об этом сайте</a>
+    </p><p class=submenu>
+    <a href="../../about/features.htm" tppabs="http://eqworld.ipmnet.ru/ru/about/features.htm">Характ. особенности</a><br>
+    <a href="../../about/board.htm" tppabs="http://eqworld.ipmnet.ru/ru/about/board.htm">Редколлегия</a><br>
+    <a href="../../about/statdata.htm" tppabs="http://eqworld.ipmnet.ru/ru/about/statdata.htm" title="Статистические данные">Стат. данные</a><br>
+    <a href="../../about/noticeboard.htm" tppabs="http://eqworld.ipmnet.ru/ru/about/noticeboard.htm">Объявления</a><br>
+    <a href="../../about/news.htm" tppabs="http://eqworld.ipmnet.ru/ru/about/news.htm">Новое на сайте</a><br>
+    <a href="../../about/contact.htm" tppabs="http://eqworld.ipmnet.ru/ru/about/contact.htm">Контакты</a>
+
+    </p><p class=menu><a href="../../authors.htm" tppabs="http://eqworld.ipmnet.ru/ru/authors.htm">Для авторов</a>
+    </p><p class=submenu>
+    <a href="../../../eqarchive/add.php.htm" tppabs="http://eqworld.ipmnet.ru/eqarchive/add.php">Добавить уравнение</a><br>
+    <a href="../../author/addbook.htm" tppabs="http://eqworld.ipmnet.ru/ru/author/addbook.htm">Добавить книгу</a><br>
+    <a href="../../author/writebook.htm" tppabs="http://eqworld.ipmnet.ru/ru/author/writebook.htm">Опубликовать книгу</a>
+
+    </p><p class=menu><a href="../../info.htm" tppabs="http://eqworld.ipmnet.ru/ru/info.htm">Информация</a>
+    </p><p class=submenu>
+    <a href="../../info/mathwebs.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/mathwebs.htm">Математич. сайты</a><br>
+    <a href="../../../en/info/errata.htm" tppabs="http://eqworld.ipmnet.ru/en/info/errata.htm">Опечатки в справочн.</a><br>
+    <a href="../../info/shops.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/shops.htm">Интернет-магазины</a><br>
+    <a href="../../info/publishers.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/publishers.htm">Научн. издательства</a><br>
+    <a href="../../info/journals.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/journals.htm">Научные журналы</a><br>
+    <a href="../../info/conferences.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/conferences.htm">Конференции</a><br>
+    <a href="../../info/ask.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/ask.htm">Задать вопрос</a><br>
+    <a href="../../info/sci-edu.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/sci-edu.htm">Наука и образование</a><br>
+    <a href="../../info/copyright.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/copyright.htm">Авторское право</a><br>
+    <a href="../../info/other.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/other.htm">Разное</a>
+
+    </p><p class=menu><a href="../../pastime.htm" tppabs="http://eqworld.ipmnet.ru/ru/pastime.htm">Развлечения</a>
+    </p><p class=submenu>
+    <a href="../../pastime/chess.htm" tppabs="http://eqworld.ipmnet.ru/ru/pastime/chess.htm">Шахматы и шашки</a><br>
+    <a href="../../pastime/puzzles.htm" tppabs="http://eqworld.ipmnet.ru/ru/pastime/puzzles.htm">Головоломки и игры</a><br>
+    <a href="../../pastime/humor.htm" tppabs="http://eqworld.ipmnet.ru/ru/pastime/humor.htm">ФизМатЮмор</a><br>
+  </td>
+  <td>&nbsp;</td>
+  <td valign=Top><p class=altmenu>
+    <a href="../../solutions.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions.htm">Точные решения</a>
+    <a class=quad href="../../methods.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods.htm">Методы решения</a>
+    <a class=quad href="../../library.htm" tppabs="http://eqworld.ipmnet.ru/ru/library.htm">Библиотека</a>
+    <a class=quad href="../../forums.htm" tppabs="http://eqworld.ipmnet.ru/ru/forums.htm">Мат. форумы</a></p>
+
+<p class=history><a href="../../solutions.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions.htm">Точные решения</a> &gt;
+  <a href="../eqindex.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/eqindex.htm">Указатель уравнений</a> &gt; Уравнения математической физики</p>
+<h2>Уравнения математической физики - Предметный указатель</h2>
+<ol class=index>
+<li><a href="../../../en/solutions/lpde/lpde503.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde503.pdf">бигармоническое уравнение, однородное</a>
+<li><a href="../../../en/solutions/lpde/lpde504.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde504.pdf">бигармоническое уравнение, неоднородное</a>
+<li><a href="../../../en/solutions/npde/npde6101.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde6101.pdf">Буссинеска уравнение</a>
+<li><a href="../../../en/solutions/npde/npde1301.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1301.pdf">Бюргерса уравнение</a>
+<li><a href="../../../en/solutions/lpde/lpde201.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde201.pdf">волновое уравнение, линейное однородное</a>
+<li><a href="../../../en/solutions/lpde/lpde202.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde202.pdf">волновое уравнение, линейное неоднородное</a>
+<li><a href="../../../en/solutions/lpde/lpde205.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde205.pdf">волновое уравнение, линейное с осевой симметрией</a>
+<li><a href="../../../en/solutions/npde/npde2207.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde2207.pdf">волновое уравнение, нелинейное (встречается в газовой динамике)</a>
+<li><a href="../npde/npde-toc2.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/npde/npde-toc2.htm">волновые уравнения, нелинейные</a>
+<li><a href="../../../en/solutions/lpde/lpde303.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde303.pdf">Гельмгольца уравнение</a>
+<li><a href="../../../en/solutions/lpde/lpde203.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde203.pdf">Клейна&mdash;Гордона уравнение, линейное однородное</a>
+<li><a href="../../../en/solutions/lpde/lpde204.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde204.pdf">Клейна&mdash;Гордона уравнение, линейное неоднородное</a>
+<li><a href="../../../en/solutions/npde/npde2107.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde2107.pdf">Клейна&mdash;Гордона уравнение, нелинейное</a>
+<li><a href="../../../en/solutions/npde/npde5101.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde5101.pdf">Кортевега&mdash;де Фриза уравнение</a>
+<li><a href="../../../en/solutions/npde/npde5103.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde5103.pdf">Кортевега&mdash;де Фриза уравнение, модифицированное</a>
+<li><a href="../../../en/solutions/npde/npde5104.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde5104.pdf">Кортевега&mdash;де Фриза уравнение, обобщенное</a>
+<li><a href="../../../en/solutions/npde/npde5102.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde5102.pdf">Кортевега&mdash;де Фриза уравнение, цилиндрическое</a>
+<li><a href="../../../en/solutions/lpde/lpde301.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde301.pdf">Лапласа уравнение</a>
+<li><a href="../../../en/solutions/npde/npde4201.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde4201.pdf">Монжа&mdash;Ампера уравнение, однородное</a>
+<li><a href="../../../en/solutions/npde/npde4202.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde4202.pdf">Монжа&mdash;Ампера уравнение, неоднородное (i)</a>
+<li><a href="../../../en/solutions/npde/npde4203.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde4203.pdf">Монжа&mdash;Ампера уравнение, неоднородное (ii)</a>
+<li><a href="../../../en/solutions/npde/npde6102.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde6102.pdf">Навье&mdash;Стокса уравнения</a>
+<li><a href="../syspde/spde-toc3.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/syspde/spde-toc3.htm">нелинейные системы двух уравнений эллиптического типа</a>
+<li><a href="../syspde/spde-toc4.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/syspde/spde-toc4.htm">нелинейные системы двух уравнений гиперболического типа</a>
+<li><a href="../syspde/spde-toc2.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/syspde/spde-toc2.htm">нелинейные системы двух уравнений параболического типа</a>
+<li><a href="../syspde/spde-toc2.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/syspde/spde-toc2.htm">нелинейные системы типа &quot;реакция&ndash;диффузия&quot;</a>
+<li><a href="../npde/npde-toc5.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/npde/npde-toc5.htm">нелинейные уравнения третьего порядка</a>
+<li><a href="../npde/npde-toc6.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/npde/npde-toc6.htm">нелинейные уравнения четвертого порядка</a>
+<li><a href="../../../en/solutions/lpde/lpde302.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde302.pdf">Пуассона уравнение</a>
+<li><a href="../../../en/solutions/npde/npde2106.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde2106.pdf">синус-Гордона уравнение</a>
+<li><a href="../../../en/solutions/npde/npde2105.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde2105.pdf">sh-Гордона уравнение</a>
+<li><a href="../syspde/spde-toc2.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/syspde/spde-toc2.htm">системы уравнений, встречающиеся в математической биологии</a>
+<li><a href="../syspde/spde-toc5.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/syspde/spde-toc5.htm">системы уравнений общего вида, линейные и нелинейные</a>
+<li><a href="../../../en/solutions/npde/npde3107.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde3107.pdf">стационарное уравнение теплопроводности с нелинейным источником</a>
+<li><a href="../../../en/solutions/lpde/lpde207.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde207.pdf">телеграфное уравнение</a>
+<li><a href="../../../en/solutions/lpde/lpde401.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde401.pdf">Трикоми уравнение (дифференциальное уравнение Трикоми)</a>
+<li><a href="../../../en/solutions/npde/npde6101.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde6101.pdf">уравнение Буссинеска</a>
+<li><a href="../../../en/solutions/npde/npde1301.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1301.pdf">уравнение Бюргерса</a>
+<li><a href="../../../en/solutions/lpde/lpde501.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde501.pdf">уравнение вынужденных колебаний упругого стержня</a>
+<li><a href="../../../en/solutions/npde/npde6102.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde6102.pdf">уравнение движения вязкой жидкости</a>
+<li><a href="../../../en/solutions/npde/npde3303.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde3303.pdf">уравнение диффузии в анизотропной среде</a><br>
+<li><a href="../../../en/solutions/npde/npde3201.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde3201.pdf">уравнение диффузии в анизотропной среде с объемной реакцией (i)</a>
+<li><a href="../../../en/solutions/npde/npde3203.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde3203.pdf">уравнение диффузии в анизотропной среде с объемной реакцией (ii)</a>
+<li><a href="../../../en/solutions/npde/npde3204.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde3204.pdf">уравнение диффузии в анизотропной среде с объемной реакцией (iii)</a>
+<li><a href="../../../en/solutions/lpde/lpde101.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde101.pdf">уравнение диффузии, линейное однородное</a>
+<li><a href="../../../en/solutions/lpde/lpde102.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde102.pdf">уравнение диффузии, линейное неоднородное</a>
+<li><a href="../../../en/solutions/lpde/lpde104.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde104.pdf">уравнение диффузии, линейное с осевой симметрией</a>
+<li><a href="../../../en/solutions/lpde/lpde106.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde106.pdf">уравнение диффузии, линейное с центральной симметрией</a>
+<li><a href="../../../en/solutions/npde/npde1201.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1201.pdf">уравнение диффузии, нелинейное</a>
+<li><a href="../../../en/solutions/npde/npde1209.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1209.pdf">уравнение диффузии, нелинейное общего вида</a>
+<li><a href="../../../en/solutions/npde/npde1210.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1210.pdf">уравнение диффузии, нелинейное общего вида, с источником</a>
+<li><a href="../../../en/solutions/npde/npde3107.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde3107.pdf">уравнение диффузии, стационарное с нелинейным источником</a>
+<li><a href="../../../en/solutions/lpde/lpde303.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde303.pdf">уравнение Гельмгольца</a>
+<li><a href="../../../en/solutions/npde/npde5105.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde5105.pdf">уравнение гидродинамического пограничного слоя</a>
+<li><a href="../../../en/solutions/npde/npde5106.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde5106.pdf">уравнение гидродинамического пограничного слоя, с градиентом давления</a>
+<li><a href="../../../en/solutions/lpde/lpde203.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde203.pdf">уравнение Клейна&mdash;Гордона, линейное однородное</a>
+<li><a href="../../../en/solutions/lpde/lpde204.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde204.pdf">уравнение Клейна&mdash;Гордона, линейное неоднородное</a>
+<li><a href="../../../en/solutions/npde/npde2107.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde2107.pdf">уравнение Клейна&mdash;Гордона, нелинейное</a>
+<li><a href="../../../en/solutions/lpde/lpde206.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde206.pdf">уравнение колебаний газа с центральной симметрией</a>
+<li><a href="../../../en/solutions/npde/npde5101.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde5101.pdf">уравнение Кортевега&mdash;де Фриза</a>
+<li><a href="../../../en/solutions/npde/npde5103.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde5103.pdf">уравнение Кортевега&mdash;де Фриза, модифицированное</a>
+<li><a href="../../../en/solutions/npde/npde5104.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde5104.pdf">уравнение Кортевега&mdash;де Фриза, обобщенное</a>
+<li><a href="../../../en/solutions/npde/npde5102.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde5102.pdf">уравнение Кортевега&mdash;де Фриза, цилиндрическое</a>
+<li><a href="../../../en/solutions/lpde/lpde301.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde301.pdf">уравнение Лапласа</a>
+<li><a href="../../../en/solutions/npde/npde4201.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde4201.pdf">уравнение Монжа&mdash;Ампера, однородное</a>
+<li><a href="../../../en/solutions/npde/npde4202.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde4202.pdf">уравнение Монжа&mdash;Ампера, неоднородное (i)</a>
+<li><a href="../../../en/solutions/npde/npde4203.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde4203.pdf">уравнение Монжа&mdash;Ампера, неоднородное (ii)</a>
+<li><a href="../../../en/solutions/lpde/lpde302.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde302.pdf">уравнение Пуассона</a>
+<li><a href="../../../en/solutions/npde/npde2106.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde2106.pdf">уравнение синус-Гордона</a>
+<li><a href="../../../en/solutions/npde/npde2105.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde2105.pdf">уравнение sh-Гордона</a>
+<li><a href="../../../en/solutions/npde/npde4101.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde4101.pdf">уравнение стационарного околозвукового течения газа</a>
+<li><a href="../../../en/solutions/npde/npde3303.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde3303.pdf">уравнение теплопроводности в анизотропной среде</a><br>
+<li><a href="../../../en/solutions/npde/npde3201.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde3201.pdf">уравнение теплопроводности в анизотропной среде с источником (i)</a>
+<li><a href="../../../en/solutions/npde/npde3203.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde3203.pdf">уравнение теплопроводности в анизотропной среде с источником (ii)</a>
+<li><a href="../../../en/solutions/npde/npde3204.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde3204.pdf">уравнение теплопроводности в анизотропной среде с источником (iii)</a>
+<li><a href="../../../en/solutions/lpde/lpde101.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde101.pdf">уравнение теплопроводности, линейное однородное</a>
+<li><a href="../../../en/solutions/lpde/lpde102.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde102.pdf">уравнение теплопроводности, линейное неоднородное</a>
+<li><a href="../../../en/solutions/lpde/lpde104.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde104.pdf">уравнение теплопроводности, линейное с осевой симметрией</a>
+<li><a href="../../../en/solutions/lpde/lpde106.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde106.pdf">уравнение теплопроводности, линейное с центральной симметрией</a>
+<li><a href="../../../en/solutions/npde/npde1201.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1201.pdf">уравнение теплопроводности, нелинейное</a>
+<li><a href="../../../en/solutions/npde/npde1209.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1209.pdf">уравнение теплопроводности, нелинейное общего вида</a>
+<li><a href="../../../en/solutions/npde/npde1210.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1210.pdf">уравнение теплопроводности, нелинейное общего вида, с источником</a>
+<li><a href="../../../en/solutions/npde/npde3107.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde3107.pdf">уравнение теплопроводности, стационарное с нелинейным источником</a>
+<li><a href="../../../en/solutions/lpde/lpde401.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde401.pdf">уравнение Трикоми (дифференциальное уравнение Трикоми)</a>
+<li><a href="../../../en/solutions/npde/npde1103.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1103.pdf">уравнение ФитцХью&mdash;Нагумо</a>
+<li><a href="../../../en/solutions/npde/npde1101.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1101.pdf">уравнение Фишера</a>
+<li><a href="../../../en/solutions/npde/npde3301.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde3301.pdf">уравнение Хохлова&mdash;Заболоцкой</a>
+<li><a href="../../../en/solutions/lpde/lpde108.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde108.pdf">уравнение Шредингера, линейное</a>
+<li><a href="../../../en/solutions/npde/npde1401.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1401.pdf">уравнение Шредингера, с кубической нелинейностью</a>
+<li><a href="../../../en/solutions/npde/npde1402.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1402.pdf">уравнение Шредингера, со степенной нелинейностью</a>
+<li><a href="../../../en/solutions/npde/npde1403.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1403.pdf">уравнение Шредингера, нелинейное общего вида</a>
+<li><a href="../lpde/lpdetoc2.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/lpde/lpdetoc2.htm">уравнения гиперболического типа, линейные</a>
+<li><a href="../npde/npde-toc2.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/npde/npde-toc2.htm">уравнения гиперболического типа, нелинейные</a>
+<li><a href="../../../en/solutions/npde/npde6102.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde6102.pdf">уравнения Навье&mdash;Стокса</a>
+<li><a href="../lpde/lpdetoc1.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/lpde/lpdetoc1.htm">уравнения параболического типа, линейные</a>
+<li><a href="../npde/npde-toc1.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/npde/npde-toc1.htm">уравнения параболического типа, нелинейные</a>
+<li><a href="../lpde/lpdetoc3.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/lpde/lpdetoc3.htm">уравнения эллиптического типа, линейные</a>
+<li><a href="../npde/npde-toc3.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/npde/npde-toc3.htm">уравнения эллиптического типа, нелинейные</a>
+<li><a href="../../../en/solutions/npde/npde1103.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1103.pdf">ФитцХью&mdash;Нагумо уравнение</a>
+<li><a href="../../../en/solutions/npde/npde1101.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1101.pdf">Фишера уравнение</a>
+<li><a href="../../../en/solutions/npde/npde3301.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde3301.pdf">Хохлова&mdash;Заболоцкой уравнение</a>
+<li><a href="../../../en/solutions/lpde/lpde108.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/lpde/lpde108.pdf">Шредингера уравнение, линейное</a>
+<li><a href="../../../en/solutions/npde/npde1401.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1401.pdf">Шредингера уравнение, с кубической нелинейностью</a>
+<li><a href="../../../en/solutions/npde/npde1402.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1402.pdf">Шредингера уравнение, со степенной нелинейностью</a>
+<li><a href="../../../en/solutions/npde/npde1403.pdf" tppabs="http://eqworld.ipmnet.ru/en/solutions/npde/npde1403.pdf">Шредингера уравнение, нелинейное общего вида</a>
+</ol>
+  </td>
+  <td>&nbsp;</td>
+  <td class=book width=160 valign=Top>
+  <p class=book><a href="javascript:if(confirm('http://www.bolero.ru/product-22312539.html?terms=полянин  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.bolero.ru/product-22312539.html?terms=полянин'" tppabs="http://www.bolero.ru/product-22312539.html?terms=полянин">
+    <img SRC="../../../images/hb-lmpe-ru.gif" tppabs="http://eqworld.ipmnet.ru/images/hb-lmpe-ru.gif" ALT="Справочник по линейным уравнениям математической физики" WIDTH=90 HEIGHT=130 border=0></a></p>
+  <p class=book><a href="javascript:if(confirm('http://www.fizmatkniga.ru/product_info.php?products_id=5078  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.fizmatkniga.ru/product_info.php?products_id=5078'" tppabs="http://www.fizmatkniga.ru/product_info.php?products_id=5078">
+    <img SRC="../../../images/bk-matfiz2005.jpg" tppabs="http://eqworld.ipmnet.ru/images/bk-matfiz2005.jpg" ALT="Методы решения нелинейных уравнений математической физики и механики" WIDTH=90 HEIGHT=129 border=0></a></p>
+  <p class=book><a href="javascript:if(confirm('http://www.bolero.ru/product-22279943.html?terms=полянин  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.bolero.ru/product-22279943.html?terms=полянин'" tppabs="http://www.bolero.ru/product-22279943.html?terms=полянин">
+    <img SRC="../../../images/hb-nmpe-ru.jpg" tppabs="http://eqworld.ipmnet.ru/images/hb-nmpe-ru.jpg" ALT="Справочник по нелинейным уравнениям математической физики" WIDTH=90 HEIGHT=127 border=0></a></p>
+  <p class=book><a href="javascript:if(confirm('http://www.bolero.ru/product-22312024.html?terms=полянин  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.bolero.ru/product-22312024.html?terms=полянин'" tppabs="http://www.bolero.ru/product-22312024.html?terms=полянин">
+    <img SRC="../../../images/hb-fpde-ru.jpg" tppabs="http://eqworld.ipmnet.ru/images/hb-fpde-ru.jpg" ALT="Справочник по дифференциальным уравнениям с частными производными первого порядка" WIDTH=90 HEIGHT=132 border=0></a></p>
+  <p class=book><a href="javascript:if(confirm('http://www.crcpress.com/shopping_cart/products/product_detail.asp?sku=C3553  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.crcpress.com/shopping_cart/products/product_detail.asp?sku=C3553'" tppabs="http://www.crcpress.com/shopping_cart/products/product_detail.asp?sku=C3553">
+    <img SRC="../../../images/hb-npde.jpg" tppabs="http://eqworld.ipmnet.ru/images/hb-npde.jpg" WIDTH=90 HEIGHT=128 border=0
+    ALT="Handbook of Nonlinear Partial Differential Equations"></a></p>
+  <p class=book><a href="javascript:if(confirm('http://www.crcpress.com/shopping_cart/products/product_detail.asp?sku=C2999  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.crcpress.com/shopping_cart/products/product_detail.asp?sku=C2999'" tppabs="http://www.crcpress.com/shopping_cart/products/product_detail.asp?sku=C2999">
+    <img SRC="../../../images/hb-lpde.jpg" tppabs="http://eqworld.ipmnet.ru/images/hb-lpde.jpg" WIDTH=90 HEIGHT=128 border=0
+    ALT="Handbook of Linear Partial Differential Equations"></a></p>
+  <p class=book><a href="javascript:if(confirm('http://www.springer-ny.com/detail.tpl?isbn=0387986545  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.springer-ny.com/detail.tpl?isbn=0387986545'" tppabs="http://www.springer-ny.com/detail.tpl?isbn=0387986545">
+    <img SRC="../../../images/bk-npde-bluman.jpg" tppabs="http://eqworld.ipmnet.ru/images/bk-npde-bluman.jpg" WIDTH=90 HEIGHT=129 border=0
+    ALT="Symmetry and Integration Methods for Differential Equations, 2nd Edition"></a></p>
+  <p class=book><a href="javascript:if(confirm('http://us.cambridge.org/titles/catalogue.asp?isbn=0521478111  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://us.cambridge.org/titles/catalogue.asp?isbn=0521478111'" tppabs="http://us.cambridge.org/titles/catalogue.asp?isbn=0521478111">
+    <img SRC="../../../images/bk-npde-olver.gif" tppabs="http://eqworld.ipmnet.ru/images/bk-npde-olver.gif" WIDTH=90 HEIGHT=129 border=0
+    ALT="Equivalence, Invariants, and Symmetry"></a></p>
+  <p class=book><a href="javascript:if(confirm('http://www.amazon.com/exec/obidos/ASIN/0127843965/weisstein-20/104-2559559-0457551  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.amazon.com/exec/obidos/ASIN/0127843965/weisstein-20/104-2559559-0457551'" tppabs="http://www.amazon.com/exec/obidos/ASIN/0127843965/weisstein-20/104-2559559-0457551">
+    <img SRC="../../../images/hb-zwillinger.gif" tppabs="http://eqworld.ipmnet.ru/images/hb-zwillinger.gif" WIDTH=90 HEIGHT=135 border=0
+    ALT="Handbook of Differential Equations, 3rd Edition"></a>
+  </td>
+</tr>
+</table>
+
+<hr width="100%" align=Left>
+<p class=note>Веб-сайт EqWorld содержит обширную информацию о решениях
+различных классов обыкновенных дифференциальных уравнений,
+дифференциальных уравнений с частными производными (уравнений математической физики),
+интегральных уравнений, функциональных уравнений и других математических уравнений.</p>
+<p class=note>&copy; 2004-2017 А. Д. Полянин</p>
+</td></tr></table></body></html>

@@ -1,0 +1,301 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ru">
+<head>
+  <meta http-equiv=Content-Type content="text/html; charset=Windows-1251">
+  <title>Нелинейные уравнения в частных производных с запаздывающим аргументом - EqWorld</title>
+ <meta name="Description" content="Нелинейные уравнения в частных производных с запаздывающим аргументом - Точные решения">
+ <meta name="Keywords" content="уравнения, в частных производных, реакционно-диффузионнные, с запаздыванием,  
+ с запаздывающим аргументом, дифференциально-разностные, системы, нелинейные, точные решения, устойчивость, неустойчивость">
+   <link rel="stylesheet" href="../../css/main.css" tppabs="http://eqworld.ipmnet.ru/css/main.css" type="text/css">
+</head>
+
+<body><table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:0.5em; margin:0px">
+<table width="100%" bgcolor="#0FD1BA" cellpadding=4>
+<tr>
+  <td ALIGN=Center VALIGN=Middle WIDTH=160>
+    <a href="../../indexr.htm" tppabs="http://eqworld.ipmnet.ru/indexr.htm"><img SRC="../../images/eqworld-logo-small.gif" tppabs="http://eqworld.ipmnet.ru/images/eqworld-logo-small.gif" ALT="EqWorld logo" WIDTH=155 HEIGHT=81 border=0></a></td>
+  <td align=Center valign=Middle>
+    <p class=ew1>EqWorld</p>
+    <p class=ew2>МИР МАТЕМАТИЧЕСКИХ УРАВНЕНИЙ</p></td>
+  <td WIDTH=155 ALIGN=Center VALIGN=Middle>
+    <img src="../../images/ipmlogo24b.gif" tppabs="http://eqworld.ipmnet.ru/images/ipmlogo24b.gif" width="86" height="80"
+    alt="IPM Logo" border="0" align="middle"></td>
+</tr>
+</table>
+
+<table width="100%" cellpadding=2 style="margin-top:.25em">
+<tr>
+  <td class=menu width=160 valign=Top align=Left>
+    <p class=menutop><a href="../../indexr.htm" tppabs="http://eqworld.ipmnet.ru/indexr.htm">Начальная стр.</a>
+      <a href="javascript:if(confirm('http://top100.rambler.ru/top100/  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://top100.rambler.ru/top100/'" tppabs="http://top100.rambler.ru/top100/">
+      <img src="../../../counter.rambler.ru/top100.cnt-708065.gif" tppabs="http://counter.rambler.ru/top100.cnt?708065" alt="" width=1 height=1 border=0></a>
+    </p><p class=menu><a href="../solutions.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions.htm">Точные решения</a>
+    </p><p class=submenu>
+    <a href="ae.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/ae.htm" title="Алгебраические уравнения">Алгебраические ур-я</a><br>
+    <a href="ode.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/ode.htm" title="Обыкновенные дифференциальные уравнения">Обыкновенные ДУ</a><br>
+    <a href="sysode.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/sysode.htm" title="Системы обыкновенных дифференциальных уравнений">Системы ОДУ</a><br>
+    <a href="firstpde.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/firstpde.htm" title="Дифференциальные уравнения с частными производными первого порядка">УрЧП 1-го порядка</a><br>
+    <a href="lpde.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/lpde.htm" title="Линейные дифференциальные уравнения с частными производными">Линейные УрЧП</a><br>
+    <a href="npde.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/npde.htm" title="Нелинейные дифференциальные уравнения с частными производными">Нелинейные УрЧП</a><br>
+    <a href="syspde.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/syspde.htm" title="Системы дифференциальных уравнений с частными производными">Системы УрЧП</a><br>
+    <a class=cur href="delaypde.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/delaypde.htm" title="Нелинейные уравнения в частных производных с запаздывающим аргументом">УрЧП с запазд. аргум.</a><br>
+    <a href="ie.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/ie.htm" title="Интегральные уравнения">Интегральные ур-ния</a><br>
+    <a href="fe.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/fe.htm" title="Функциональные уравнения">Функциональные ур-я</a><br>
+    <a href="eqindex.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/eqindex.htm">Указатель уравнений</a><br>
+    <a href="../../eqarchive/-lang=ru.htm" tppabs="http://eqworld.ipmnet.ru/eqarchive/?lang=ru">EqArchive</a><br>
+    <a href="basbooks.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/basbooks.htm">Справочники</a><br>
+    <a href="interesting.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions/interesting.htm">Интересные статьи</a>
+
+    </p><p class=menu><a href="../methods.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods.htm">Методы решения</a>
+    </p><p class=submenu>
+    <a href="../methods/meth-ae.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/meth-ae.htm" title="Алгебраические уравнения">Алгебраические ур-я</a><br>
+    <a href="../methods/meth-de.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/meth-de.htm" title="Диофантовы уравнения">Диофантовы ур-ния</a><br>
+    <a href="../methods/meth-ode.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/meth-ode.htm" title="Обыкновенные дифференциальные уравнения">Обыкновенные ДУ</a><br>
+    <a href="../methods/meth-pde.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/meth-pde.htm" title="Дифференциальные уравнения с частными производными">УрЧП</a><br>
+    <a href="../methods/meth-ie.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/meth-ie.htm" title="Интегральные уравнения">Интегральные ур-ния</a><br>
+    <a href="../methods/meth-fe.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/meth-fe.htm" title="Функциональные уравнения">Функциональные ур-я</a>
+
+    </p><p class=menu><a href="../forums.htm" tppabs="http://eqworld.ipmnet.ru/ru/forums.htm">Мат. форумы</a>
+    </p><p class=submenu>
+    <a href="javascript:if(confirm('http://eqworld.ipmnet.ru/forum/  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ·юОсЖч±ЁёжёГОДјюОґХТµЅЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://eqworld.ipmnet.ru/forum/'" tppabs="http://eqworld.ipmnet.ru/forum/">Форум EqWorld</a><br>
+    <a href="../forums/others.htm" tppabs="http://eqworld.ipmnet.ru/ru/forums/others.htm">Другие форумы</a>
+
+    </p><p class=menu><a href="../auxiliary.htm" tppabs="http://eqworld.ipmnet.ru/ru/auxiliary.htm">Вспом. разделы</a>
+    </p><p class=submenu>
+    <a href="../auxiliary/aux-integrals.htm" tppabs="http://eqworld.ipmnet.ru/ru/auxiliary/aux-integrals.htm">Интегралы</a><br>
+    <a href="../auxiliary/aux-specfunc.htm" tppabs="http://eqworld.ipmnet.ru/ru/auxiliary/aux-specfunc.htm" title="Специальные функции">Спец. функции</a><br>
+    <a href="../auxiliary/aux-inttrans.htm" tppabs="http://eqworld.ipmnet.ru/ru/auxiliary/aux-inttrans.htm" title="Интегральные преобразования">Интеграл. преобраз.</a>
+
+    </p><p class=menu><a href="../software.htm" tppabs="http://eqworld.ipmnet.ru/ru/software.htm">Программы</a>
+    </p><p class=submenu>
+    <a href="../software.htm#maple" tppabs="http://eqworld.ipmnet.ru/ru/software.htm#maple">Maple</a><br>
+    <a href="../software.htm#mathematica" tppabs="http://eqworld.ipmnet.ru/ru/software.htm#mathematica">Mathematica</a><br>
+    <a href="../software.htm#matlab" tppabs="http://eqworld.ipmnet.ru/ru/software.htm#matlab">MATLAB</a><br>
+    <a href="../software.htm#others" tppabs="http://eqworld.ipmnet.ru/ru/software.htm#others">Другие</a>
+
+    </p><p class=menu><a href="../education.htm" tppabs="http://eqworld.ipmnet.ru/ru/education.htm">Образование</a>
+    </p><p class=submenu>
+    <a href="../education/edu-ae.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-ae.htm" title="Алгебраические уравнения">Алгебраические ур-я</a><br>
+    <a href="../education/edu-de.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-de.htm" title="Диофантовы уравнения">Диофантовы  ур-ния</a><br>
+    <a href="../education/edu-ode.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-ode.htm" title="Обыкновенные дифференциальные уравнения">Обыкновенные ДУ</a><br>
+    <a href="../education/edu-pde.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-pde.htm" title="Дифференциальные уравнения с частными производными">УрЧП</a><br>
+    <a href="../education/edu-ie.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-ie.htm" title="Интегральные уравнения">Интегральные ур-ния</a><br>
+    <a href="../education/edu-fe.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-fe.htm" title="Функциональные уравнения">Функциональные ур-я</a><br>
+    <a href="../education/edu-CommonErrors.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-CommonErrors.htm" title="Типичные ошибки при построении точных решений">Типичные ошибки</a><br>
+    <a href="../education/edu-scientists.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-scientists.htm" title="Выдающиеся математики">Выдающ. математики</a><br>
+    <a href="../education/edu-universities.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-universities.htm">Университеты</a><br>
+    <a href="../education/edu-mathsites.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-mathsites.htm">Сайты для студентов</a><br>
+    <a href="../education/edu-school.htm" tppabs="http://eqworld.ipmnet.ru/ru/education/edu-school.htm">Для школьников</a>
+
+    </p><p class=menu><a href="../library.htm" tppabs="http://eqworld.ipmnet.ru/ru/library.htm">Библиотека</a>
+    </p><p class=submenu>
+    <a href="../library/mathematics.htm" tppabs="http://eqworld.ipmnet.ru/ru/library/mathematics.htm">Книги по математике</a><br>
+    <a href="../library/mechanics.htm" tppabs="http://eqworld.ipmnet.ru/ru/library/mechanics.htm">Книги по механике</a><br>
+    <a href="../library/physics.htm" tppabs="http://eqworld.ipmnet.ru/ru/library/physics.htm">Книги по физике</a><br>
+    <a href="../library/theses.htm" tppabs="http://eqworld.ipmnet.ru/ru/library/theses.htm">Диссертации</a><br>
+    <a href="../library/bookrefs.htm" tppabs="http://eqworld.ipmnet.ru/ru/library/bookrefs.htm">Ссылки на книги</a><br>
+    <a href="../library/otherlibs.htm" tppabs="http://eqworld.ipmnet.ru/ru/library/otherlibs.htm">Другие библиотеки</a>
+
+    </p><p class=menu><a href="../about.htm" tppabs="http://eqworld.ipmnet.ru/ru/about.htm">Об этом сайте</a>
+    </p><p class=submenu>
+    <a href="../about/features.htm" tppabs="http://eqworld.ipmnet.ru/ru/about/features.htm">Характ. особенности</a><br>
+    <a href="../about/board.htm" tppabs="http://eqworld.ipmnet.ru/ru/about/board.htm">Редколлегия</a><br>
+    <!--<a href="../../ru/about/statdata.htm" title="Статистические данные">Стат. данные</a><br>-->
+    <a href="../about/noticeboard.htm" tppabs="http://eqworld.ipmnet.ru/ru/about/noticeboard.htm">Объявления</a><br>
+    <a href="../about/news.htm" tppabs="http://eqworld.ipmnet.ru/ru/about/news.htm">Новое на сайте</a><br>
+    <a href="../about/contact.htm" tppabs="http://eqworld.ipmnet.ru/ru/about/contact.htm">Контакты</a>
+
+    </p><p class=menu><a href="../authors.htm" tppabs="http://eqworld.ipmnet.ru/ru/authors.htm">Для авторов</a>
+    </p><p class=submenu>
+    <a href="../../eqarchive/add.php.htm" tppabs="http://eqworld.ipmnet.ru/eqarchive/add.php">Добавить уравнение</a><br>
+    <a href="../author/addbook.htm" tppabs="http://eqworld.ipmnet.ru/ru/author/addbook.htm">Добавить книгу</a><br>
+    <a href="../author/writebook.htm" tppabs="http://eqworld.ipmnet.ru/ru/author/writebook.htm">Опубликовать книгу</a>
+
+    </p><p class=menu><a href="../info.htm" tppabs="http://eqworld.ipmnet.ru/ru/info.htm">Информация</a>
+    </p><p class=submenu>
+    <a href="../info/mathwebs.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/mathwebs.htm">Математич. сайты</a><br>
+    <a href="../../en/info/errata.htm" tppabs="http://eqworld.ipmnet.ru/en/info/errata.htm">Опечатки в справочн.</a><br>
+    <a href="../info/shops.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/shops.htm">Интернет-магазины</a><br>
+    <a href="../info/publishers.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/publishers.htm">Научн. издательства</a><br>
+    <a href="../info/journals.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/journals.htm">Научные журналы</a><br>
+    <a href="../info/conferences.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/conferences.htm">Конференции</a><br>
+    <a href="../info/ask.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/ask.htm">Задать вопрос</a><br>
+    <a href="../info/sci-edu.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/sci-edu.htm">Наука и образование</a><br>
+    <a href="../info/copyright.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/copyright.htm">Авторское право</a><br>
+    <a href="../info/other.htm" tppabs="http://eqworld.ipmnet.ru/ru/info/other.htm">Разное</a>
+
+    </p><p class=menu><a href="../pastime.htm" tppabs="http://eqworld.ipmnet.ru/ru/pastime.htm">Развлечения</a>
+    </p><p class=submenu>
+    <a href="../pastime/chess.htm" tppabs="http://eqworld.ipmnet.ru/ru/pastime/chess.htm">Шахматы и шашки</a><br>
+    <a href="../pastime/puzzles.htm" tppabs="http://eqworld.ipmnet.ru/ru/pastime/puzzles.htm">Головоломки и игры</a><br>
+    <a href="../pastime/humor.htm" tppabs="http://eqworld.ipmnet.ru/ru/pastime/humor.htm">ФизМатЮмор</a><br>
+    </p>
+  </td>
+  <td>&nbsp;</td>
+  <td valign=Top><p class=altmenu>
+    <a href="../solutions.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions.htm">Точные решения</a>
+    <a class=quad href="../methods.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods.htm">Методы решения</a>
+    <a class=quad href="../library.htm" tppabs="http://eqworld.ipmnet.ru/ru/library.htm">Библиотека</a>
+    <a class=quad href="../forums.htm" tppabs="http://eqworld.ipmnet.ru/ru/forums.htm">Мат. форумы</a></p>
+
+<p class=history><a href="../solutions.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions.htm">Точные решения</a> &gt; Нелинейные уравнения в частных производных с запаздывающим аргументом</p>
+<h2>Нелинейные уравнения в частных производных с запаздывающим аргументом</h2>
+
+<!--<p><b>Selected Articles Since 2000</b>-->
+
+<h3>Публикации по теме:</h3>
+<ul>
+<li>J.&nbsp;Wu, X.&nbsp;Zou. <a
+href="delaypde/Wu_Zou_2001.pdf" tppabs="http://eqworld.ipmnet.ru/ru/solutions/delaypde/Wu_Zou_2001.pdf">Traveling wave fronts of reaction-diffusion systems with delay</a>.
+<i>J. Dynamics and Differential Equations</i>, Vol.&nbsp;13, pp.&nbsp;651-687, 2001. (Файл статьи взят из Интернета, см. <a style="white-space:nowrap" href="javascript:if(confirm('http://www.apmaths.uwo.ca/~xzou/Repr/jdde01.pdf  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.apmaths.uwo.ca/~xzou/Repr/jdde01.pdf'" tppabs="http://www.apmaths.uwo.ca/~xzou/Repr/jdde01.pdf">http://www.apmaths.uwo.ca/~xzou/Repr/jdde01.pdf</a>)</li>
+
+<li>J.&nbsp;Huang, X.&nbsp;Zou.  <a
+href="delaypde/Huang_Zou_2002.pdf" tppabs="http://eqworld.ipmnet.ru/ru/solutions/delaypde/Huang_Zou_2002.pdf">Traveling wavefronts in diffusive and cooperative Lotka–Volterra
+system with delays</a>. <i>J. Math. Anal. Appl.,</i> Vol.&nbsp;271, pp.&nbsp;455-466, 2002. (Файл статьи взят из Интернета, см. <a style="white-space:nowrap" href="javascript:if(confirm('http://www.apmaths.uwo.ca/~xzou/Repr/jmaa02.pdf  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.apmaths.uwo.ca/~xzou/Repr/jmaa02.pdf'" tppabs="http://www.apmaths.uwo.ca/~xzou/Repr/jmaa02.pdf">http://www.apmaths.uwo.ca/~xzou/Repr/jmaa02.pdf</a>)</li>
+
+<li>А.&nbsp;Д.&nbsp;Полянин, А.&nbsp;И.&nbsp;Журов. <a
+href="delaypde/Polyanin_Zhurov_Vestnik_MEPHI_2013.pdf" tppabs="http://eqworld.ipmnet.ru/ru/solutions/delaypde/Polyanin_Zhurov_Vestnik_MEPHI_2013.pdf">Метод функциональных связей: точные решения нелинейных реакционно-диффузионных
+уравнений с запаздыванием</a>. <i>Вестник Национального исследовательского ядерного университета “МИФИ”</i>, т.&nbsp;2, №&nbsp;4, с.&nbsp;425-431, 2013.
+
+<li>A.&nbsp;D.&nbsp;Polyanin, A.&nbsp;I.&nbsp;Zhurov.  <a
+href="javascript:if(confirm('http://www.sciencedirect.com/science/article/pii/S1007570413003195  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.sciencedirect.com/science/article/pii/S1007570413003195'" tppabs="http://www.sciencedirect.com/science/article/pii/S1007570413003195">
+Functional constraints method for constructing exact solutions to delay reaction-diffusion equations and more complex nonlinear equations</a>.
+<i>Communications in Nonlinear Science and Numerical Simulation</i>,
+Vol.&nbsp;19, No.&nbsp;3, pp.&nbsp;417&ndash;430, 2014. 
+(See also: <a
+href="delaypde/Polyanin_Zhurov_arXiv_2013.pdf" tppabs="http://eqworld.ipmnet.ru/ru/solutions/delaypde/Polyanin_Zhurov_arXiv_2013.pdf">A new method for constructing exact solutions to nonlinear delay
+partial differential equations</a>. <i>arXiv</i>:1304.5473v1 [nlin.SI] 19&nbsp;Apr&nbsp;2013.)</li>
+
+<li>А.&nbsp;Д.&nbsp;Полянин. <a
+href="delaypde/Polyanin_Eng_MGTU_2013.pdf" tppabs="http://eqworld.ipmnet.ru/ru/solutions/delaypde/Polyanin_Eng_MGTU_2013.pdf">Точные решения и нелинейная неустойчивость
+реакционно-диффузионных систем уравнений с запаздыванием</a>. <i>Инженерный журнал: наука и инновации</i>, №&nbsp;4(16), 2013.
+
+<li>А.&nbsp;Д.&nbsp;Полянин. <a
+href="javascript:if(confirm('http://www.mathnet.ru/php/presentation.phtml?option_lang=rus&presentid=6339  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.mathnet.ru/php/presentation.phtml?option_lang=rus&presentid=6339'" tppabs="http://www.mathnet.ru/php/presentation.phtml?option_lang=rus&presentid=6339">Нелинейная неустойчивость и точные решения реакционно-диффузионных систем уравнений 
+с запаздыванием</a> (видеотека). М.:&nbsp;МИАН&nbsp;РАН, 19.03.2013.
+
+<li>А.&nbsp;Д.&nbsp;Полянин. <a
+href="delaypde/Polyanin_IPMech_2014.pdf" tppabs="http://eqworld.ipmnet.ru/ru/solutions/delaypde/Polyanin_IPMech_2014.pdf">Реакционно-диффузионные, гидродинамические и другие системы с
+запаздыванием: точные решения, методы, задачи, нелинейная неустойчивость</a> (презентация). М.:&nbsp;ИПМех&nbsp;РАН, 23.01.2014
+(<a href="delaypde/Polyanin_IPMech_2014.ppt" tppabs="http://eqworld.ipmnet.ru/ru/solutions/delaypde/Polyanin_IPMech_2014.ppt">формат ppt</a>).
+
+<li>А.&nbsp;Д.&nbsp;Полянин, В.&nbsp;Г.&nbsp;Сорокин. <a
+href="delaypde/Polyanin_Sorokin_Vestnik_MEPHI_2014.pdf" tppabs="http://eqworld.ipmnet.ru/ru/solutions/delaypde/Polyanin_Sorokin_Vestnik_MEPHI_2014.pdf">Точные решения нелинейных реакционно-диффузионных
+уравнений гиперболического типа с запаздыванием</a>. <i>Вестник Национального исследовательского ядерного университета “МИФИ”</i>, т.&nbsp;3, №&nbsp;2, 2014.
+
+<li>А.&nbsp;Д.&nbsp;Полянин, В.&nbsp;Г.&nbsp;Сорокин, А.&nbsp;В.&nbsp; Вязьмин. <a
+href="javascript:if(confirm('http://www.mathnet.ru/links/56a2e7bf78e68a562bdc411bae11012c/mmcm29.pdf  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.mathnet.ru/links/56a2e7bf78e68a562bdc411bae11012c/mmcm29.pdf'" tppabs="http://www.mathnet.ru/links/56a2e7bf78e68a562bdc411bae11012c/mmcm29.pdf">Нелинейные реакционно-диффузионные уравнения 
+гиперболического типа с запаздыванием: точные решения, глобальная неустойчивость </a>. <i>Мат. моделирование и численные методы</i>, т.&nbsp;4, с.&nbsp;53–73, 2014.
+</ul>
+
+<h3>Некоторые другие статьи по теме:</h3>
+<ul>
+<li>S.&nbsp;V.&nbsp;Meleshko, S.&nbsp;Moyo.<a
+ href="javascript:if(confirm('http://www.sciencedirect.com/science/article/pii/S0022247X07004416  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.sciencedirect.com/science/article/pii/S0022247X07004416'" tppabs="http://www.sciencedirect.com/science/article/pii/S0022247X07004416">
+On the complete group classification of the reaction--diffusion
+equation with a delay</a>.  <i>Journal of Mathematical Analysis and Applications</i>, Vol. 338, pp. 448&ndash;466, 2008.</li>
+
+<li>J.&nbsp;Tanthanuch. <a href="javascript:if(confirm('http://www.sciencedirect.com/science/article/pii/S1007570412002626  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.sciencedirect.com/science/article/pii/S1007570412002626'" tppabs="http://www.sciencedirect.com/science/article/pii/S1007570412002626">Symmetry analysis 
+ of the nonhomogeneous inviscid Burgers equation with delay</a>. <i>Communications in Nonlinear Science and Numerical Simulation</i>, Vol. 17,
+pp.&nbsp;4978&ndash;4987, 2012.</li>
+
+<li>A.&nbsp;D.&nbsp;Polyanin, A.&nbsp;I.&nbsp;Zhurov.  <a
+ href="javascript:if(confirm('http://www.sciencedirect.com/science/article/pii/S0020746212001382  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.sciencedirect.com/science/article/pii/S0020746212001382'" tppabs="http://www.sciencedirect.com/science/article/pii/S0020746212001382">
+Integration of linear and some model non-linear equations of
+motion of incompressible fluids</a>.
+<i>International  Journal of Non-Linear Mechanics</i>, Vol.&nbsp;49, pp.&nbsp;77&ndash;83, 2013.</li>
+
+<li>A.&nbsp;D.&nbsp;Polyanin, A.&nbsp;I.&nbsp;Zhurov.  <a
+href="javascript:if(confirm('http://www.sciencedirect.com/science/article/pii/S0020746213000589  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.sciencedirect.com/science/article/pii/S0020746213000589'" tppabs="http://www.sciencedirect.com/science/article/pii/S0020746213000589">
+Exact solutions of linear and non-linear differential-difference heat and diffusion
+equations with finite relaxation time</a>.
+<i>International  Journal of Non-Linear Mechanics</i>,
+Vol.&nbsp;54, pp.&nbsp;115&ndash;126, 2013.</li>
+
+<li>A.&nbsp;D.&nbsp;Polyanin, A.&nbsp;I.&nbsp;Zhurov.  <a
+href="javascript:if(confirm('http://www.sciencedirect.com/science/article/pii/S0020746213001285  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.sciencedirect.com/science/article/pii/S0020746213001285'" tppabs="http://www.sciencedirect.com/science/article/pii/S0020746213001285">
+Exact solutions of non-linear differential-difference equations of a viscous fluid with finite relaxation time</a>,
+<i>International  Journal of Non-Linear Mechanics</i>.
+Vol.&nbsp;57, pp.&nbsp;116&ndash;122, 2013.</li>
+
+<li>A.&nbsp;D.&nbsp;Polyanin, A.&nbsp;I.&nbsp;Zhurov.  <a
+href="javascript:if(confirm('http://www.sciencedirect.com/science/article/pii/S1007570413003213  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.sciencedirect.com/science/article/pii/S1007570413003213'" tppabs="http://www.sciencedirect.com/science/article/pii/S1007570413003213">
+Exact separable solutions of delay reaction-diffusion equations and other nonlinear
+partial functional-differential equations</a>.
+<i>Communications in Nonlinear Science and Numerical Simulation</i>,
+Vol.&nbsp;19, No.&nbsp;3, pp.&nbsp;409&ndash;416, 2014.</li>
+
+<li>A.&nbsp;D.&nbsp;Polyanin, A.&nbsp;I.&nbsp;Zhurov.  <a
+href="javascript:if(confirm('http://www.sciencedirect.com/science/article/pii/S0020746213001959  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.sciencedirect.com/science/article/pii/S0020746213001959'" tppabs="http://www.sciencedirect.com/science/article/pii/S0020746213001959">
+New generalized and functional separable solutions to non-linear delay reaction-diffusion equations</a>.
+<i>International  Journal of Non-Linear Mechanics</i>,
+Vol.&nbsp;59, pp.&nbsp;16&ndash;22, 2014.</li>
+
+<li>A.&nbsp;D.&nbsp;Polyanin, A.&nbsp;I.&nbsp;Zhurov.  <a
+href="javascript:if(confirm('http://www.sciencedirect.com/science/article/pii/S1007570413006023  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.sciencedirect.com/science/article/pii/S1007570413006023'" tppabs="http://www.sciencedirect.com/science/article/pii/S1007570413006023">
+Generalized and functional separable solutions to nonlinear delay Klein&ndash;Gordon equations</a>.
+<i>Communications in Nonlinear Science and Numerical Simulation</i>, 
+Vol.&nbsp;19, No.&nbsp;8, pp.&nbsp;2676&ndash;2689, 2014.</li>
+
+<li>A.&nbsp;D.&nbsp;Polyanin, A.&nbsp;I.&nbsp;Zhurov.  <a
+href="javascript:if(confirm('http://www.sciencedirect.com/science/article/pii/S0020746214000250  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.sciencedirect.com/science/article/pii/S0020746214000250'" tppabs="http://www.sciencedirect.com/science/article/pii/S0020746214000250">
+Non-linear instability and exact solutions to some delay reaction–diffusion systems</a>.
+<i>International  Journal of Non-Linear Mechanics</i>, 
+Vol.&nbsp;62, pp.&nbsp;33&ndash;40, 2014.</li>
+
+<li>A.&nbsp;D.&nbsp;Polyanin, A.&nbsp;I.&nbsp;Zhurov.  <a
+href="javascript:if(confirm('http://www.sciencedirect.com/science/article/pii/S089396591400161X  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.sciencedirect.com/science/article/pii/S089396591400161X'" tppabs="http://www.sciencedirect.com/science/article/pii/S089396591400161X">
+Nonlinear delay reaction–diffusion equations with varying transfer coefficients: Exact methods and new solutions</a>,
+<i>Applied Mathematics Letters</i> ,
+Vol.&nbsp;37, pp.&nbsp;43&ndash;48, 2014.</li>
+
+<li>A.&nbsp;D.&nbsp;Polyanin, A.&nbsp;I.&nbsp;Zhurov.  <a
+href="javascript:if(confirm('http://www.sciencedirect.com/science/article/pii/S0020746214001851  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.sciencedirect.com/science/article/pii/S0020746214001851'" tppabs="http://www.sciencedirect.com/science/article/pii/S0020746214001851">
+The functional constraints method: Application to non-linear delay reaction-diffusion equations with varying transfer coefficients</a>,
+<i>International  Journal of Non-Linear Mechanics</i>,
+Vol.&nbsp;67, pp.&nbsp;267&ndash;277, 2014.</li>
+
+<li>A.&nbsp;D.&nbsp;Polyanin, A.&nbsp;I.&nbsp;Zhurov.  <a
+href="javascript:if(confirm('http://www.sciencedirect.com/science/article/pii/S0020746215000062  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.sciencedirect.com/science/article/pii/S0020746215000062'" tppabs="http://www.sciencedirect.com/science/article/pii/S0020746215000062">
+The generating equations method: Constructing exact solutions to delay reaction-diffusion systems and other non-linear coupled delay PDEs</a>,
+<i>International  Journal of Non-Linear Mechanics</i>,
+Vol.&nbsp;71, pp.&nbsp;104&ndash;115, 2015.</li>
+
+<li>A.&nbsp;D.&nbsp;Polyanin, V.&nbsp;G.&nbsp;Sorokin.  <a
+href="javascript:if(confirm('http://www.sciencedirect.com/science/article/pii/S0893965915000506  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.sciencedirect.com/science/article/pii/S0893965915000506'" tppabs="http://www.sciencedirect.com/science/article/pii/S0893965915000506">
+Nonlinear delay reaction-diffusion equations: Traveling-wave solutions in elementary functions</a>,
+<i>Applied Mathematics Letters</i>,
+Vol.&nbsp;46, pp.&nbsp;38&ndash;43, 2015.</li>
+ </ul>
+ 
+  <h3> См. также:</h3>
+  <ul>
+ <li>P.&nbsp;M.&nbsp;Jordan, W.&nbsp;Dai, R.E.&nbsp;Mickens. <a
+href="javascript:if(confirm('http://www.sciencedirect.com/science/article/pii/S0093641308000438  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://www.sciencedirect.com/science/article/pii/S0093641308000438'" tppabs="http://www.sciencedirect.com/science/article/pii/S0093641308000438">
+A note on the delayed heat equation: Instability with respect to initial data</a>. 
+<i>Mechanics Research Communications</i>, 2008, Vol.&nbsp;35, pp.&nbsp;414-420.</li>
+
+<li>R. &nbsp;S.&nbsp;Ismagilov, N. &nbsp;A.&nbsp;Rautian, V.&nbsp;V.&nbsp;Vlasov.<a
+href="delaypde/Ismagilov_arXiv_2014.pdf" tppabs="http://eqworld.ipmnet.ru/ru/solutions/delaypde/Ismagilov_arXiv_2014.pdf">
+Examples of very unstable linear partial functional differential equations</a>.
+<i>arXiv</i>: arXiv:1402.4107 [math.AP]&nbsp;17&nbsp;Feb&nbsp;2014.</li>
+
+ <li><a href="../../en/solutions/delay_reaction_diffusion_equations.htm" tppabs="http://eqworld.ipmnet.ru/en/solutions/delay_reaction_diffusion_equations.htm">Delay Reaction-Diffusion Equations</a> - EqWorld</li>
+ </ul>
+
+
+  </td>
+  <td>&nbsp;</td>
+  <td class=book width=160 valign=Top>
+    <br>
+  </td>
+</tr>
+</table>
+
+<hr width="100%" align=Left>
+<p class=note>Веб-сайт EqWorld содержит обширную информацию о решениях
+различных классов обыкновенных дифференциальных уравнений,
+дифференциальных уравнений с частными производными (уравнений математической физики),
+интегральных уравнений, функциональных уравнений и других математических уравнений.</p>
+<p class=note>&copy; 2004-2017 А. Д. Полянин</p>
+</td></tr></table></body></html>

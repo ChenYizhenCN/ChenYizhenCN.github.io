@@ -1,0 +1,1030 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//RU"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ru">
+<head>
+ <meta http-equiv=Content-Type content="text/html; charset=Windows-1251">
+ <title>Решение дифференциальных уравнений с помощью инвариантов</title>
+ <meta name="Description" content="Решение обыкновенных дифференциальных уравнений и нелинейных уравнений математической физики с помощью инвариантов">
+ <meta name="Keywords" content="уравнения, дифференциальные, обыкновенные, математической физики, в частных производных, алгебраические, математические, нелинейные, методы, точные, решения, инварианты, преобразования, Полянин, Казаков">
+ <link rel="stylesheet" href="../../../../css/main.css" tppabs="http://eqworld.ipmnet.ru/css/main.css" type="text/css">
+ <style type="text/css">
+  p {text-align:justify;}
+  p.fnote {font-size:smaller;}
+  p.center {text-align: center}
+  p.hmenu {margin: 5pt 0 0 0; font-size: 11pt; font-weight: bold; text-align: center; width:100%; background-color: #CEFCE4; line-height: 140%;}
+  li {text-align:justify;}
+  .left li {text-align:left;}
+  .example {font-size:83%;}
+ </style>
+ <link rel="stylesheet" type="text/css" href="Invarianty-ru.css" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru.css">
+</head>
+<body><table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:0.5em; margin:0px">
+<table width="100%" bgcolor="#0FD1BA" cellpadding=4>
+<tr>
+ <td ALIGN=Center VALIGN=Middle WIDTH=160>
+ <a href="../../../../indexr.htm" tppabs="http://eqworld.ipmnet.ru/indexr.htm"><img SRC="../../../../images/eqworld-logo-small.gif" tppabs="http://eqworld.ipmnet.ru/images/eqworld-logo-small.gif" ALT="EqWorld logo" WIDTH=155 HEIGHT=81 border=0></a></td>
+ <td align=Center valign=Middle>
+ <p class="ew1 center">EqWorld</p>
+ <p class="ew2 center">МИР МАТЕМАТИЧЕСКИХ УРАВНЕНИЙ</p></td>
+ <td WIDTH=155 ALIGN=Center VALIGN=Middle>
+ <img src="../../../../images/ipmlogo24b.gif" tppabs="http://eqworld.ipmnet.ru/images/ipmlogo24b.gif" width="86" height="80"
+ alt="IPM Logo" border="0" align="middle"></td>
+</tr>
+</table>
+<p class=hmenu>
+<a href="../../../../indexr.htm" tppabs="http://eqworld.ipmnet.ru/indexr.htm">Начальная стр.</a>
+<a class=quad href="../../../solutions.htm" tppabs="http://eqworld.ipmnet.ru/ru/solutions.htm">Точные&nbsp;решения</a>
+<a class=quad href="../../../methods.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods.htm">Методы</a>
+<a class=quad href="../../../education.htm" tppabs="http://eqworld.ipmnet.ru/ru/education.htm">Образование</a>
+<a class=quad href="../../../about.htm" tppabs="http://eqworld.ipmnet.ru/ru/about.htm">Об&nbsp;этом&nbsp;сайте</a>
+<a class=quad href="../../../library.htm" tppabs="http://eqworld.ipmnet.ru/ru/library.htm">Библиотека</a>
+<a class=quad href="../../../forums.htm" tppabs="http://eqworld.ipmnet.ru/ru/forums.htm">Мат.&nbsp;форумы</a></p>
+<p style="margin-top:.5em"></p>
+<div style="width:100%">
+<p class=history><a href="../../../methods.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods.htm">Методы</a> &gt;
+ <a href="../../meth-pde.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/meth-pde.htm">Уравнения с частными производными, уравнения математической физики</a> &gt;
+ А.&nbsp;Д.&nbsp;Полянин, К.&nbsp;Е.&nbsp;Казаков. Решение дифференциальных уравнений с помощью инвариантов
+ <a href="javascript:if(confirm('http://top100.rambler.ru/top100/  \n\nёГОДјюОЮ·ЁУГ Teleport Ultra ПВФШ, ТтОЄ ЛьКЗТ»ёцУт»тВ·ѕ¶НвІї±»ЙиЦГОЄЛьµДЖфКјµШЦ·µДµШЦ·ЎЈ  \n\nДгПлФЪ·юОсЖчЙПґтїЄЛь?'))window.location='http://top100.rambler.ru/top100/'" tppabs="http://top100.rambler.ru/top100/">
+ <img src="../../../../../counter.rambler.ru/top100.cnt-708065.gif" tppabs="http://counter.rambler.ru/top100.cnt?708065" width=1 height=1 border=0></a></p>
+
+<h2 style="margin-bottom:0.5ex">Решение дифференциальных уравнений с помощью инвариантов</h2>
+<p style="margin-top:0px">&copy; 2008 &nbsp; А.&nbsp;Д.&nbsp;Полянин, К.&nbsp;Е.&nbsp;Казаков<br>
+Московский государственный технический университет имени Н.Э. Баумана</p>
+
+<p style="font-size:smaller;margin-left:2em;margin-right:4em"><b>Аннотация</b><br>
+В учебном пособии описана общая схема исследования математических уравнений, основанная на использовании инвариантов и позволяющая упрощать алгебраические уравнения и системы, понижать порядок обыкновенных дифференциальных уравнений (или их интегрировать), а также получать точные решения нелинейных уравнений математической физики. Приведены примеры решения конкретных уравнений. Пособие также содержит задачи для самостоятельной работы, которые могут быть использованы при проведении практических занятий.<br><br>
+Пособие предназначено для студентов четвертого и пятого курса кафедры &quot;Прикладная математика&quot;, а также может быть полезно студентам других кафедр, специализирующихся в области математики, физики и механики.</p>
+
+<h3>Оглавление</h3>
+<div style="font-size:90%; margin-left:2ex;">
+<b><a href="#sec0">Введение</a></b><br><br>
+<b><a href="#sec1">1. Симметрии. Общая схема использования инвариантов для решения математических уравнений</a></b><br>
+<a href="#sec1.1">1.1. Симметрии. Преобразования, сохраняющие вид уравнений. Инварианты</a><br>
+<a href="#sec1.2">1.2. Общая схема использования инвариантов для решения математических уравнений</a><br><br>
+<b><a href="#sec2">2. Алгебраические уравнения и системы уравнений</a></b><br>
+<a href="#sec2.1">2.1. Алгебраические уравнения, содержащие четные степени</a><br>
+<a href="#sec2.2">2.2. Возвратные уравнения</a><br>
+<a href="#sec2.3">2.3. Системы алгебраических уравнений, симметричные относительно перестановки аргументов</a><br>
+<a href="#sec2.4">2.4. Выводы</a><br>
+<a href="#sec2.5">Упражнения к разделу 2</a><br><br>
+<b><a href="#sec3">3. Обыкновенные дифференциальные уравнения</a></b><br>
+<a href="#sec3.1">3.1. Преобразования, сохраняющие вид уравнения, и их инварианты</a><br>
+<a href="#sec3.2">3.2. Процедура понижения порядка уравнений при <i>n</i>&nbsp;&#x2265;&nbsp;2 (приведение уравнений к разрешимому виду при <i>n</i>&nbsp;=&nbsp;1)</a><br>
+<a href="#sec3.3">3.3. Используемые преобразования. Процедура определения инвариантов</a><br>
+<a href="#sec3.4">3.4. Анализ конкретных обыкновенных дифференциальных уравнений</a><br>
+<a href="#sec3.5">3.5. Выводы</a><br>
+<a href="#sec3.6">Упражнения к разделу 3</a><br><br>
+<b><a href="#sec4">4. Дифференциальные уравнения с частными производными</a></b><br>
+<a href="#sec4.1">4.1. Преобразования, сохраняющие вид уравнения, и их инварианты</a><br>
+<a href="#sec4.2">4.2. Процедура построения точных решений</a><br>
+<a href="#sec4.3">4.3. Примеры построения точных решений нелинейных уравнений математической физики</a><br>
+<a href="#sec4.4">4.4. Выводы</a><br>
+<a href="#sec4.5">Упражнения к разделу 4</a><br><br>
+<b><a href="#sec5">5. Общие выводы и замечания</a></b><br><br>
+<b><a href="#sec6">Литература</a></b>
+</div>
+
+<h3><a name="sec0"></a>Введение</h3>
+
+<p class="indent">В учебном пособии описана общая схема исследования математических уравнений, основанная на использовании инвариантов и позволяющая упрощать алгебраические уравнения и системы, понижать порядок обыкновенных дифференциальных уравнений (или их интегрировать), а также получать точные решения нелинейных уравнений математической физики. Построение инвариантов осуществляется путем поиска преобразований, сохраняющих вид рассматриваемых уравнений (при этом не используются понятия и сложный аппарат группового анализа). Приведены многочисленные примеры решения конкретных алгебраических и дифференциальных уравнений. Важно отметить, что применение простейших преобразований сдвига и масштабирования (и их комбинаций) позволяет единообразно описать разрешимых (или допускающих понижение порядка) обыкновенных дифференциальных уравнений значительно больше, чем описано в классических и специальных учебниках. При использовании указанного простого метода надо уметь решать лишь самые простые алгебраические уравнения и системы и уметь дифференцировать. Последнее обстоятельство говорит о целесообразности введения данного метода в стандартные курсы лекций по обыкновенным дифференциальным уравнениям и уравнениям математической физики, которые читаются студентам, специализирующимся в области прикладной математики, физики и механики (этот метод с успехом можно включать также в соответствующие специальные курсы, читаемые в некоторых технических и педагогических вузах).</p>
+
+<h3><a name="sec1"></a>1. Симметрии. Общая схема использования инвариантов для решения математических уравнений</h3>
+<p><span class="labx-1200"><a name="sec1.1"></a>1.1. Симметрии. Преобразования, сохраняющие вид уравнений. Инварианты.</span>
+В&nbsp;природе и технике часто встречаются геометрические симметрии: зеркальная симметрия, когда одна половина предмета зеркально-симметрична другой, и центральная симметрия, когда предмет переходит сам в себя при повороте относительно некоторого центра. Однако понятие симметрии гораздо шире, чем в указанных случаях, в общем случае под симметрией понимается неизменность при какой-либо процедуре не только предметов, но и физических явлений, математических формул, уравнений и т.&nbsp;д. В данном учебном пособии пойдет речь о симметрии алгебраических и дифференциальных уравнений и о том как использовать это свойство, чтобы находить решения или упрощать
+уравнения.
+
+<p class="indent">Под симметриями математических уравнений будут пониматься преобразования, сохраняющие вид уравнений. Ниже приведены примеры конкретных уравнений, которые сохраняют свой вид при некоторых простых преобразованиях.
+
+<p class="indent"><span class="labx-1000">Пример 1. Рассмотрим биквадратное уравнение</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru0x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru0x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.1.1"></a>(1.1)</td></tr></table>
+<p><span class="larm-1000">Замена</span>
+<center class="math-display"><img src="Invarianty-ru1x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru1x.png" class="math-display"></center>
+<span class="larm-1000">приводит к точно такому же уравнению</span>
+<center class="math-display"><img src="Invarianty-ru2x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru2x.png" class="math-display"></center>
+<span class="larm-1000">(т.&nbsp;е. уравнение <a href="#eq.1.1">(1.1)</a> сохраняет вид при преобразовании </span><span class="cmmi-10">x </span><span class="cmr-10">= </span><span class="cmsy-10">-</span><img src="Invarianty-ru3x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru3x.png" class="bar"><span class="larm-1000">).</span>
+
+<p class="indent"><span class="larm-1000">Два других преобразования</span>
+<center class="math-display"><img src="Invarianty-ru4x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru4x.png" class="math-display"></center>
+<span class="larm-1000">также сохраняют вид уравнения <a href="#eq.1.1">(1.1)</a>, поскольку после умножения на</span> <img src="Invarianty-ru5x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru5x.png" class="tilde"><sup><span class="cmr-7">4</span></sup> <span class="larm-1000">получим</span>
+<center class="math-display"><img src="Invarianty-ru6x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru6x.png" class="math-display"></center>
+
+<p class="indent"><span class="labx-1000">Пример 2. </span><span class="larm-1000">Вид дифференциального уравнения</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru7x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru7x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.1.2"></a>(1.2)</td></tr></table>
+<p><span class="larm-1000">не изменится, если сделать любое преобразование</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru8x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru8x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.1.3"></a>(1.3)</td></tr></table>
+<p><span class="larm-1000">поскольку для всех трех указанных преобразований в результате получим точно такое же уравнение</span>
+<center class="math-display"><img src="Invarianty-ru9x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru9x.png" class="math-display"></center>
+
+<p class="indent">Далее будет показано, что преобразования, сохраняющие вид уравнений, позволяют &quot;размножать&quot; решения уравнений.
+
+
+<p class="indent"><span class="lati-1200">Инвариант преобразования </span>&#8212; функция (отличная от постоянной), которая сохраняет вид при действии данного преобразования. Инвариант преобразования может зависеть от независимых и зависимой переменной и их производных (если идет речь о дифференциальных уравнениях). Для пояснения понятия инвариантов, которые сохраняют вид при заданных преобразованиях, рассмотрим несколько простых конкретных примеров.
+
+<p class="indent"><span class="labx-1000">Пример 3. </span><span class="larm-1000">Преобразование одновременного сдвига по обоим осям</span>
+<center class="math-display"><img src="Invarianty-ru10x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru10x.png" class="math-display"></center>
+<span class="larm-1000">где </span><span class="cmmi-10">a</span> <span class="larm-1000">&#8212; любое число, имеет инвариант</span>
+<center class="math-display"><img src="Invarianty-ru11x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru11x.png" class="math-display"></center>
+
+<p class="indent"><span class="larm-1000">Если </span><span class="cmmi-10">x </span><span class="larm-1000">&#8212; независимая переменная, а </span><span class="cmmi-10">y </span><span class="larm-1000">&#8212; зависимая переменная, то другими инвариантами этого преобразования являются производные</span>
+<center class="math-display"><img src="Invarianty-ru12x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru12x.png" class="math-display"></center>
+
+<p class="indent"><span class="labx-1000">Пример 4. </span><span class="larm-1000">Преобразование одинакового изменения масштабов длины по обоим осям</span>
+<center class="math-display"><img src="Invarianty-ru13x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru13x.png" class="math-display"></center>
+<span class="larm-1000">где</span> <span class="cmmi-10">a </span><span class="cmsy-10">&#x2044;</span><span class="cmr-10">= 0 </span><span class="larm-1000">&#8212; любое число, имеет инвариант</span>
+<center class="math-display"><img src="Invarianty-ru14x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru14x.png" class="math-display"></center>
+
+<p class="indent"><span class="larm-1000">Если </span><span class="cmmi-10">x </span><span class="larm-1000">&#8212; независимая переменная, а </span><span class="cmmi-10">y </span><span class="larm-1000">&#8212; зависимая переменная, то имеются также более сложные инварианты, которые зависят от производных и сохраняют вид при действии данного преобразования, например,</span>
+<center class="math-display"><img src="Invarianty-ru15x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru15x.png" class="math-display"></center>
+
+<p class="indent"><span class="labx-1200"><a name="sec1.2"></a>1.2. Общая схема использования инвариантов для решения</span> <span class="labx-1200">математических уравнений. </span>Ниже изображена принципиальная схема исследования математических уравнений, которая основана на поиске преобразований, сохраняющих вид уравнений, с последующем переходом в уравнении от исходных переменных к новым переменным &#8212; инвариантам преобразований.
+
+<center class="math-display"><img src="Invarianty-ru16x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru16x.png" class="math-display"></center>
+
+<p class="indent">После выполнения указанных действий уравнение часто упрощается или приводится к разрешимому виду. Важно отметить, что данная схема с успехом может применяться для самых различных типов математических уравнений (см. далее разделы 2&#8211;4).
+
+<p class="indent">Для лучшего понимания и усвоения идей использования инвариантов для решения математических уравнений при изложении дальнейшего материала применяется схема &quot;от простого к сложному&quot;: сначала кратко излагаются соответствующие результаты для алгебраических уравнений, потом &#8212; для обыкновенных дифференциальных уравнений, а затем &#8212; для нелинейных уравнений математической физики.
+
+<h3><a name="sec2"></a>2. Алгебраические уравнения и системы уравнений</h3>
+<p><span class="labx-1200"><a name="sec2.1"></a>2.1. Алгебраические уравнения, содержащие четные степени. </span>Рассмотрим
+алгебраическое уравнение
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru17x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru17x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.2.1"></a>(2.1)</td></tr></table>
+<p>содержащие только четные степени. Биквадратное уравнение является частным случаем уравнения <a href="#eq.2.1">(2.1)</a> при <span class="cmmi-12">n </span><span class="cmr-12">= 2</span>.
+
+<p class="indent">Замена
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru18x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru18x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.2.2"></a>(2.2)</td></tr></table>
+<p>приводит точно к такому же уравнению для <img src="Invarianty-ru19x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru19x.png" class="bar"> (говорят, что уравнение <a href="#eq.2.1">(2.1)</a> инвариантно относительно преобразования <a href="#eq.2.2">(2.2)</a>). Отсюда следует, что если уравнение <a href="#eq.2.1">(2.1)</a> имеет решение <span class=math><i>x</i> = <i>x</i><sub>1</sub></span>, то оно имеет также другое решение <span class=math><i>x</i> = &minus; <i>x</i><sub>1</sub></span>.
+
+<p class="indent">Возводя в квадрат обе части <a href="#eq.2.2">(2.2)</a>, получим простейшую алгебраическую функцию, которая сохраняет вид при преобразовании <a href="#eq.2.2">(2.2)</a>:
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru20x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru20x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.2.3"></a>(2.3)</td></tr></table>
+<p>Эта функция и является инвариантом преобразования <a href="#eq.2.2">(2.2)</a>. Если выбирать инвариант <a href="#eq.2.3">(2.3)</a> за новую переменную, <span class="cmmi-12">z </span><span class="cmr-12">= </span><span class="cmmi-12">x</span><sup><span class="cmr-8">2</span></sup>, то уравнение <a href="#eq.2.1">(2.1)</a> порядка <span class="cmr-12">2</span><span class="cmmi-12">n</span> преобразуется к уравнению порядка <span class="cmmi-12">n</span>:
+<center class="math-display"><img src="Invarianty-ru21x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru21x.png" class="math-display"></center>
+Таким образом в данном случае переход от исходной переменной <span class="cmmi-12">x </span>к инварианту преобразования <a href="#eq.2.3">(2.3)</a> <span class="cmmi-12">z </span><span class="cmr-12">= </span><span class="cmmi-12">x</span><sup><span class="cmr-8">2</span></sup> позволяет упростить рассматриваемое уравнение (понизить его порядок в два раза).
+
+<p class="indent"><span class="labx-1200"><a name="sec2.2"></a>2.2. Возвратные уравнения. </span>Возвратное алгебраическое уравнение четной степени имеет вид
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru22x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru22x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.2.4"></a>(2.4)</td></tr></table>
+<p>Левая часть этого уравнения называется <span class="lati-1200">возвратным многочленом</span>.
+
+<p class="indent">Замена
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru23x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru23x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.2.5"></a>(2.5)</td></tr></table>
+<p>преобразует уравнение <a href="#eq.2.4">(2.4)</a> в точно такое же уравнение Отсюда следует, что если уравнение <a href="#eq.2.4">(2.4)</a> имеет корень <span class="cmmi-12">x </span><span class="cmr-12">= </span><span class="cmmi-12">b</span>, то оно имеет также другое решение <span class="cmmi-12">x </span><span class="cmr-12">= 1</span><span class="cmmi-12">&#x2215;b</span>.
+
+<p class="indent">Простейшее возвратное уравнение &#8212; квадратное уравнение
+<center class="math-display"><img src="Invarianty-ru24x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru24x.png" class="math-display"></center>
+Делим его на <span class="cmmi-12">x</span><sup><span class="cmr-8">2</span></sup>:
+<center class="math-display"><img src="Invarianty-ru25x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru25x.png" class="math-display"></center>
+Результат удобно представить в форме уравнения первого порядка
+<center class="math-display"><img src="Invarianty-ru26x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru26x.png" class="math-display"></center>
+где
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru27x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru27x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.2.6"></a>(2.6)</td></tr></table>
+<p>&#8212; простейший <span class="lati-1200">инвариант преобразования</span>&nbsp;<a href="#eq.2.5">(2.5)</a>.
+
+<p class="indent"><span class="labx-1200">Теорема 1</span>. В общем случае возвратное уравнение порядка <span class="cmr-12">2</span><span class="cmmi-12">n </span>допускает понижение порядка с помощью подстановки&nbsp;<a href="#eq.2.6">(2.6)</a>. В результате получается алгебраическое уравнение порядка <span class="cmmi-12">n</span>.
+
+<p class="indent"><span class="labx-1000">Пример 1. </span><span class="larm-1000">Рассмотрим возвратное уравнение четвертого порядка</span>
+<center class="math-display"><img src="Invarianty-ru28x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru28x.png" class="math-display"></center>
+<span class="larm-1000">Делим его на </span><span class="cmmi-10">x</span><sup><span class="cmr-7">2</span></sup><span class="larm-1000">:</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru29x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru29x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.2.7"></a>(2.7)</td></tr></table>
+<p><span class="larm-1000">Учитываем, что</span>
+<center class="math-display"><img src="Invarianty-ru30x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru30x.png" class="math-display"></center>
+<span class="larm-1000">В результате уравнение &nbsp;<a href="#eq.2.7">(2.7)</a> путем замены&nbsp;<a href="#eq.2.6">(2.6)</a> (основанной на инварианте преобразования&nbsp;<a href="#eq.2.5">(2.5)</a> сводится к уравнению второго порядка</span>
+<center class="math-display"><img src="Invarianty-ru31x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru31x.png" class="math-display"></center>
+
+<p class="indent"><span class="labx-1200">Теорема 2</span>. В общем случае возвратное алгебраическое уравнение нечетного порядка
+<center class="math-display"><img src="Invarianty-ru32x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru32x.png" class="math-display"></center>
+имеет корень <span class="cmmi-12">x </span><span class="cmr-12">= </span><span class="cmsy-10x-x-120">-</span><span class="cmr-12">1</span>, а его левая часть допускает представление
+<center class="math-display"><img src="Invarianty-ru33x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru33x.png" class="math-display"></center>
+где <span class="cmmi-12">Q</span><sub><span class="cmr-8">2</span><span class="cmmi-8">n</span></sub><span class="cmr-12">(</span><span class="cmmi-12">x</span><span class="cmr-12">) </span>&#8212; возвратный многочлен степени <span class="cmr-12">2</span><span class="cmmi-12">n</span>.
+
+<p class="indent"><span class="labx-1000">Пример 2. </span><span class="larm-1000">Возвратное уравнение третьего порядка</span>
+<center class="math-display"><img src="Invarianty-ru34x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru34x.png" class="math-display"></center>
+<span class="larm-1000">может быть представлено в виде</span>
+<center class="math-display"><img src="Invarianty-ru35x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru35x.png" class="math-display"></center>
+
+<p class="indent">Из теоремы 2 следует, что возвратное уравнение порядка <span class="cmr-12">2</span><span class="cmmi-12">n </span><span class="cmr-12">+ 1 </span>после деления на <span class="cmr-12">(</span><span class="cmmi-12">x </span><span class="cmr-12">+ 1) </span>и введения новой переменной <a href="#eq.2.6">(2.6)</a> сводится к уравнению порядка <span class="cmmi-12">n</span>.
+
+<p class="indent"><span class="labx-1200"><a name="sec2.3"></a>2.3. Системы алгебраических уравнений, симметричные относительно</span> <span class="labx-1200">перестановки аргументов. </span>Многочлен <span class="cmmi-12">P</span><span class="cmr-12">(</span><span class="cmmi-12">x,y</span><span class="cmr-12">) </span>от двух переменных называетс <span class="lati-1200">симметрическим</span>, если он не меняется при перестановке аргументов: <span class="cmmi-12">P</span><span class="cmr-12">(</span><span class="cmmi-12">x,y</span><span class="cmr-12">) = </span><span class="cmmi-12">P</span><span class="cmr-12">(</span><span class="cmmi-12">y,x</span><span class="cmr-12">)</span>.
+
+<p class="indent"><span class="labx-1000">Замечание. </span><span class="larm-1000">В терминах преобразований симметрический многочлен определяется как многочлен, сохраняющий вид при преобразовании </span><span class="cmmi-10">x </span><span class="cmr-10">=</span> <img src="Invarianty-ru36x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru36x.png" class="bar"> <span class="larm-1000">, </span><span class="cmmi-10">y </span><span class="cmr-10">=</span> <img src="Invarianty-ru37x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru37x.png" class="bar"><span class="larm-1000">.</span>
+
+<p class="indent">Простейшие симметричные многочлены
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru38x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru38x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.2.8"></a>(2.8)</td></tr></table>
+<p>называются <span class="lati-1200">элементарными</span>. Эти многочлены являются простейшими алгебраическими инвариантами при перестановке аргументов.
+
+<p class="indent">Любой симметрический многочлен от двух переменных может быть единственным образом выражен через элементарные многочлены.
+
+<p class="indent">Для решения систем двух алгебраических уравнений
+<center class="math-display"><img src="Invarianty-ru39x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru39x.png" class="math-display"></center>
+где <span class="cmmi-12">P </span>и <span class="cmmi-12">Q </span>&#8212; симметричные многочлены, полезно в качестве новых переменных использовать элементарные симметрические многочлены <a href="#eq.2.8">(2.8)</a>. Подобные системы обладают следующим свойством: если система имеет решение <span class="cmmi-12">x </span><span class="cmr-12">= </span><span class="cmmi-12">x</span><sub><span class="cmr-8">0</span></sub>, <span class="cmmi-12">y </span><span class="cmr-12">= </span><span class="cmmi-12">y</span><sub><span class="cmr-8">0</span></sub>, то она имеет также решение <span class="cmmi-12">x </span><span class="cmr-12">= </span><span class="cmmi-12">y</span><sub><span class="cmr-8">0</span></sub>, <span class="cmmi-12">y </span><span class="cmr-12">= </span><span class="cmmi-12">x</span><sub><span class="cmr-8">0</span></sub>.
+
+<p class="indent"><span class="labx-1000">Пример 3. </span><span class="larm-1000">Рассмотрим нелинейную систему алгебраических уравнений</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru40x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru40x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.2.9"></a>(2.9)</td></tr></table>
+<p><span class="larm-1000">Система <a href="#eq.2.9">(2.9)</a> не меняется при перестановке аргументов.</span>
+
+<p class="indent"><span class="larm-1000">Переходя в <a href="#eq.2.9">(2.9)</a> от </span><span class="cmmi-10">x</span><span class="larm-1000">, </span><span class="cmmi-10">y </span><span class="larm-1000">к переменным <a href="#eq.2.8">(2.8)</a> и учитывая формулы</span>
+<center class="math-display"><img src="Invarianty-ru41x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru41x.png" class="math-display"></center>
+<span class="larm-1000">получим</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru42x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru42x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.2.10"></a>(2.10)</td></tr></table>
+<p><span class="larm-1000">Исключая из уравнений </span><span class="cmmi-10">u</span><span class="larm-1000">, приходим к квадратному уравнению</span>
+<center class="math-display"><img src="Invarianty-ru43x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru43x.png" class="math-display"></center>
+<span class="larm-1000">Дальнейшая процедура определения решений элементарна и мы ее опускаем.</span>
+
+<p class="indent"><span class="labx-1000">Пример 4. </span><span class="larm-1000">Рассмотрим нелинейную систему алгебраических уравнений</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru44x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru44x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.2.11"></a>(2.11)</td></tr></table>
+<p><span class="larm-1000">Переходя к переменным <a href="#eq.2.8">(2.8)</a> и учитывая равенство </span><span class="cmmi-10">x</span><sup><span class="cmr-7">3</span></sup> <span class="cmr-10">+ </span><span class="cmmi-10">y</span><sup><span class="cmr-7">3</span></sup> <span class="cmr-10">= (</span><span class="cmmi-10">x </span><span class="cmr-10">+ </span><span class="cmmi-10">y</span><span class="cmr-10">)</span><sup><span class="cmr-7">3</span></sup> <span class="cmsy-10">- </span><span class="cmr-10">3</span><span class="cmmi-10">xy</span><span class="cmr-10">(</span><span class="cmmi-10">x </span><span class="cmr-10">+ </span><span class="cmmi-10">y</span><span class="cmr-10">)</span><span class="larm-1000">, получим</span>
+<center class="math-display"><img src="Invarianty-ru45x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru45x.png" class="math-display"></center>
+<span class="larm-1000">Исключив </span><span class="cmmi-10">w</span><span class="larm-1000">, приходим к кубическому уравнению</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru46x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru46x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.2.12"></a>(2.12)</td></tr></table>
+
+<p class="indent"> <span class="larm-1000">Отметим, что прямое исключение из системы <a href="#eq.2.11">(2.11)</a> переменной </span><span class="cmmi-10">y </span><span class="larm-1000">приводит к существенно более сложному чем <a href="#eq.2.12">(2.12)</a> уравнению шестого порядка:</span>
+<center class="math-display"><img src="Invarianty-ru47x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru47x.png" class="math-display"></center>
+
+<p class="indent"><span class="labx-1000">Замечание. </span><span class="larm-1000">Более подробное изложение теоретического материала по алгебраическим уравнениям и системам уравнений, обладающими свойствами симметрии (т.&nbsp;е. допускающими преобразования, сохраняющими вид уравнений), и многочисленные примеры можно найти в [<a href="#ref1">1</a>, <a href="#ref2">2</a>].</span>
+
+<p class="indent"><span class="labx-1200"><a name="sec2.4"></a>2.4. Выводы. </span>Описанный метод исследования, основанный на использовании инвариантов, позволяет решать и упрощать некоторые типы алгебраических уравнений (понижать их порядки) и систем уравнений.
+
+<p class="indent"><span class="labx-1200"><a name="sec2.5"></a>Упражнения к разделу 2.</span>
+
+<p class="indent">1. Свести алгебраическое уравнение пятой степени <span class="cmmi-12">x</span><sup><span class="cmr-8">5</span></sup> <span class="cmr-12">+ </span><span class="cmmi-12">ax</span><sup><span class="cmr-8">4</span></sup> <span class="cmr-12">+ </span><span class="cmmi-12">bx</span><sup><span class="cmr-8">3</span></sup> <span class="cmr-12">+ </span><span class="cmmi-12">bx</span><sup><span class="cmr-8">2</span></sup> <span class="cmr-12">+ </span><span class="cmmi-12">ax </span><span class="cmr-12">+ </span><span class="cmmi-12">x </span><span class="cmr-12">= 0</span> к квадратному уравнению. Найти корни исходного уравнения при <span class="cmmi-12">a </span><span class="cmr-12">= </span><span class="cmmi-12">b </span><span class="cmr-12">= </span><span class="cmsy-10x-x-120">-</span><span class="cmr-12">1/2</span>.
+
+<p class="indent">2. Решить уравнение четвертой степени <span class="cmmi-12">ax</span><sup><span class="cmr-8">4</span></sup> <span class="cmr-12">+ </span><span class="cmmi-12">bx</span><sup><span class="cmr-8">3</span></sup> <span class="cmr-12">+ </span><span class="cmmi-12">cx</span><sup><span class="cmr-8">2</span></sup> <span class="cmsy-10x-x-120">- </span><span class="cmmi-12">bx </span><span class="cmr-12">+ </span><span class="cmmi-12">a </span><span class="cmr-12">= 0</span>. <span class="lati-1200">Указание</span>: учесть, что преобразование <span class="cmmi-12">x </span><span class="cmr-12">= </span><span class="cmsy-10x-x-120">-</span><span class="cmr-12">1</span><span class="cmmi-12">&#x2215;</span><img src="Invarianty-ru48x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru48x.png" class="bar"> сохраняет вид уравнения; найти и использовать инвариант этого преобразования.
+
+<p class="indent">3. Найти общий вид алгебраического уравнения четной степени, которое сохраняет вид при преобразовании <span class="cmmi-12">x </span><span class="cmr-12">= </span><span class="cmsy-10x-x-120">-</span><span class="cmr-12">1</span><span class="cmmi-12">&#x2215;</span><img src="Invarianty-ru49x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru49x.png" class="bar">. Указать замену, понижающую порядок полученного уравнения. Подробно рассмотреть случай уравнения шестого порядка и свести его к уравнению третьего порядка.
+
+<p class="indent">4. Решить систему уравнений
+<center class="math-display"><img src="Invarianty-ru50x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru50x.png" class="math-display"></center>
+
+<p class="indent">5. Решить систему уравнений
+<center class="math-display"><img src="Invarianty-ru51x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru51x.png" class="math-display"></center>
+
+<p class="indent">6. Решить систему уравнений
+<center class="math-display"><img src="Invarianty-ru52x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru52x.png" class="math-display"></center>
+
+<p class="indent">7. Решить систему уравнений
+<center class="math-display"><img src="Invarianty-ru53x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru53x.png" class="math-display"></center>
+
+<h3><a name="sec3"></a>3. Обыкновенные дифференциальные уравнения</h3>
+<p><span class="labx-1200"><a name="sec3.1"></a>3.1. Преобразования, сохраняющие вид уравнения, и их инварианты.</span>
+Говорят, что обыкновенное дифференциальное уравнение
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru54x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru54x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.1"></a>(3.1)</td></tr></table>
+<p><span class="lati-1200">инвариантно относительно </span>(<span class="lati-1200">обратимого</span>) <span class="lati-1200">преобразования</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru55x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru55x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.2"></a>(3.2)</td></tr></table>
+<p>если в результате подстановки&nbsp;<a href="#eq.3.2">(3.2)</a> в&nbsp;<a href="#eq.3.1">(3.1)</a> получим точно такое же уравнение
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru56x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru56x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.3"></a>(3.3)</td></tr></table>
+<p>Функция <span class="cmmi-12">F </span>в уравнениях&nbsp;<a href="#eq.3.1">(3.1)</a> и&nbsp;<a href="#eq.3.3">(3.3)</a> одинакова.
+
+<p class="indent">Преобразования, сохраняющие вид уравнения, позволяют &quot;размножать&quot; его решения. Действительно, пусть известно частное решение
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru57x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru57x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.4"></a>(3.4)</td></tr></table>
+<p>уравнения <a href="#eq.3.1">(3.1)</a>. Поскольку уравнение <a href="#eq.3.1">(3.1)</a> после перехода к новым переменным <a href="#eq.3.2">(3.2)</a>
+сохраняет такой же вид, то преобразованное уравнение <a href="#eq.3.3">(3.3)</a> имеет решение
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru58x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru58x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.5"></a>(3.5)</td></tr></table>
+<p>Возвращаясь в <a href="#eq.3.5">(3.5)</a> к старым переменным по формулам <a href="#eq.3.2">(3.2)</a> (их предварительно надо разрешить относительно <img src="Invarianty-ru59x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru59x.png" class="bar"> и <img src="Invarianty-ru60x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru60x.png" class="bar"> ) получим решение уравнения <a href="#eq.3.1">(3.1)</a>, которое, в
+случае общего положения будет отличаться от исходного решения <a href="#eq.3.4">(3.4)</a>.
+
+<p class="indent"><span class="labx-1000">Пример 1. </span><span class="larm-1000">Уравнение третьего порядка</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru61x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru61x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.6"></a>(3.6)</td></tr></table>
+<p><span class="larm-1000">имеет частное решение</span>
+<center class="math-display"><img src="Invarianty-ru62x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru62x.png" class="math-display"></center>
+<span class="larm-1000">Преобразование</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru63x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru63x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.7"></a>(3.7)</td></tr></table>
+<p><span class="larm-1000">сохраняет вид этого уравнения, поэтому преобразованное уравнение</span>
+<center class="math-display"><img src="Invarianty-ru64x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru64x.png" class="math-display"></center>
+<span class="larm-1000">имеет решение</span> <img src="Invarianty-ru65x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru65x.png" class="bar"> <span class="cmr-10">= </span><span class="cmmi-10">e</span><sup><img src="Invarianty-ru66x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru66x.png" class="bar"></sup><span class="larm-1000">. Подставляя сюда старые переменные, полученные обращением формул <a href="#eq.3.7">(3.7)</a>, имеем новое решение уравнения <a href="#eq.3.6">(3.6)</a>:</span>
+<center class="math-display"><img src="Invarianty-ru67x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru67x.png" class="math-display"></center>
+<span class="larm-1000">содержащее две произвольные постоянные </span><span class="cmmi-10">A </span><span class="larm-1000">и </span><span class="cmmi-10">b</span><span class="larm-1000">.</span>
+
+<p class="indent">
+Функция<span class=math> <i>I</i>(<i>x</i>,<i>y</i>,<i>y&prime;</i>)</span> (отличная от постоянной)
+называется инвариантом преобразования <a href="#eq.3.2">(3.2)</a>, если она сохраняется при этом преобразовании
+<center class="math-display"><img src="Invarianty-ru68x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru68x.png" class="math-display"></center>
+
+<p class="indent"><span class="labx-1000">Замечание. </span><span class="larm-1000">Если <span class=math><i>I</i> = <i>I</i>(<i>x</i>,<i>y</i>,<i>y&prime;</i>)</span> инвариант преобразования <a href="#eq.3.2">(3.2)</a>, то </span><span class="cmr-10">&#x03A8;(</span><span class="cmmi-10">I</span><span class="cmr-10">)</span><span class="larm-1000">, где </span><span class="cmr-10">&#x03A8; </span><span class="larm-1000">&#8212; произвольная функция, тоже является инвариантом данного преобразования.</span>
+
+<p class="indent"><span class="labx-1200"><a name="sec3.2"></a>3.2. Процедура понижения порядка уравнений при </span><span class="cmmi-12">n </span><span class="cmsy-10x-x-120">&#x2265; </span><span class="cmr-12">2 </span><span class="labx-1200">(приведение</span> <span class="labx-1200">уравнений к разрешимому виду при </span><span class="cmmi-12">n </span><span class="cmr-12">= 1</span><span class="labx-1200">)</span>. Конкретизируем описанную в
+разделе&nbsp;1 общую схему использования инвариантов для анализа математических
+уравнений применительно к обыкновенным дифференциальным уравнениям.
+
+<p class="indent">На первом этапе ищется преобразование
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru69x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru69x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.8"></a>(3.8)</td></tr></table>
+<p>которое сохраняет вид уравнения <a href="#eq.3.1">(3.1)</a>. Преобразование <a href="#eq.3.8">(3.8)</a> обязательно должно
+зависеть от <span class="lati-1200">одного свободного параметра </span><span class="cmmi-12">a </span><span class="cmsy-10x-x-120"><img src="cmsy10-c-32.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/cmsy10-c-32.png" class="10-120x-x-32"> </span><span class="cmr-12">[</span><span class="cmmi-12">a</span><sub><span class="cmr-8">1</span></sub><span class="cmmi-12">,a</span><sub><span class="cmr-8">2</span></sub><span class="cmr-12">] </span>(само исходное уравнение&nbsp;<a href="#eq.3.1">(3.1)</a>
+от этого параметра не зависит).
+
+<p class="indent">На втором этапе для уравнений второго и более высоких порядков (при
+<span class="cmmi-12">n </span><span class="cmsy-10x-x-120">&#x2265; </span><span class="cmr-12">2</span>) строятся два функционально-независимых инварианта преобразования <a href="#eq.3.8">(3.8)</a>:
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru70x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru70x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.9"></a>(3.9)</td></tr></table>
+
+<p class="indent"> На третьем этапе инварианты <a href="#eq.3.9">(3.9)</a> выбираются в качестве новых переменных
+для уравнения <a href="#eq.3.1">(3.1)</a>, т.&nbsp;е. делается преобразование
+<center class="math-display"><img src="Invarianty-ru71x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru71x.png" class="math-display"></center>
+Указанная процедура приводит к понижению порядка уравнения на единицу.
+
+<p class="indent">Для уравнений первого порядка (при <span class="cmmi-12">n </span><span class="cmr-12">= 1</span>) на третьем этапе в&nbsp;<a href="#eq.3.1">(3.1)</a> надо сделать
+замену
+<center class="math-display"><img src="Invarianty-ru72x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru72x.png" class="math-display"></center>
+В результате уравнение приводится к разрешимому виду (к уравнению с
+разделяющимися переменными).
+
+<p class="indent"><span class="labx-1200"><a name="sec3.3"></a>3.3. Используемые преобразования. Процедура определения</span> <span class="labx-1200">инвариантов. </span>Далее будем использовать только простейшие преобразования вида
+<center class="math-display"><img src="Invarianty-ru73x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru73x.png" class="math-display"></center>и
+их комбинации
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru74x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru74x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.10"></a>(3.10)</td></tr></table>
+<p>В этом случае между производными имеют место линейные соотношения&nbsp;
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru75x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru75x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.11"></a>(3.11)</td></tr></table>
+<p>Коэффициенты преобразования <span class="cmmi-12">A</span><sub><span class="cmr-8">1</span></sub>, <span class="cmmi-12">A</span><sub><span class="cmr-8">2</span></sub>, <span class="cmmi-12">B</span><sub><span class="cmr-8">1</span></sub>, <span class="cmmi-12">B</span><sub><span class="cmr-8">2</span></sub> определяются из условия инвариантности рассматриваемого уравнения (коэффициенты <span class="cmmi-12">A</span><sub><span class="cmr-8">1</span></sub>, <span class="cmmi-12">A</span><sub><span class="cmr-8">2</span></sub>, <span class="cmmi-12">B</span><sub><span class="cmr-8">1</span></sub>, <span class="cmmi-12">B</span><sub><span class="cmr-8">2</span></sub> должны
+зависеть от одного свободного параметра&nbsp;<span class="cmmi-12">a</span>).
+
+<p class="indent">Справедливо следующее утверждение. Пусть преобразование <a href="#eq.3.10">(3.10)</a> сохраняет вид
+некоторого уравнения, имеющего частное решение <a href="#eq.3.4">(3.4)</a>. Тогда это уравнение имеет
+также решение
+<center class="math-display"><img src="Invarianty-ru76x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru76x.png" class="math-display"></center>
+
+<p class="indent">Первый инвариант <span class="cmmi-12">I</span><sub><span class="cmr-8">1</span></sub> получаем путем исключения параметра <span class="cmmi-12">a </span>из равенств&nbsp;<a href="#eq.3.10">(3.10)</a>,
+а второй инвариант <span class="cmmi-12">I</span><sub><span class="cmr-8">2</span></sub> &#8212; путем исключения параметра <span class="cmmi-12">a </span>из одного из соотношений&nbsp;<a href="#eq.3.10">(3.10)</a>
+и первого соотношения&nbsp;<a href="#eq.3.11">(3.11)</a>.
+
+<p class="indent"><span class="labx-1200"><a name="sec3.4"></a>3.4. Анализ конкретных обыкновенных дифференциальных уравнений.</span>
+
+<p class="indent"><span class="labx-1000">Пример 2. </span><span class="larm-1000">Уравнение второго порядка, не зависящее явно от </span><span class="cmmi-10">y</span><span class="larm-1000">:</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru77x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru77x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.12"></a>(3.12)</td></tr></table>
+
+<p class="indent"> <span class="larm-1000">Это уравнение не меняется при произвольном сдвиге по зависимой переменной: </span><span class="cmmi-10">y </span><img src="Invarianty-ru78x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru78x.png" class="Longrightarrow"><span class="cmmi-10"> y </span><span class="cmr-10">+ </span><span class="cmmi-10">a</span> <span class="larm-1000">(соответствует </span><span class="cmmi-10">y </span><span class="cmr-10">=</span> <img src="Invarianty-ru79x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru79x.png" class="bar"> <span class="cmr-10">+ </span><span class="cmmi-10">a</span><span class="larm-1000">), где </span><span class="cmmi-10">a </span><span class="larm-1000">&#8212; свободный параметр. При этом из трех величин </span><span class="cmmi-10">x</span><span class="larm-1000">, </span><span class="cmmi-10">y</span><span class="larm-1000">, </span><span class="cmmi-10">y&prime;</span> <span class="larm-1000">две остаются неизменными:</span>
+<center class="math-display"><img src="Invarianty-ru80x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru80x.png" class="math-display"></center>
+<span class="larm-1000">Это инварианты уравнения&nbsp;<a href="#eq.3.12">(3.12)</a>, т.&nbsp;е.</span>
+<center class="math-display"><img src="Invarianty-ru81x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru81x.png" class="math-display"></center>
+<span class="larm-1000">Их выбираем за новые переменные:</span>
+<center class="math-display"><img src="Invarianty-ru82x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru82x.png" class="math-display"></center>
+<span class="larm-1000">В результате получим уравнение первого порядка</span>
+<center class="math-display"><img src="Invarianty-ru83x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru83x.png" class="math-display"></center>
+
+<p class="indent"><span class="labx-1000">Пример 3. </span><span class="larm-1000">Автономное уравнение второго порядка, не зависящее явно от </span><span class="cmmi-10">x</span><span class="larm-1000">:</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru84x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru84x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.13"></a>(3.13)</td></tr></table>
+
+<p class="indent"> <span class="larm-1000">Это уравнение не меняется при произвольном сдвиге по независимой переменной:</span> <span class="cmmi-10">x </span><img src="Invarianty-ru85x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru85x.png" class="Longrightarrow"><span class="cmmi-10"> x </span><span class="cmr-10">+ </span><span class="cmmi-10">a</span><span class="larm-1000">, где </span><span class="cmmi-10">a </span><span class="larm-1000">&#8212; свободный параметр. При этом из трех величин </span><span class="cmmi-10">x</span><span class="larm-1000">, </span><span class="cmmi-10">y</span><span class="larm-1000">, </span><span class="cmmi-10">y&prime;</span> <span class="larm-1000">две остаются неизменными:</span>
+<center class="math-display"><img src="Invarianty-ru86x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru86x.png" class="math-display"></center>
+<span class="larm-1000">Это инварианты уравнения&nbsp;<a href="#eq.3.13">(3.13)</a>, т.&nbsp;е. </span> <span class=math>
+<i>I</i><sub>1</sub> = <i>y</i>, <i>I</i><sub>2</sub> = <i>y&prime;</i></span>.
+<span class="larm-1000">Их выбираем за новые переменные:</span>
+<center class="math-display"><img src="Invarianty-ru87x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru87x.png" class="math-display"></center>
+<span class="larm-1000">В результате получим уравнение первого порядка: </span><span class="cmmi-10">uu&prime;</span> <span class="cmr-10">= </span><span class="cmmi-10">F</span><span class="cmr-10">(</span><span class="cmmi-10">z,u</span><span class="cmr-10">)</span><span class="larm-1000">.</span>
+
+<p class="indent"><span class="labx-1000">Пример 4. </span><span class="larm-1000">Нелинейное уравнение второго порядка</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru88x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru88x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.14"></a>(3.14)</td></tr></table>
+<p><span class="larm-1000">не меняется при растяжении зависимой переменной: </span><span class="cmmi-10">y </span><img src="Invarianty-ru89x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru89x.png" class="Longrightarrow"><span class="cmmi-10"> ay</span><span class="larm-1000">. При этом две комбинации из трех величин </span> <span class=math><i>x,y,y&prime;</i></span> <span class="larm-1000">остаются остаются неизменными:</span>
+<center class="math-display"><img src="Invarianty-ru90x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru90x.png" class="math-display"></center>
+<span class="larm-1000">Это инварианты уравнения&nbsp;<a href="#eq.3.14">(3.14)</a>. Их выбираем за новые переменные:</span>
+<center class="math-display"><img src="Invarianty-ru91x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru91x.png" class="math-display"></center>
+<span class="larm-1000">Дифференцируя </span><span class="cmmi-10">u </span><span class="larm-1000">по </span><span class="cmmi-10">x</span><span class="larm-1000">, имеем</span>
+<center class="math-display"><img src="Invarianty-ru92x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru92x.png" class="math-display"></center>
+<span class="larm-1000">Исключая с помощью этого соотношения вторую производную </span> <span class=math><i>y&Prime;</i></span> в <a href="#eq.3.14">(3.14)</a>, <span class="larm-1000">приходим к уравнению первого порядка</span>
+<center class="math-display"><img src="Invarianty-ru93x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru93x.png" class="math-display"></center>
+
+<p class="indent"><span class="labx-1000">Замечание. </span><span class="larm-1000">При </span><span class="cmmi-10">F</span><span class="cmr-10">(</span><span class="cmmi-10">x,u</span><span class="cmr-10">) = </span><span class="cmmi-10">g</span><span class="cmr-10">(</span><span class="cmmi-10">x</span><span class="cmr-10">) + </span><span class="cmmi-10">f</span><span class="cmr-10">(</span><span class="cmmi-10">x</span><span class="cmr-10">)</span><span class="cmmi-10">u </span><span class="larm-1000">исходное уравнение <a href="#eq.3.14">(3.14)</a> является общим линейным однородным уравнением второго порядка. Указанным преобразованием оно сводится к уравнению первого порядка с квадратичной нелинейностью.</span>
+
+<p class="indent"><span class="labx-1000">Пример 5. </span><span class="larm-1000">Рассмотрим нелинейное уравнение второго порядка</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru94x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru94x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.15"></a>(3.15)</td></tr></table>
+<p><span class="larm-1000">Ищем инвариантное преобразование в виде</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru95x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru95x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.16"></a>(3.16)</td></tr></table>
+<p><span class="larm-1000">Подставив&nbsp;<a href="#eq.3.16">(3.16)</a> в&nbsp;<a href="#eq.3.15">(3.15)</a>, а затем сократив на </span><span class="cmmi-10">a</span><span class="larm-1000">, получим</span>
+<center class="math-display"><img src="Invarianty-ru96x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru96x.png" class="math-display"></center>
+<span class="larm-1000">Требуя совпадения с уравнением&nbsp;<a href="#eq.3.15">(3.15)</a>, получим соотношение для определения параметра</span> <span class="cmmi-10">b</span><span class="larm-1000">:</span><table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru97x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru97x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.17"></a>(3.17)</td></tr></table>
+<p><span class="larm-1000">При этом параметр </span><span class="cmmi-10">a </span><span class="larm-1000">остается свободным.</span>
+
+<p class="indent"><span class="larm-1000">Подставим&nbsp;<a href="#eq.3.17">(3.17)</a> в&nbsp;<a href="#eq.3.16">(3.16)</a>, а затем из второго соотношения исключим параметр </span><span class="cmmi-10">a </span><span class="larm-1000">с помощью первого соотношения. Имеем</span>
+<center class="math-display"><img src="Invarianty-ru98x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru98x.png" class="math-display"></center>
+<span class="larm-1000">Таким образом получен первый инвариант преобразования&nbsp;<a href="#eq.3.16">(3.16)</a>&#8211;<a href="#eq.3.17">(3.17)</a> в виде</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru99x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru99x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.18"></a>(3.18)</td></tr></table>
+<p><span class="larm-1000">Чтобы найти второй инвариант, вычислим производную</span>
+<center class="math-display"><img src="Invarianty-ru100x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru100x.png" class="math-display"></center>
+<span class="larm-1000">Исключая здесь параметр </span><span class="cmmi-10">a </span><span class="larm-1000">с помощью второго соотношения&nbsp;<a href="#eq.3.16">(3.16)</a>, получим второй инвариант</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru101x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru101x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.19"></a>(3.19)</td></tr></table>
+
+<p class="indent"> <span class="larm-1000">Для понижения порядка исходного уравнения надо принять за новые переменные инварианты&nbsp;<a href="#eq.3.18">(3.18)</a>&#8211;<a href="#eq.3.19">(3.19)</a>:</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru102x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru102x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.20"></a>(3.20)</td></tr></table>
+<p><span class="larm-1000">С одной стороны</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru103x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru103x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.21"></a>(3.21)</td></tr></table>
+<p><span class="larm-1000">с другой стороны</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru104x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru104x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.22"></a>(3.22)</td></tr></table>
+<p><span class="larm-1000">Приравнивая&nbsp;<a href="#eq.3.21">(3.21)</a>&#8211;<a href="#eq.3.22">(3.22)</a>, имеем</span>
+<center class="math-display"><img src="Invarianty-ru105x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru105x.png" class="math-display"></center>
+<span class="larm-1000">Подставив в&nbsp;<a href="#eq.3.15">(3.15)</a>, после элементарных преобразований получим уравнение первого порядка с разделяющимися переменными:</span>
+<center class="math-display"><img src="Invarianty-ru106x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru106x.png" class="math-display"></center>
+
+<p class="indent"><span class="labx-1000">Замечание. </span><span class="larm-1000">Аналогичными свойствами обладает более общее нелинейное уравнение второго порядка</span>
+<center class="math-display"><img src="Invarianty-ru107x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru107x.png" class="math-display"></center>
+<span class="larm-1000">Преобразование&nbsp;<a href="#eq.3.20">(3.20)</a> приводит его к уравнению первого порядка:</span>
+<center class="math-display"><img src="Invarianty-ru108x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru108x.png" class="math-display"></center>
+
+<p class="indent"><span class="labx-1000">Пример 6. </span><span class="larm-1000">Рассмотрим теперь нелинейное уравнение первого порядка</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru109x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru109x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.23"></a>(3.23)</td></tr></table>
+<p><span class="larm-1000">Левая часть этого уравнения не меняется при преобразованиях вида</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru110x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru110x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.24"></a>(3.24)</td></tr></table>
+<p><span class="larm-1000">где </span><span class="cmmi-10">a</span><span class="larm-1000">, </span><span class="cmmi-10">b</span><span class="larm-1000">, </span><span class="cmmi-10">c </span><span class="larm-1000">&#8212; произвольные постоянные. Подставим&nbsp;<a href="#eq.3.24">(3.24)</a> в аргумент правой части уравнения&nbsp;<a href="#eq.3.23">(3.23)</a>:</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru111x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru111x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.25"></a>(3.25)</td></tr></table>
+<p><span class="larm-1000">Чтобы уравнение&nbsp;<a href="#eq.3.23">(3.23)</a> было инвариантным относительно преобразования&nbsp;<a href="#eq.3.24">(3.24)</a> в <a href="#eq.3.25">(3.25)</a> надо положить</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru112x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru112x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.26"></a>(3.26)</td></tr></table>
+<p><span class="larm-1000">Эти соотношения можно рассматривать как систему двух линейных алгебраических уравнений первого порядка для определения коэффициентов </span><span class="cmmi-10">b </span><span class="larm-1000">и </span><span class="cmmi-10">c</span><span class="larm-1000">. При этом коэффициент </span><span class="cmmi-10">a </span><span class="larm-1000">остается произвольным. Таким образом уравнение&nbsp;<a href="#eq.3.23">(3.23)</a> инвариантно относительно преобразования&nbsp;<a href="#eq.3.24">(3.24)</a>,&nbsp;<a href="#eq.3.26">(3.26)</a>, а первым инвариантом этого преобразования является аргумент правой части уравнения&nbsp;<a href="#eq.3.23">(3.23)</a>. Поэтому в уравнении&nbsp;<a href="#eq.3.23">(3.23)</a> надо сделать замену</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru113x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru113x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.3.27"></a>(3.27)</td></tr></table>
+<p><span class="larm-1000">Разрешим&nbsp;<a href="#eq.3.27">(3.27)</a> относительно </span><span class="cmmi-10">y</span><span class="larm-1000">, а затем продифференцируем по </span><span class="cmmi-10">x</span><span class="larm-1000">. Заменив затем производную </span>
+<i>y&prime;</i>
+<span class="larm-1000">на </span><span class="cmmi-10">f</span><span class="cmr-10">(</span><span class="cmmi-10">z</span><span class="cmr-10">) </span><span class="larm-1000">(это следует из&nbsp;<a href="#eq.3.23">(3.23)</a> и&nbsp;<a href="#eq.3.27">(3.27)</a>), после элементарных преобразований приходим к уравнению с разделяющимися переменными</span>
+<center class="math-display"><img src="Invarianty-ru114x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru114x.png" class="math-display"></center>
+
+<p class="indent">В таблице 1 представлены некоторые обыкновенные дифференциальные
+уравнения второго порядка, допускающие понижение порядка путем использования простейших инвариантных преобразований.
+Для уравнений первого порядка (когда
+функция <span class="cmmi-12">F</span><span class="cmr-12">(</span><span class="cmmi-12">u,v,w</span><span class="cmr-12">) </span>не зависит от третьего аргумента) уравнения, указанные в таблице
+1, решаются путем перехода от <span class="cmmi-12">y </span>к новой зависимой переменной <span class="cmmi-12">z </span><span class="cmr-12">= </span><span class="cmmi-12">I</span><sub><span class="cmr-8">1</span></sub><span class="cmr-12">(</span><span class="cmmi-12">x,y</span><span class="cmr-12">)</span>, где <span class="cmmi-12">I</span><sub><span class="cmr-8">1</span></sub> &#8212;
+первый инвариант.<br><br>
+<table border="1" cellspacing="0" cellpadding="2">
+ <caption align="top">
+ <b>Таблица 1.</b> Некоторые обыкновенные дифференциальные уравнения, допускающие понижение порядка, и их инварианты
+ </caption>
+ <tr>
+ <td style="text-align:center; vertical-align:middle">Уравнение</td>
+ <td style="text-align:center; vertical-align:middle">Инвариантное преобразование</td>
+ <td style="text-align:center; vertical-align:middle">Первый инвариант</td>
+ <td style="text-align:center; vertical-align:middle">Второй инвариант</td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl10x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl10x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl11x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl11x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl12x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl12x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl13x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl13x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl14x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl14x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl15x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl15x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl16x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl16x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl17x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl17x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl18x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl18x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl19x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl19x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl110x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl110x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl111x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl111x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl112x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl112x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl113x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl113x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl114x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl114x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl115x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl115x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl116x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl116x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl117x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl117x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl118x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl118x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl119x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl119x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl120x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl120x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl121x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl121x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl122x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl122x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl123x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl123x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl124x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl124x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl125x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl125x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl126x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl126x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl127x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl127x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl128x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl128x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl129x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl129x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl130x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl130x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl131x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl131x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl132x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl132x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl133x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl133x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl134x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl134x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl135x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl135x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl136x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl136x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl137x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl137x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl138x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl138x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl139x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl139x.png" class="math-display"></td>
+ </tr>
+</table>
+
+
+<p class="indent">Приведенные в таблице 1 результаты легко обобщаются на нелинейные уравнения произвольного порядка.
+
+<p class="indent"><span class="labx-1200"><a name="sec3.5"></a>3.5. Выводы. </span>Описанный метод исследования обыкновенных дифференциальных
+уравнений использует идеи метода группового анализа, но значительно проще
+последнего. Содержание разд.&nbsp;3.2 (основанного на результатах [<a href="#ref3">3</a>&#8211;<a href="#ref5">5</a>]) на начальном
+этапе может излагаться как общий эвристический подход, применимость которого
+проверяется на конкретных примерах. Для применения данного метода надо уметь
+решать лишь самые простые алгебраические уравнения (и системы) и уметь
+дифференцировать, в то время как при использовании метода группового анализа на
+промежуточных этапах приходится рассматривать уравнения с частными
+производными (т.&nbsp;е. приходится выходить за рамки стандартного курса по
+обыкновенным дифференциальных уравнениям). В качестве еще одного достоинства
+этого простого метода следует отметить, что здесь практически не приходится вводить новых понятий, которыми изобилует метод группового анализа.
+Данный метод позволяет единообразно описать разрешимых (или допускающих
+понижение порядка) обыкновенных дифференциальных уравнений значительно
+больше, чем разобрано в подавляющем большинстве существующих учебников.
+
+<p class="indent"><span class="labx-1200"><a name="sec3.6"></a>Упражнения к разделу 3.</span>
+
+<p class="indent">
+1. Решить уравнение <span class=math>
+<i>y&prime;</i> = <i>y</i>(<i>kx</i> + ln <i>y</i>).</span>
+
+
+<p class="indent">
+2. Решить уравнение <span class=math>
+<i>xy&prime;</i> = <i>f</i>(<i>ky</i> + ln <i>x</i>),</span>
+где <span class=math><i>f</i> = <i>f</i>(<i>z</i>)</span>
+&#8212; произвольная функция.
+
+
+<p class="indent">
+3. Решить обобщенно-однородное уравнение
+<span class=math>
+<i>y&prime; = ax</i><sup><i>k</i>&minus;1</sup>exp(<i>yx</i><sup><i>&minus; k</i></sup>).</span>
+
+
+<p class="indent">
+4. Решить обобщенно-однородное уравнение
+<span class=math>
+<i>xy&prime; = yf</i>(<i>x</i><sup><i>n</i></sup><i>y</i><sup><i>m</i></sup>).</span>
+
+
+<p class="indent">
+5. Понизить порядок уравнения <a href="#eq.1.2">(1.2)</a> тремя различными способами, используя преобразования&nbsp;<a href="#eq.1.3">(1.3)</a>.
+
+
+<p class="indent">
+6. Понизить порядок уравнени
+<span class=math><i>xy&Prime; &minus; y&prime;</i> = 0</span> тремя различными способами.
+
+
+<p class="indent">
+7. Понизить порядок уравнени
+<span class=math><i>y&Prime;</i> &minus; (<i>y&prime;</i>)<sup>2</sup> = 0</span> тремя различными способами.
+
+
+<p class="indent">
+8. Понизить порядок уравнения Эмдена &#8212; Фаулера
+<span class=math>
+<i>y&Prime; = Ax</i><sup><i>n</i></sup><i>y</i><sup><i>m</i></sup>.</span>
+
+
+<p class="indent">
+9. Понизить порядок уравнени
+<span class=math>
+<i>y&Prime; = Ax</i><sup><i>n</i></sup><i>e</i><sup><i>&lambda;y</i></sup>.</span>
+
+
+<p class="indent">
+10. Понизить порядок уравнени
+<span class=math>
+<i>y&Prime; = Ay</i><sup><i>n</i></sup><i>e</i><sup><i>&lambda;x</i></sup>.</span>
+
+
+<p class="indent">
+11. Найти преобразование, понижающее порядок обобщенного уравнения Эмдена &#8212; Фаулера
+<span class=math><i>y&Prime; = Ax</i><sup><i>n</i></sup><i>y</i><sup><i>m</i></sup>(<i>y&prime;</i>)<sup><i>k</i></sup>.</span>
+
+
+<p class="indent">
+12. Найти преобразование, понижающее порядок уравнения&nbsp;
+<span class=math>
+<i>y&Prime; = Ay</i><sup><i>n</i></sup><i>e</i><sup><i>&lambda;x</i></sup>(<i>y&prime;</i>)<sup><i>m</i></sup>.</span>
+
+
+<p class="indent">
+13. Найти преобразование, понижающее порядок уравнения&nbsp;
+<span class=math>
+<i>y&Prime; = Ax</i><sup><i>n</i></sup><i>e</i><sup><i>&lambda;y</i></sup>(<i>y&prime;</i>)<sup><i>m</i></sup>.</span>
+
+
+<p class="indent">
+14.&nbsp;Написать обобщения уравнений, приведенных в табл.&nbsp;1, на случай уравнений
+произвольного порядка.
+
+<h3><a name="sec4"></a>4. Дифференциальные уравнения с частными производными</h3>
+<p><span class="labx-1200"><a name="sec4.1"></a>4.1. Преобразования, сохраняющие вид уравнения, и их инварианты. </span>Будем
+рассматривать точечные (обратимые) преобразования вида<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru149x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru149x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.1"></a>(4.1)</td></tr></table>
+
+<p class="indent"> Говорят, что уравнение с частными производными
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru150x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru150x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.2"></a>(4.2)</td></tr></table>
+<p><span class="lati-1200">инвариантно относительно преобразования </span><a href="#eq.4.1">(4.1)</a>, если в результате подстановки
+<a href="#eq.4.1">(4.1)</a> в <a href="#eq.4.2">(4.2)</a> получим точно такое же уравнение
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru151x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru151x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.3"></a>(4.3)</td></tr></table>
+<p>Функция <span class="cmmi-12">F </span>в уравнениях <a href="#eq.4.1">(4.1)</a> и <a href="#eq.4.2">(4.2)</a> одинакова.
+
+<p class="indent">Величина <span class="cmmi-12">I</span><span class="cmr-12">(</span><span class="cmmi-12">x,t,w</span><span class="cmr-12">) </span>называется <span class="lati-1200">инвариантом преобразования </span><a href="#eq.4.1">(4.1)</a>, если она
+сохраняется при этом преобразовании
+<center class="math-display"><img src="Invarianty-ru152x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru152x.png" class="math-display"></center>
+
+<p class="indent"><span class="labx-1000">Замечание. </span><span class="larm-1000">Если </span><span class="cmmi-10">I </span><span class="cmr-10">= </span><span class="cmmi-10">I</span><span class="cmr-10">(</span><span class="cmmi-10">x,t,w</span><span class="cmr-10">) </span><span class="larm-1000">&#8212; инвариант преобразования <a href="#eq.4.1">(4.1)</a>, то </span><span class="cmr-10">&#x03A8;(</span><span class="cmmi-10">I</span><span class="cmr-10">)</span><span class="larm-1000">, где </span><span class="cmr-10">&#x03A8; </span><span class="larm-1000">&#8212; произвольная функция, тоже является инвариантом данного преобразования.</span>
+
+<p class="indent"><span class="labx-1200"><a name="sec4.2"></a>4.2. Процедура построения точных решений</span>. Конкретизируем описанную в
+разделе&nbsp;1 общую схему использования инвариантов для анализа математических
+уравнений применительно к дифференциальным уравнениям с частными
+производными.
+
+<p class="indent">На первом этапе ищется преобразование
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru153x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru153x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.4"></a>(4.4)</td></tr></table>
+<p>которое сохраняет вид уравнения <a href="#eq.4.2">(4.2)</a>. Преобразование <a href="#eq.4.4">(4.4)</a> обязательно должно
+зависеть от <span class="lati-1200">одного свободного параметра </span><span class="cmmi-12">C </span><span class="cmsy-10x-x-120"><img src="cmsy10-c-32.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/cmsy10-c-32.png" class="10-120x-x-32"> </span><span class="cmr-12">[</span><span class="cmmi-12">C</span><sub><span class="cmr-8">1</span></sub><span class="cmmi-12">,C</span><sub><span class="cmr-8">2</span></sub><span class="cmr-12">] </span>(причем само уравнение&nbsp;<a href="#eq.4.2">(4.2)</a>
+от этого параметра не зависит).
+
+<p class="indent">На втором этапе строятся два функционально-независимых инварианта
+преобразования <a href="#eq.4.4">(4.4)</a>:
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru154x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru154x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.5"></a>(4.5)</td></tr></table>
+
+<p class="indent"> На третьем этапе инварианты <a href="#eq.4.5">(4.5)</a> выбираются в качестве новых переменных и
+точное решение уравнения <a href="#eq.4.4">(4.2)</a> ищется в виде
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru155x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru155x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.6"></a>(4.6)</td></tr></table>
+<p>где <span class="cmr-12">&#x03A6;(</span><span class="cmmi-12">z</span><span class="cmr-12">) </span>&#8212; функция, удовлетворяющая обыкновенному дифференциальному
+уравнению, которое получается путем подстановки <a href="#eq.4.6">(4.6)</a> в <a href="#eq.4.2">(4.2)</a> (соответствующее
+решение называется <span class="lati-1200">инвариантным</span>).
+
+<p class="indent">Как и ранее, в качестве преобразований <a href="#eq.4.4">(4.4)</a> будем рассматривать только
+простейшие преобразования&nbsp;
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru156x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru156x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.7"></a>(4.7)</td></tr></table>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru157x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru157x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.8"></a>(4.8)</td></tr></table>
+<p>и их комбинации.
+
+<p class="indent"><span class="labx-1200"><a name="sec4.3"></a>4.3. Примеры построения точных решений нелинейных уравнений</span> <span class="labx-1200">математической физики.</span>
+
+<p class="indent"><span class="labx-1000">Пример 1. </span><span class="larm-1000">Рассмотрим нелинейное уравнение нестационарной теплопроводности</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru158x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru158x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.9"></a>(4.9)</td></tr></table>
+<p><span class="larm-1000">Это уравнение не меняется при произвольном сдвиге по зависимым переменным</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru159x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru159x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.10"></a>(4.10)</td></tr></table>
+<p><span class="larm-1000">где </span><span class="cmmi-10">C </span><span class="larm-1000">&#8212; свободный параметр, а </span><span class="cmmi-10">k </span><span class="larm-1000">и </span><span class="cmmi-10">&#x03BB; </span><span class="larm-1000">&#8212; некоторые заданные числа (которые могут выбираться произвольно). Исключая из первых двух соотношений <a href="#eq.4.10">(4.10)</a> параметр </span><span class="cmmi-10">C </span><span class="larm-1000">находим один из инвариантов</span>
+<center class="math-display"><img src="Invarianty-ru160x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru160x.png" class="math-display"></center>
+<span class="larm-1000">Вторым инвариантом здесь является </span><span class="cmmi-10">I</span><sub><span class="cmr-7">2</span></sub> <span class="cmr-10">= </span><span class="cmmi-10">w </span><span class="cmr-10">=</span> <img src="Invarianty-ru161x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru161x.png" class="bar"><span class="larm-1000">. В силу <a href="#eq.4.6">(4.6)</a> уравнение <a href="#eq.4.9">(4.9)</a> допускает решение вида</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru162x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru162x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.11"></a>(4.11)</td></tr></table>
+<p><span class="larm-1000">Подставив <a href="#eq.4.11">(4.11)</a> в <a href="#eq.4.9">(4.9)</a>, приходим к обыкновенному дифференциальному уравнению</span>
+<center class="math-display"><img src="Invarianty-ru163x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru163x.png" class="math-display"></center>
+<span class="larm-1000">Интегрируя дважды, получим его решение в неявном виде</span>
+<center class="math-display"><img src="Invarianty-ru164x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru164x.png" class="math-display"></center>
+<span class="larm-1000">где</span> <span class="cmmi-10">C</span><sub><span class="cmr-7">1</span></sub> <span class="larm-1000">и </span><span class="cmmi-10">C</span><sub><span class="cmr-7">2</span></sub> <span class="larm-1000">&#8212; произвольные постоянные.</span>
+
+<p class="indent"><span class="labx-1000">Замечание 1. </span><span class="larm-1000">Решения вида <a href="#eq.4.11">(4.11)</a> называются решениями типа </span><span class="lati-1000">бегущей волны </span><span class="larm-1000">[<a href="#ref6">6</a>, <a href="#ref7">7</a>].</span>
+
+<p class="indent"><span class="labx-1000">Замечание 2. </span><span class="larm-1000">Решения типа бегущей волны допускают уравнения общего вида, которые не зависят явно от независимых переменных:</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru165x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru165x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.12"></a>(4.12)</td></tr></table>
+<p><span class="larm-1000">Подставляя <a href="#eq.4.11">(4.11)</a> в <a href="#eq.4.12">(4.12)</a>, получим автономное обыкновенное дифференциальное уравнение относительно функции&nbsp;</span><span class="cmr-10">&#x03A6;(</span><span class="cmmi-10">z</span><span class="cmr-10">)</span><span class="larm-1000">:</span>
+<center class="math-display"><img src="Invarianty-ru166x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru166x.png" class="math-display"></center>
+
+<p class="indent"><span class="labx-1000">Пример 2. </span><span class="larm-1000">Рассмотрим уравнение нестационарной теплопроводности с нелинейным источником степенного вида</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru167x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru167x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.13"></a>(4.13)</td></tr></table>
+
+<p class="indent"> <span class="larm-1000">Ищем инвариантное преобразование масштабирования. Подставив <a href="#eq.4.8">(4.8)</a> в <a href="#eq.4.13">(4.13)</a> и умножив все члены на </span><span class="cmmi-10">b&#x2215;c</span><span class="larm-1000">, имеем</span>
+<center class="math-display"><img src="Invarianty-ru168x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru168x.png" class="math-display"></center>
+<span class="larm-1000">Требуя совпадения с уравнением&nbsp;<a href="#eq.4.13">(4.13)</a>, получим два соотношения</span>
+<center class="math-display"><img src="Invarianty-ru169x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru169x.png" class="math-display"></center>
+<span class="larm-1000">Выразим параметры </span><span class="cmmi-10">a </span><span class="larm-1000">и </span><span class="cmmi-10">c </span><span class="larm-1000">через </span><span class="cmmi-10">b</span><span class="larm-1000">:</span>
+<center class="math-display"><img src="Invarianty-ru170x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru170x.png" class="math-display"></center>
+<span class="larm-1000">Подставляя эти величины в <a href="#eq.4.8">(4.8)</a>, находим инвариантное преобразование</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru171x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru171x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.14"></a>(4.14)</td></tr></table>
+<p><span class="larm-1000">содержащее свободный параметр </span><span class="cmmi-10">C </span><span class="cmr-10">= </span><span class="cmmi-10">b</span><span class="larm-1000">.</span>
+
+<p class="indent"><span class="larm-1000">Перейдем теперь к определению инвариантов. Из первых двух соотношений <a href="#eq.4.14">(4.14)</a> исключаем</span> <span class="cmmi-10">b</span><span class="larm-1000">:</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru172x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru172x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.15"></a>(4.15)</td></tr></table>
+<p><span class="larm-1000">Из второго и последнего соотношений <a href="#eq.4.14">(4.14)</a> исключаем </span><span class="cmmi-10">b</span><span class="larm-1000">:</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru173x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru173x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.16"></a>(4.16)</td></tr></table>
+<p><span class="larm-1000">Соотношение <a href="#eq.4.6">(4.6)</a> с учетом <a href="#eq.4.15">(4.15)</a>, <a href="#eq.4.16">(4.16)</a> определяет вид автомодельное решения</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru174x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru174x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.17"></a>(4.17)</td></tr></table>
+<p><span class="larm-1000">Подставив <a href="#eq.4.17">(4.17)</a> в <a href="#eq.4.13">(4.13)</a>, после несложных преобразований приходим к обыкновенному дифференциальному уравнению</span>
+<center class="math-display"><img src="Invarianty-ru175x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru175x.png" class="math-display"></center>
+
+<p class="indent"><span class="labx-1000">Замечание. </span><span class="larm-1000">Преобразование <a href="#eq.4.8">(4.8)</a> часто удобнее записывать в виде</span>
+<center class="math-display"><img src="Invarianty-ru176x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru176x.png" class="math-display"></center>
+<span class="larm-1000">а затем определять значения постоянных </span><span class="cmmi-10">k </span><span class="larm-1000">и </span><span class="cmmi-10">m</span><span class="larm-1000">, при которых сохраняется вид исходного уравнения (</span><span class="cmmi-10">C</span> <span class="larm-1000">&#8212; свободный параметр). Соответствующие таким преобразованиям точные решения называются</span> <span class="lati-1000">автомодельными </span><span class="larm-1000">[<a href="#ref6">6</a>&#8211;<a href="#ref8">8</a>].</span>
+
+<p class="indent">Примеры некоторых автомодельных решений, указанные в [<a href="#ref9">9</a>&#8211;<a href="#ref11">11</a>], приведены в
+таблице 2 (используется сокращение ОДУ &#8212; обыкновенное дифференциальное
+уравнение).<br><br>
+ <table border="1">
+ <caption align="top">
+ <b>Таблица 2.</b> Некоторые нелинейные уравнения математической физики, которые допускают автомодельные решения<a name="tab2"></a>
+ </caption>
+ <tr>
+ <td style="text-align:center; vertical-align:middle">Уравнение</td>
+ <td style="text-align:center; vertical-align:middle">Название уравнения</td>
+ <td style="text-align:center; vertical-align:middle">Вид решения</td>
+ <td style="text-align:center; vertical-align:middle">Итоговое ОДУ</td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl20x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl20x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle">Нестационарное уравнение теплопроводности</td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl21x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl21x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl22x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl22x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl23x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl23x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle">Уравнение Бюргерса</td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl24x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl24x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl25x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl25x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl26x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl26x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle">Уравнение фильтрации</td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl27x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl27x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl28x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl28x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl29x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl29x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle">Волновое уравнение</td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl210x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl210x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl211x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl211x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl212x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl212x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle">Уравнение теплопроводности с источником</td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl213x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl213x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl214x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl214x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl215x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl215x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle">Уравнение околозвукового газового потока</td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl216x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl216x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl217x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl217x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl218x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl218x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle">Уравнение Кортевега&nbsp;&#8211; де&nbsp;Фриза</td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl219x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl219x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl220x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl220x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl221x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl221x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle">Уравнение пограничного слоя</td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl222x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl222x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Invarianty-ru_tbl223x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl223x.png" class="math-display"></td>
+ </tr>
+</table>
+
+
+<p class="indent">Аналогичный подход с успехом может использоваться для построения точных
+решений систем уравнений с частными производными.
+
+<p class="indent"><span class="labx-1000">Пример 3. </span><span class="larm-1000">Рассмотрим систему уравнений стационарного ламинарного гидродинамического пограничного слоя на плоской пластине:</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru218x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru218x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.18"></a>(4.18)</td></tr></table>
+
+<p class="indent"> <span class="larm-1000">Сделаем в <a href="#eq.4.18">(4.18)</a> растяжение независимых и зависимых переменных по правилу</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru219x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru219x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.19"></a>(4.19)</td></tr></table>
+<p><span class="larm-1000">Умножив полученные уравнения на подходящие постоянные множители, имеем</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru220x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru220x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.20"></a>(4.20)</td></tr></table>
+<p><span class="larm-1000">Потребуем, чтобы вид уравнений преобразованной системы <a href="#eq.4.20">(4.20)</a> совпал с видом уравнений исходной системы&nbsp;<a href="#eq.4.18">(4.18)</a>. Это условие дает два линейных алгебраических уравнения:</span> <span class="cmmi-10">n </span><span class="cmsy-10">- </span><span class="cmmi-10">m </span><span class="cmsy-10">- </span><span class="cmmi-10">k </span><span class="cmr-10">+ 1 = 0</span><span class="larm-1000">, </span><span class="cmsy-10">-</span><span class="cmr-10">2</span><span class="cmmi-10">k </span><span class="cmsy-10">- </span><span class="cmmi-10">m </span><span class="cmr-10">+ 1 = 0</span><span class="larm-1000">. Разрешив их относительно </span><span class="cmmi-10">m </span><span class="larm-1000">и&nbsp;</span><span class="cmmi-10">n</span><span class="larm-1000">, получим</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru221x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru221x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.21"></a>(4.21)</td></tr></table>
+<p><span class="larm-1000">где показатель </span><span class="cmmi-10">k </span><span class="larm-1000">может быть выбран произвольно. Подставим <a href="#eq.4.21">(4.21)</a> в <a href="#eq.4.19">(4.19)</a>:</span>
+<center class="math-display"><img src="Invarianty-ru222x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru222x.png" class="math-display"></center>
+<span class="larm-1000">Находим отсюда инварианты путем исключения параметра </span><span class="cmmi-10">C</span><span class="larm-1000">:</span>
+<center class="math-display"><img src="Invarianty-ru223x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru223x.png" class="math-display"></center>
+
+<p class="indent"><span class="larm-1000">Решение ищется в виде </span><span class="cmmi-10">I</span><sub><span class="cmr-7">2</span></sub> <span class="cmr-10">= </span><span class="cmmi-10">U</span><span class="cmr-10">(</span><span class="cmmi-10">I</span><sub><span class="cmr-7">1</span></sub><span class="cmr-10">)</span><span class="larm-1000">, </span><span class="cmmi-10">I</span><sub><span class="cmr-7">3</span></sub> <span class="cmr-10">= </span><span class="cmmi-10">V </span><span class="cmr-10">(</span><span class="cmmi-10">I</span><sub><span class="cmr-7">1</span></sub><span class="cmr-10">)</span><span class="larm-1000">, т.&nbsp;е.</span>
+<center class="math-display"><img src="Invarianty-ru224x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru224x.png" class="math-display"></center>
+<span class="larm-1000">или</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru225x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru225x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.22"></a>(4.22)</td></tr></table>
+<p><span class="larm-1000">где </span><span class="cmmi-10">k </span><span class="larm-1000">&#8212; произвольная постоянная. Подставив <a href="#eq.4.22">(4.22)</a> в исходную систему <a href="#eq.4.18">(4.18)</a>, получим систему обыкновенных дифференциальных уравнений для функций </span><span class="cmmi-10">U </span><span class="cmr-10">= </span><span class="cmmi-10">U</span><span class="cmr-10">(</span><span class="cmmi-10">&#x03B6;</span><span class="cmr-10">)</span><span class="larm-1000">, </span><span class="cmmi-10">V </span><span class="cmr-10">= </span><span class="cmmi-10">V </span><span class="cmr-10">(</span><span class="cmmi-10">&#x03B6;</span><span class="cmr-10">)</span><span class="larm-1000">:</span>
+<center class="math-display"><img src="Invarianty-ru226x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru226x.png" class="math-display"></center>
+
+<p class="indent"><span class="labx-1000">Пример 4. </span><span class="larm-1000">Рассмотрим уравнение Клейна&#8211;Гордона с нелинейностью экспоненциального вида</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru227x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru227x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.23"></a>(4.23)</td></tr></table>
+
+<p class="indent"> <span class="larm-1000">Ищем инвариантное преобразование в виде комбинации преобразований сдвига и масштабирования:</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru228x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru228x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.24"></a>(4.24)</td></tr></table>
+<p><span class="larm-1000">Подставив <a href="#eq.4.24">(4.24)</a> в <a href="#eq.4.23">(4.23)</a> и умножив на </span><span class="cmmi-10">b</span><sup><span class="cmr-7">2</span></sup><span class="larm-1000">, получим</span>
+<center class="math-display"><img src="Invarianty-ru229x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru229x.png" class="math-display"></center>
+<span class="larm-1000">Чтобы это уравнение совпало с <a href="#eq.4.23">(4.23)</a>, надо положить</span>
+<center class="math-display"><img src="Invarianty-ru230x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru230x.png" class="math-display"></center>
+<span class="larm-1000">Отсюда имеем</span>
+<center class="math-display"><img src="Invarianty-ru231x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru231x.png" class="math-display"></center>
+<span class="larm-1000">и преобразование <a href="#eq.4.24">(4.24)</a> принимает вид</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru232x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru232x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.25"></a>(4.25)</td></tr></table>
+<p><span class="larm-1000">где </span><span class="cmmi-10">b &#x003E; </span><span class="cmr-10">0 </span><span class="larm-1000">&#8212; произвольная постоянная.</span>
+
+<p class="indent"><span class="larm-1000">Исключая из соотношений <a href="#eq.4.24">(4.24)</a> параметр </span><span class="cmmi-10">b</span><span class="larm-1000">, находим инварианты</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru233x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru233x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.26"></a>(4.26)</td></tr></table>
+<p><span class="larm-1000">Соотношение <a href="#eq.4.6">(4.6)</a> с учетом <a href="#eq.4.26">(4.26)</a> определяет вид автомодельное решения</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru234x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru234x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.27"></a>(4.27)</td></tr></table>
+<p><span class="larm-1000">Подставляя <a href="#eq.4.27">(4.27)</a> в <a href="#eq.4.23">(4.23)</a>, получим обыкновенное дифференциальное уравнение</span>
+<center class="math-display"><img src="Invarianty-ru235x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru235x.png" class="math-display"></center>
+
+<p class="indent"><span class="labx-1000">Замечание. </span><span class="larm-1000">Точно таким же образом ищется точное решение стационарного уравнения теории горения с экспоненциальным тепловыделением</span>
+<center class="math-display"><img src="Invarianty-ru236x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru236x.png" class="math-display"></center>
+
+<p class="indent"><span class="labx-1000">Пример 5. </span><span class="larm-1000">Рассмотрим нелинейное уравнение нестационарной теплопроводности</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru237x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru237x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.28"></a>(4.28)</td></tr></table>
+
+<p class="indent"><span class="larm-1000">Ищем инвариантное преобразование в виде комбинации преобразований сдвига и масштабирования:</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru238x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru238x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.29"></a>(4.29)</td></tr></table>
+<p><span class="larm-1000">Подставив <a href="#eq.4.29">(4.29)</a> в <a href="#eq.4.28">(4.28)</a> и поделив на </span><span class="cmmi-10">c</span><span class="larm-1000">, получим</span>
+<center class="math-display"><img src="Invarianty-ru239x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru239x.png" class="math-display"></center>
+<span class="larm-1000">Требование совпадения с уравнением <a href="#eq.4.28">(4.28)</a> дает одно условие</span>
+<center class="math-display"><img src="Invarianty-ru240x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru240x.png" class="math-display"></center>
+<span class="larm-1000">где </span><span class="cmmi-10">c</span> <span class="larm-1000">&#8212; произвольная постоянная. При этом другой параметр </span><span class="cmmi-10">b </span><span class="larm-1000">также остается произвольным, т.&nbsp;е. полученное инвариантное преобразование</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru241x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru241x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.30"></a>(4.30)</td></tr></table>
+<p><span class="larm-1000">является двухпараметрическим.</span>
+
+<p class="indent"><span class="larm-1000">Поскольку для применимости используемого метода требуется однопараметрическое инвариантное преобразование положим</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru242x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru242x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.31"></a>(4.31)</td></tr></table>
+<p><span class="larm-1000">где вид функции </span><span class="cmmi-10">f </span><span class="larm-1000">будет определяться далее. Исключая параметр </span><span class="cmmi-10">c </span><span class="larm-1000">из двух последних соотношений <a href="#eq.4.30">(4.30)</a> с учетом <a href="#eq.4.31">(4.31)</a>, имеем</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru243x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru243x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.32"></a>(4.32)</td></tr></table>
+<p><span class="larm-1000">Это равенство будет определять инвариант </span><span class="cmmi-10">I</span><span class="cmr-10">(</span><span class="cmmi-10">t,w</span><span class="cmr-10">) = </span><span class="cmmi-10">I</span><span class="cmr-10">(</span><img src="Invarianty-ru244x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru244x.png" class="bar"> <span class="cmmi-10">,</span><img src="Invarianty-ru245x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru245x.png" class="bar"><span class="cmr-10">)</span><span class="larm-1000">, если выполняется соотношение</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru246x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru246x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.33"></a>(4.33)</td></tr></table>
+<p><span class="larm-1000">которое можно рассматривать как функциональное уравнение. Нетрудно проверить, что уравнение <a href="#eq.4.33">(4.33)</a> имеет решение</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru247x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru247x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.34"></a>(4.34)</td></tr></table>
+<p><span class="larm-1000">где </span><span class="cmmi-10">A </span><span class="larm-1000">&#8212; произвольная постоянная. Подставив <a href="#eq.4.31">(4.31)</a> в <a href="#eq.4.30">(4.30)</a> с учетом <a href="#eq.4.34">(4.34)</a>, получим</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="Invarianty-ru248x.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru248x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.35"></a>(4.35)</td></tr></table>
+<p><span class="larm-1000">При </span><span class="cmmi-10">A </span><span class="cmsy-10">&#x2044;</span><span class="cmr-10">= 0 </span><span class="larm-1000">выразим из второго соотношения <a href="#eq.4.35">(4.35)</a> параметр </span><span class="cmmi-10">c </span><span class="larm-1000">через </span><span class="cmmi-10">t </span><span class="larm-1000">и подставим в оставшиеся соотношения. В результате находим инварианты</span>
+<center class="math-display"><img src="index.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru249x.png" class="math-display"></center>
+<span class="larm-1000">Используя теперь формулу <a href="#eq.4.6">(4.6)</a>, определяем вид точного решения уравнения <a href="#eq.4.28">(4.28)</a>:</span>
+<table width="100%" border="0"><tr><td width="99%" align="center" valign="middle"><img src="index-1.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru250x.png" class="math-display"></td><td width="1" valign="middle"><a name="eq.4.36"></a>(4.36)</td></tr></table>
+<p><span class="larm-1000">Подставив <a href="#eq.4.36">(4.36)</a> в <a href="#eq.4.28">(4.28)</a>, получим обыкновенное дифференциальное уравнение для функции</span> <span class="cmr-10">&#x03A6;(</span><span class="cmmi-10">z</span><span class="cmr-10">)</span><span class="larm-1000">:</span>
+<center class="math-display"><img src="main.css" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru251x.png" class="math-display"></center>
+
+<p class="indent"><span class="labx-1000">Замечание. </span><span class="larm-1000">Преобразование <a href="#eq.4.30">(4.30)</a> при </span><span class="cmmi-10">b </span><span class="cmr-10">= </span><span class="cmmi-10">c </span><span class="larm-1000">сохраняет вид уравнения <a href="#eq.4.28">(4.28)</a>, но не имеет инвариантов. Отсюда следует, что не каждое преобразование, сохраняющее вид уравнения, имеет инварианты.</span><br><br>
+ <table border="1">
+ <caption align="top">
+ <b>Таблица 3.</b> Инвариантные решения, которые могут быть получены путем использования комбинаций преобразований сдвига и масштабирования, сохраняющих вид уравнений
+(<span class="cmmi-10">C &#x003E;</span> 0 &#8212; произвольная постоянная)
+</caption>
+ <tr>
+ <td style="text-align:center; vertical-align:middle">N</td>
+ <td style="text-align:center; vertical-align:middle">Инвариантные преобразования</td>
+ <td style="text-align:center; vertical-align:middle">Вид инвариантных решений</td>
+ <td style="text-align:center; vertical-align:middle">Примеры уравнений</td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle">1</td>
+ <td style="text-align:center; vertical-align:middle"><img src="edge.6.0.0.min.js" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl30x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="Poster.png" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl31x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="top100.cnt-708065" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl32x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle">2</td>
+ <td style="text-align:center; vertical-align:middle"><img src="solutions.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl33x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="ae.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl34x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><a href="#tab2">Уравнения см. в таблице 2</a></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle">3</td>
+ <td style="text-align:center; vertical-align:middle"><img src="ode.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl35x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="sysode.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl36x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="firstpde.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl37x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle">4</td>
+ <td style="text-align:center; vertical-align:middle"><img src="lpde.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl38x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="npde.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl39x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="syspde.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl310x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle">5</td>
+ <td style="text-align:center; vertical-align:middle"><img src="delaypde.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl311x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="ie.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl312x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="fe.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl313x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle">6</td>
+ <td style="text-align:center; vertical-align:middle"><img src="eqindex.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl314x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="-lang=en" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl315x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="basbooks.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl316x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle">7</td>
+ <td style="text-align:center; vertical-align:middle"><img src="interesting.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl317x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="methods.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl318x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="meth-ode.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl319x.png" class="math-display"></td>
+ </tr>
+ <tr>
+ <td style="text-align:center; vertical-align:middle">8</td>
+ <td style="text-align:center; vertical-align:middle"><img src="meth-pde.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl320x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="meth-dpde.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl321x.png" class="math-display"></td>
+ <td style="text-align:center; vertical-align:middle"><img src="meth-ie.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru_tbl322x.png" class="math-display"></td>
+ </tr>
+</table>
+
+
+<p class="indent"><span class="labx-1200"><a name="sec4.4"></a>4.4. Выводы. </span>Описанный метод исследования нелинейных уравнений с
+частными производными является естественным обобщением метода подобия [<a href="#ref6">6</a>, <a href="#ref8">8</a>] и использует идеи метода группового анализа, но значительно проще
+последнего. Содержание разд.&nbsp;4.2 (основанного на результатах [<a href="#ref7">7</a>, <a href="#ref10">10</a>&#8211;<a href="#ref11">14</a>])
+на начальном этапе может излагаться как общий эвристический подход,
+применимость которого проверяется на конкретных примерах. Для успешного
+использования данного метода надо уметь решать лишь простейшие алгебраические
+уравнения и уметь дифференцировать (и не требуется понимать и использовать
+сложную терминологию группового анализа дифференциальных уравнений).
+
+<p class="indent">Основные ограничения описанного метода:
+
+<p class="indent">1) не всегда можно найти преобразование (отличное от тождественного),
+которое сохраняет вид уравнения;
+
+<p class="indent">2) не всякое преобразование, сохраняющее вид уравнения, можно эффективно
+использовать (преобразование должно зависеть от свободного параметра);
+
+<p class="indent">3) не всегда существует инвариант заданного преобразования.
+
+<p class="indent"><span class="labx-1200"><a name="sec4.5"></a>Упражнения к разделу 4.</span>
+
+<p class="indent">1. Найти автомодельное решение нелинейного уравнения теплопроводности
+<a href="#eq.4.28">(4.28)</a>.
+
+<p class="indent">2. Найти решение нелинейного уравнения теплопроводности <a href="#eq.4.28">(4.28)</a>, основанное на
+инвариантном преобразовании вида
+<center class="math-display"><img src="meth-fe.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru311x.png" class="math-display"></center>
+
+<p class="indent">3. Найти автомодельное решение нелинейного уравнения теплопроводности с
+источником
+<center class="math-display"><img src="auxiliary.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru312x.png" class="math-display"></center>
+
+<p class="indent">4. Найти точные решения нелинейного уравнения теплопроводности
+<center class="math-display"><img src="aux-integrals.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru313x.png" class="math-display"></center>
+
+<p class="indent">5. Найти автомодельное решение потенциального уравнение Бюргерса
+<center class="math-display"><img src="aux-specfunc.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru314x.png" class="math-display"></center>
+
+<p class="indent">6. Найти автомодельное и другие точные решения уравнения нелинейной
+фильтрации
+<center class="math-display"><img src="aux-inttrans.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru315x.png" class="math-display"></center>
+
+<p class="indent">7. Найти автомодельное и другие точные решения нелинейного волнового
+уравнения&nbsp;
+<center class="math-display"><img src="forums.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru316x.png" class="math-display"></center>
+
+<p class="indent">8. Найти точные решения нелинейного волнового уравнения&nbsp;
+<center class="math-display"><img src="others.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru317x.png" class="math-display"></center>
+
+<p class="indent">9. Найти точные решения уравнения околозвукового газового потока
+<center class="math-display"><img src="software.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru318x.png" class="math-display"></center>
+основанные на поиске инвариантных комбинаций преобразований сдвига и
+масштабирования.
+
+<p class="indent">10. Найти точное решение уравнения&nbsp;
+<center class="math-display"><img src="education.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru319x.png" class="math-display"></center>
+
+
+<p class="indent">11. Найти точные решения уравнения Монжа &#8212; Ампера
+<center class="math-display"><img src="edu-ode.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru320x.png" class="math-display"></center>
+
+<p class="indent">12. Найти точные решения уравнения Буссинеска:
+<center class="math-display"><img src="edu-pde.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/Invarianty-ru321x.png" class="math-display"></center>
+
+<h3><a name="sec5"></a>5. Общие выводы и замечания</h3>
+<p>Описанный метод с успехом может использоваться для решения самых различных
+типов математических уравнений. В случае обыкновенных дифференциальных
+уравнений и уравнений математической физики данный метод намного проще дл
+понимания, чем классический метод группового анализа [<a href="#ref3">3</a>&#8211;<a href="#ref5">5</a>, <a href="#ref7">7</a>, <a href="#ref10">10</a>&#8211;<a href="#ref14">14</a>], и может
+трактоваться как его частный случай. При использовании описанного простого
+метода надо уметь решать лишь самые простые алгебраические уравнения (и
+системы) и уметь дифференцировать. Важно отметить, что эффективность данного
+метода для обыкновенных дифференциальных уравнений практически не уступает
+классическому методу группового анализа [см.&nbsp;<a href="#ref4">4</a>,&nbsp;<a href="#ref5">5</a>], а для нелинейных уравнений
+математической физики позволяет находить все наиболее распространенные решения (которые по самым грубым оценкам
+составляют более половины решений,
+которые можно найти с помощью метода группового анализа; эту оценку
+можно получить путем исследования представленных в [<a href="#ref9">9</a>&#8211;<a href="#ref11">11</a>] результатов).
+Указанные обстоятельства говорят о целесообразности введения данного
+метода в стандартные курсы лекций по обыкновенным дифференциальным
+уравнениям и уравнениям математической физики, которые читаются студентам,
+специализирующимся в области прикладной математики, физики и механики (этот
+метод с успехом можно включать также в соответствующие специальные курсы,
+читаемые в некоторых технических и педагогических вузах). Кроме того,
+этот простой метод полезно излагать на предварительном этапе (в качестве
+введения) до чтения основного материала в существенно более сложных для восприятия спецкурсах
+по методам группового анализа дифференциальных уравнений.
+
+<h3><a name="sec6"></a>Литература</h3>
+ <ol class="enumerate1">
+ <li class="enumerate" id="x1-8002x1"><span class="larm-1000"><a name="ref1"></a>Болтянский В. Г., Виленкин Н. Я. Симметрия в алгебре, 2-е изд. М.: Наука, 2002.</span></li>
+ <li class="enumerate" id="x1-8004x2"><span class="larm-1000"><a name="ref2"></a>Кудряшов Н. А. Симметрия алгебраических и дифференциальных уравнений.</span>
+ <span class="larm-1000">Соросовский образовательный журнал, 1998, N 9, с. 104&#8211;110.</span></li>
+ <li class="enumerate" id="x1-8006x3"><span class="larm-1000"><a name="ref3"></a>Ибрагимов Н. Х. Азбука группового анализа. М.: Знание, 1989, N 8.</span></li>
+ <li class="enumerate" id="x1-8008x4"><span class="larm-1000"><a name="ref4"></a>Ибрагимов Н. Х. Опыт группового анализа обыкновенных дифференциальных</span>
+ <span class="larm-1000">уравнений. М.: Знание, 1991, N 7.</span></li>
+ <li class="enumerate" id="x1-8010x5"><span class="larm-1000"><a name="ref5"></a>Polyanin A. D., Zaitsev V. F. Handbook of Exact Solutions for Ordinary
+Differential Equations, 2nd Edition. Boca Raton: Chapman &amp; Hall/CRC Press, 2003.</span></li>
+ <li class="enumerate" id="x1-8012x6"><span class="larm-1000"><a name="ref6"></a>Баренблатт Г.&nbsp;И. Подобие, автомодельность, промежуточная асимптотика. М.:</span>
+ <span class="larm-1000">Гидрометеоиздат, 1978.</span></li>
+ <li class="enumerate" id="x1-8014x7"><span class="larm-1000"><a name="ref7"></a>Полянин А. Д., Зайцев В. Ф., Журов А. И. Методы решения нелинейных уравнений</span>
+ <span class="larm-1000">математической физики и механики. М.: Физматлит, 2005.</span></li>
+ <li class="enumerate" id="x1-8016x8"><span class="larm-1000"><a name="ref8"></a>Седов Л. И. Методы подобия и размерности в механике. М.: Наука, 1972.</span></li>
+ <li class="enumerate" id="x1-8018x9"><span class="larm-1000"><a name="ref9"></a>Полянин А. Д., Зайцев В. Ф. Справочник по нелинейным уравнениям математической</span>
+ <span class="larm-1000">физики: Точные решения. М.: Физматлит, 2002.</span></li>
+ <li class="enumerate" id="x1-8020x10"><span class="larm-1000"><a name="ref10"></a>Ibragimov N.&nbsp;H. (ed.). CRC Handbook of Lie Group to Differential Equations, Vol.&nbsp;1.</span>
+ <span class="larm-1000">Symmetries, Exact Solutions and Conservation Laws. Boca Raton: CRC Press, 1994.</span></li>
+ <li class="enumerate" id="x1-8022x11"><span class="larm-1000"><a name="ref11"></a>Polyanin A.&nbsp;D., Zaitsev V.&nbsp;F. Handbook of Nonlinear Partial Differential Equations. Boca</span>
+ <span class="larm-1000">Raton: Chapman &amp; Hall/CRC Press, 2004.</span></li>
+ <li class="enumerate" id="x1-8024x12"><span class="larm-1000"><a name="ref12"></a>Овсянников Л.&nbsp;В. Групповой анализ дифференциальных уравнений. М.: Наука, 1978.</span></li>
+ <li class="enumerate" id="x1-8026x13"><span class="larm-1000"><a name="ref13"></a>Дородницын В. А., Еленин Г. Г. Симметрия в решениях уравнений математической</span>
+ <span class="larm-1000">физики. М.: Знание, 1984, N 4.</span></li>
+ <li class="enumerate" id="x1-8028x14"><span class="larm-1000"><a name="ref14"></a>Polyanin&nbsp;A.&nbsp;D., Manzhirov,&nbsp;A.&nbsp;V. Handbook of Mathematics for Engineers and Scientists.</span>
+ <span class="larm-1000">Boca Raton: Chapman &amp; Hall/CRC Press, 2007.</span></li>
+</ol>
+
+<p style="margin-top:2em">Адрес статьи в Интернете: <a href="index.htm" tppabs="http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/">http://eqworld.ipmnet.ru/ru/methods/lpde/Invarianty/</a>
+<br>
+Статья выложена на сайт: 19.03.2010&nbsp;г.</p>
+</div>
+<hr width="100%" align=Left>
+<p class=note2>Веб-сайт EqWorld содержит обширную информацию о решениях различных классов обыкновенных дифференциальных уравнений, дифференциальных уравнений с частными производными (уравнений математической физики), интегральных уравнений, функциональных уравнений и других математических уравнений.
+<p class=note2>&copy; 2004&ndash;2011 А.&nbsp;Д.&nbsp;Полянин
+</td></tr></table></body></html>
